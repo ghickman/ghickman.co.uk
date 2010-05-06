@@ -1,0 +1,67 @@
+---
+title: 404 - Not Found!
+---
+!!!
+%html
+  %head
+    %meta{:"http-equiv" => "Content-type", :content => "text/html; charset=utf-8"}
+    %title== 27smiles: #{page.title? ? page.title : 'Home'}
+    %link{:rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/960/all.css", :type => "text/css"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/darkness/master.css", :type => "text/css"}
+
+  %body
+    #header
+      .container_12
+        .grid_9#logo
+          %a{:href => "/", :title => "Take me home!"} <img src="/images/darkness/logo.png">
+        .grid_3#search
+          %form{:action => "http://www.google.com/cse", :id => "cse-search-box"}
+            %div
+              %input{:name => "cx", :type => "hidden", :value => "003452776527504715988:fpri-ti1_v0"}
+              %input{:name => "ie", :type => "hidden", :value => "UTF-8"}
+              %input{:name => "q", :id => "q", :type => "text", :size => "28", :placeholder => 'Search'}
+          #feeds
+            %a{:href => "http://feeds.feedburner.com/27smiles"}
+              %img{:src => "/images/darkness/feed.png"}
+              Blog Feed
+    #container_404
+      .container_12#content
+        %img{:src => '/images/darkness/404.jpg', :alt => "404 - Not Found!"}
+        #not_found_info
+          %h2 Opps, couldn't find what you were looking for!
+          .grid_4
+            %h3 Top posts
+            %ul
+              %li <a href="/2008/04/07/tinymce-syntaxhighlighter-plugin">Tinymce Syntaxhighlighter Plugin</a>
+              %li <a href="/2008/05/22/setting-up-nginx-with-rails">Setting up Nginx with Rails</a>
+              %li <a href="/2008/08/08/setting-up-xen-on-debian-etch-64bit/">Setting up Xen on Debian etch (64bit)</a>
+          .grid_2
+            %h3 Busy categories
+            %ul
+              - site.categories.sort { |a, b| a.last.length <=> b.last.length }.reverse.slice(0..2).each do |cat, posts|
+                %li== <a href="/category/#{category_slug(cat)}">#{category_capitalize(cat)}</a>
+          .grid_6
+            %p
+              The file you were looking for could not be found, it might of just moved; the links on the left are some of the popular content.
+              If you're after some of my code then head on over to my <a href="https://github.com/RichGuk">github account</a>.
+              Finally, if you're totally unsure then the <a href="/">home page</a> is what you'll want!
+          .clear
+
+
+    .container_12#footer
+      .grid_12#footer_info
+        %p
+          The photograph used above is the works of <a href="http://www.flickr.com/people/23912576@N05/">laverrue</a>
+          and was found on his <a href="http://www.flickr.com/photos/23912576@N05/3199748827/">Flickr account</a>.
+          The photograph is released under the <a href="http://creativecommons.org/licenses/by/2.0/deed.en_GB">Creative Commons Licence</a>.
+        ==Copyright &copy; 2007 - #{Time.new.year} Richard Grundy. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.
+
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    :javascript
+      try {
+      var pageTracker = _gat._getTracker("UA-2160161-2");
+      pageTracker._trackPageview();
+      } catch(err) {}

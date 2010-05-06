@@ -1,0 +1,382 @@
+/** reset CSS for all browsers*/
+* {
+    padding:0;
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, 
+ul, ol, dl, fieldset, address, li, dd {margin:0;}
+fieldset {padding: .5em;}
+
+select option {padding: 0 5px;}
+
+.hide, .print-logo, .close-button {display:none;}
+.left {float:left;}
+.right {float:right;}
+.clr {clear:both; height:1px; font-size:1px; line-height:1px;}
+a img {border:none;}
+
+/* mac hide\*/
+html, body {
+    height: 100%
+}
+/* end hide */
+/*---------------------------------------------------------------------------**/
+
+
+
+/** GENERIC SECTIONS */
+.wrapper {
+	width: 999px;
+	margin: 0 auto;
+}
+
+body {
+	color: #000;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #e6791b;
+}
+
+a img {
+	border: none;
+}
+
+h1, h2, h3, h4 {
+    color: #69C;
+    margin: 10px 0 1px;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+/*    font-weight: bold;*/
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** HEADER */
+#header {
+    background: url('/images/ghickman/header.png') repeat-x center center;
+    height: 200px;
+	margin: 0;
+}
+
+#logo img{
+    float: right;
+    margin: 60px 60px 0 0;
+}
+
+#header a {
+	text-decoration: none;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** MENU */
+#menu {
+    height: 40px;
+    background: #232323;
+}
+
+#menu_bar {
+    margin: 0 0 0 5px;
+    padding: 7px 0 0;
+}
+
+#menu_bar li {
+    display: inline;
+    margin-left: 200px;
+}
+
+#menu_bar li a {
+    color: #e6791b;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-top: 17px;
+    display: block;
+}
+
+.menu_left, .menu_right {
+    height: 60px;
+}
+
+.menu_left, .menu_middle, .menu_right {
+    float: left;
+    height: 60px;
+    margin-top: -17px;
+}
+
+#menu_bar .menu_middle {
+    background: url('/images/ghickman/menu_middle.png') center repeat-x;
+}
+
+.menu_left {
+    background: url('/images/ghickman/menu_left.png') no-repeat top left;
+    width: 25px;
+    margin-left: 20px;
+}
+
+.menu_right {
+    background: url('/images/ghickman/menu_right.png') no-repeat top right;
+    width: 27px;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** SIDEBAR */
+#sidebar {
+	float: right;
+	width: 200px;
+    padding: 0 20px 0 0;
+}
+
+.sidebar_title h3 {
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    padding: 5px 0 0;
+    margin: 0;
+}
+
+.sidebar_title, .sidebar_content {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    -webkit-box-shadow: 5px 5px 5px #888;
+}
+
+.sidebar_title {
+    background: url('/images/ghickman/footer.png');
+    height: 35px;
+    margin: 20px 0 0px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    -moz-border-radius-topleft: 7px;
+    -moz-border-radius-topright: 7px;
+    border-top: 1px solid black;
+}
+
+.sidebar_content {
+    background-color: #e6e6e6;
+    padding: 5px 0 10px 10px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    -moz-border-radius-bottomleft: 7px;
+    -moz-border-radius-bottomright: 7px;
+    border-bottom: 1px solid black;
+}
+
+.sidebar_content li {
+    list-style: none;
+    padding: 5px 0 3px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.sidebar_content.categories a, .sidebar_content.archives a {
+    padding: 2px 0 2px 25px;
+}
+
+.sidebar_content.categories a {
+    background: url('/images/ghickman/categories.png') no-repeat top left;
+}
+
+.sidebar_content.archives a {
+    background: url('/images/ghickman/archive2.png') no-repeat top left;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** CONTENT */
+#content {
+	margin: 20px 0 0 0;
+	padding: 0 20px;
+	float: left;
+    width: 730px;
+}
+
+h1 a {
+    color: #e6791b;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+p, li, .feedback {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+
+.post {
+    margin-bottom: 20px;
+/*    background: url('/images/ghickman/separator.png') center bottom middle;
+    border-bottom: 1px dotted black;*/
+}
+
+.post ul {
+    padding: 0 0 10px 25px;
+    
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** POSTS */
+/* info */
+.info {
+	font-size: 10px;
+	color: #B3B3B2;
+	margin: 0px 0 3px;
+}
+
+.info p {
+    margin: 0;
+}
+
+ul.post_tags {
+    padding: 0;
+}
+
+.post_tags li {
+	display: inline;
+	list-style: none;
+	margin: 0 5px 0 0;	
+}
+
+.post_tags li a {
+	text-decoration: none;
+	background: url('/images/ghickman/tag_blue.png') no-repeat center left;
+	margin-left: 2px;
+	padding: 1px 0 0 18px;
+}
+
+.post_tags li img {
+	margin: 0 0 -3px 0;
+}
+
+/* Code */
+pre {
+    color: white;
+    background: #043673;
+    border: 1px solid black;
+    font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 13px;
+    margin: 3px 0 5px;
+    padding: 3px;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** COMMENTS */
+.comment {
+    margin: 15px 0 0 0;
+    padding: 3px 0 3px 3px;
+}
+
+.comment p {
+    margin: 3px 0;
+}
+
+.even {
+    background: #C6DEFF;
+}
+
+#postcomment {
+    margin: 10px 0 0 0;
+}
+
+#commentform #submit {
+    float: right;
+    border: 2px outset buttonface;
+}
+
+#commentform #author, #commentform #email, #commentform #url, #commentform textarea {
+	padding: .2em;
+}
+
+#commentform input, #commentform textarea {
+    border: 2px solid #BFBFBF;
+}
+
+#commentform input:focus, #commentform textarea:focus {
+    border: 2px solid #4f4f4f;
+}
+
+#commentform textarea {
+	width: 100%;
+}
+
+#commentlist {
+    list-style-type: none;
+}
+
+#commentlist li ul {
+	border-left: 1px solid #ddd;
+	font-size: 110%;
+	list-style-type: none;
+}
+
+#commentlist li .avatar {
+	float: right;
+	margin-right: 25px;
+	border: 1px dotted #ccc;
+	padding: 2px;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** FOOTER */
+#footer {
+    background: url('/images/ghickman/footer.png') repeat-x center center; 
+    height: 60px;
+    margin: 20px 0 0 0;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+#copyright, #contact, #jekyll {
+    padding: 24px 0 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#jekyll {
+    padding-left: 20px;
+}
+
+#copyright {
+    padding-left: 250px;
+}
+
+#contact {
+    padding-right: 20px;
+}
+/*---------------------------------------------------------------------------**/

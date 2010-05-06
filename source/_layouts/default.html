@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>{{ page.title }}</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/ghickman/master.css" />
+	<script type="text/javascript" src="/javascript/jquery.js"></script>
+	<script type="text/javascript" src="/javascript/sidebar.js"></script>
+</head>
+
+<body>
+<div id="header">
+	<div id="logo" class="wrapper">
+		<a href="/"><img src="/images/ghickman/logo.png"/></a>
+	</div>
+</div>
+
+<div id="menu">
+	<div class="wrapper">
+		<ul id="menu_bar">
+		    <li>
+		        <div class="menu_left"></div>
+		        <div class="menu_middle"><a href="/">blog</a></div>
+                <div class="menu_right"></div>
+		    </li>
+            <li>
+                <div class="menu_left"></div>
+                <div class="menu_middle"><a href="/">portfolio</a></div>
+                <div class="menu_right"></div>
+            </li>
+            <li>
+                <div class="menu_left"></div>
+                <div class="menu_middle"><a href="/">about</a></div>
+                <div class="menu_right"></div>
+            </li>
+		</ul>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div id="sidebar">
+        <a class="categories" href="#"><div class="sidebar_title"><h3>Categories</h3></div></a>
+	    <div class="sidebar_content categories">
+	        <ul>
+	            {% for tag, post in site.categories %}
+	                <li><a href="/category/{{tag}}">{{tag}}</a></li>
+                {% endfor %}
+	        </ul>
+	    </div>
+	    
+	    <a href="#" class="archives"><div class="sidebar_title"><h3>Archives</h3></div></a>
+	    <div class="sidebar_content archives">
+	        <ul>
+	            <li><a href="#">archive 1</a></li>
+	            <li><a href="#">archive 2</a></li>
+	        </ul>
+	    </div>
+	    
+	    <a href="#" class="twitter"><div class="sidebar_title"><h3>Twitter</h3></div></a>
+	    <div class="sidebar_content twitter">
+	        <ul><li><a href="#">{% include twitter.html %}</a></li></ul>
+	    </div>
+	</div>
+	
+	<div id="content">
+        {{ content }}
+    </div>
+</div>
+<div class="clr"></div>
+<div id="footer">
+	<div class="wrapper">
+	    <div id="jekyll" class="left">Powered by <a href="http://github.com/richguk/jekyll">Jekyll</a></div>
+		<div id="copyright" class="left">Copyright &copy; 2010 George Hickman, All Rights Reserved</div>
+		<div id="contact" class="right"><a href="contact">Contact</a></div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+---
+layout: default
+title: Posts categorised as %cat%
+---
+.big_box#category_box
+  %h1== Entries categorised as &#8220;#{page.category}&#8221;
+  - page.category_posts.reverse.each do |post|
+    .article
+      .grid_7.alpha
+        %h2.title== <a href="#{post.url}">#{post.title}</a>
+        %span.full_date= post.date.strftime("%d %B %Y")
+      .grid_2.omega
+        .short_date
+          %span.month= post.date.strftime('%b')
+          %span.day= post.date.day
