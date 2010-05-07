@@ -114,7 +114,7 @@ h4 {
     font-size: 18px;
     text-transform: capitalize;
     font-weight: bold;
-    padding-top: 17px;
+    margin-top: 17px;
     display: block;
 }
 
@@ -288,6 +288,11 @@ pre {
     font-size: 13px;
     margin: 3px 0 5px;
     padding: 3px;
+}
+
+.separator {
+    width: 100%;
+    border-bottom: 1px black dotted;
 }
 /*---------------------------------------------------------------------------**/
 
