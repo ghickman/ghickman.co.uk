@@ -18,7 +18,9 @@ There are many prebuilt versions of Deluge for a variety of platforms but I've a
 
 First of all grab the source tarball from [here](http://download.deluge-torrent.org/source/) and the libtorrent [source](http://code.google.com/p/libtorrent/downloads/list). At the time of writing I used Deluge 1.2.3 and libtorrent 0.14.10. Download both to your home directory and extract, renaming them to just deluge and libtorrent (from their respective version numbers) to make life a little easier and move the libtorrent directory into the deluge one.
 
-Deluge has a number of dependencies that need to be met before it can be built. I installed them through a mixture of python's easy_install and apt-get.
+Deluge has a number of dependencies that need to be met before it can be built. I installed them through a mixture of python's easy_install and apt-get. If you haven't got easy_install installed then you can grab it with
+
+<pre>sudo apt-get install python-setuptools</pre>
 
 #### easy_install
 
