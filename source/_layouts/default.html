@@ -46,8 +46,8 @@
         <a class="categories" href="#"><div class="sidebar_title"><h3>Categories</h3></div></a>
 	    <div class="sidebar_content categories">
 	        <ul>
-	            {% for tag, post in site.categories %}
-	                <li><a href="/category/{{tag}}">{{tag}}</a></li>
+	            {% for post, tag in site.categories %}
+	                <li><a href="/category/{{ tag[0] }}">{{ tag[0] }}</a></li>
                 {% endfor %}
 	        </ul>
 	    </div>
