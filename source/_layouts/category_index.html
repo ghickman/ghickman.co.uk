@@ -2,11 +2,6 @@
 layout: default
 title: Posts categorised as %cat%
 ---
-<!-- <p>Test1: {{ page }}</p> -->
-<!-- <p>Test2: {{ page.category }}</p> -->
-<!-- <p>Test3: {{ page.category_posts }}</p> -->
-<!-- <p>Test4: {{ site.categories[0] }}</p> -->
-<!-- <p>Test5: {{ site.categories.page.category_posts }}</p> -->
 {% for post in page.category_posts %}
 <div class="post">
     <h1><a href="{{ post.url }}/" title="{{ post.title }}">{{ post.title }}</a></h1>
