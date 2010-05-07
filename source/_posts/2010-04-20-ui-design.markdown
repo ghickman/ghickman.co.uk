@@ -1,11 +1,12 @@
 ---
 layout: post
 title: UI Design IRL
+extended: === extra ===
 categories:
   - UI
   - design
   - rant
-extended: === extra ===
+  - personal
 ---
 
 Not quite so recently now I discovered how much I enjoy a well designed (superficially at least) product when I took the plunge and bought my first macbook. After a little bit of time spent in OSX I came to the realisation that I am a complete whore for nice looking things. Take my choice of operating system: I am a massive Linux nut and would never dream of running anything on a server other than Linux, but when it comes to the Desktop it looks terrible and it just takes a lot of effort to setup (especially if you've come from a windows background). However, my newly realised discovery has spoilt me. I look for good design in everything now, but it the self service tills in Tescos (which I think are terrible by the way) or the chip and pin reader at the customer service desk.

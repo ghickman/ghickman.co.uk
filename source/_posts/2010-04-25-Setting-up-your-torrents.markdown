@@ -6,6 +6,7 @@ categories:
   - category
   - linux
   - fileserver
+  - personal
 ---
 
 # Deluge
