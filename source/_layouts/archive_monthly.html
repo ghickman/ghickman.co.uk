@@ -1,0 +1,22 @@
+---
+layout: default
+title: Archives for %str_month% %year%
+---
+<h1>Archives for {{ page.month }} {{ page.year }}</h1>
+{% for post in page.archive_posts %}
+<div class="post">
+    <div class="title">
+        <h1><a href="{{ post.url }}/" title="{{ post.title }}">{{ post.title }}</a></h1>
+        <div class="info">
+            <p>Posted on: {{ post.date | date: '%b %d %Y' }}</p>
+            <ul class="post_tags">
+                <li>Tagged as: </li>
+                {% for tag in post.categories %}
+                    <li><a href="/category/{{ tag }}">{{ tag | capitalize }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="separator"></div>
+{% endfor %}
