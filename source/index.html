@@ -5,19 +5,21 @@ front_page: true
 ---
 {% for post in site.posts limit:5 %}
 <div class="post">
-    <h1><a href="{{ post.url }}/" title="{{ post.title }}">{{ post.title }}</a></h1>
-    <div class="info">
-        <p>Posted on: {{ post.date | date: '%b %d %Y' }}</p>
-        <ul class="post_tags">
-            <li>Tagged as: </li>
-            {% for tag in post.categories %}
-                <li><a href="/category/{{ tag }}">{{ tag | capitalize }}</a></li>
-            {% endfor %}
-        </ul>
+    <div class="title">
+        <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+        <div class="info">
+            <p>Posted on: {{ post.date | date: '%b %d %Y' }}</p>
+            <ul class="post_tags">
+                <li class="first">Tagged as: </li>
+                {% for tag in post.categories %}
+                    <li><a href="/category/{{ tag }}">{{ tag | capitalize }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
     {{ post.content }}
 </div>
 
-<div class="separator"></div>
+<!-- <div class="separator"></div> -->
 
 {% endfor %}

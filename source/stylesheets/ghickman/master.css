@@ -55,7 +55,6 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 26px;
     font-weight: bold;
-    margin-top: 15px;
 }
 
 h2 {
@@ -213,7 +212,6 @@ h4 {
 
 /** CONTENT */
 #content {
-	margin: 20px 0 0 0;
 	padding: 0 20px;
 	float: left;
     width: 730px;
@@ -247,6 +245,21 @@ p, li, .feedback {
 
 
 /** POSTS */
+.title {
+    border: 1px black solid;
+    background: url('/images/ghickman/title.png') repeat-x center;
+    margin: 15px 0 10px;
+    padding: 5px 10px;
+}
+
+.title h1 {
+    margin-top: 0;
+}
+
+#post_title {
+/*    color: black;*/
+}
+
 /* info */
 .info {
 	font-size: 10px;
@@ -260,12 +273,17 @@ p, li, .feedback {
 
 ul.post_tags {
     padding: 0;
+    margin-top: 3px;
+}
+
+.post_tags li.first {
+    margin: 0;
 }
 
 .post_tags li {
 	display: inline;
 	list-style: none;
-	margin: 0 5px 0 0;	
+	margin: 0 10px 0 0;	
 }
 
 .post_tags li a {
@@ -276,7 +294,7 @@ ul.post_tags {
 }
 
 .post_tags li img {
-	margin: 0 0 -3px 0;
+	margin: 0 0 -3px;
 }
 
 /* Code */
@@ -288,11 +306,6 @@ pre {
     font-size: 13px;
     margin: 3px 0 5px;
     padding: 3px;
-}
-
-.separator {
-    width: 100%;
-    border-bottom: 1px black dotted;
 }
 /*---------------------------------------------------------------------------**/
 
