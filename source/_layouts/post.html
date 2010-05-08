@@ -8,7 +8,7 @@ post_page: true
         <div class="info">
             <p>Posted on: {{ page.date | date: '%b %d %Y' }}</p>
             <ul class="post_tags">
-                <li class="first">Tagged as: </li>
+                <li class="first">Tagged as:</li>
                 {% for tag in page.categories %}
                     <li><a href="/category/{{ tag }}">{{ tag | capitalize }}</a></li>
                 {% endfor %}

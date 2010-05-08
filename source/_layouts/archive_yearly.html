@@ -10,7 +10,7 @@ title: Archives for %year%
         <div class="info">
             <p>Posted on: {{ post.date | date: '%b %d %Y' }}</p>
             <ul class="post_tags">
-                <li>Tagged as: </li>
+                <li class="first">Tagged as:</li>
                 {% for tag in post.categories %}
                     <li><a href="/category/{{ tag }}">{{ tag | capitalize }}</a></li>
                 {% endfor %}
