@@ -75,7 +75,7 @@ h4 {
 
 /** HEADER */
 #header {
-    background: url('/images/ghickman/header.png') repeat-x center center;
+    background: url('/images/header.png') repeat-x center center;
     height: 200px;
 	margin: 0;
 }
@@ -128,17 +128,17 @@ h4 {
 }
 
 #menu_bar .menu_middle {
-    background: url('/images/ghickman/menu_middle.png') center repeat-x;
+    background: url('/images/menu_middle.png') center repeat-x;
 }
 
 .menu_left {
-    background: url('/images/ghickman/menu_left.png') no-repeat top left;
+    background: url('/images/menu_left.png') no-repeat top left;
     width: 25px;
     margin-left: 20px;
 }
 
 .menu_right {
-    background: url('/images/ghickman/menu_right.png') no-repeat top right;
+    background: url('/images/menu_right.png') no-repeat top right;
     width: 27px;
 }
 /*---------------------------------------------------------------------------**/
@@ -167,7 +167,7 @@ h4 {
 }
 
 .sidebar_title {
-    background: url('/images/ghickman/footer.png');
+    background: url('/images/footer.png');
     height: 35px;
     margin: 20px 0 0px;
     border-top-left-radius: 7px;
@@ -189,22 +189,26 @@ h4 {
 
 .sidebar_content li {
     list-style: none;
-    padding: 5px 0 3px;
+    padding: 5px 0 3px 25px;
     font-weight: bold;
     text-transform: capitalize;
     font-size: 14px;
 }
 
+.inner {
+    margin: 0 0 0 20px;
+}
+
 .sidebar_content.categories a, .sidebar_content.archives a {
-    padding: 2px 0 2px 25px;
+    padding: 2px 0 2px;
 }
 
-.sidebar_content.categories a {
-    background: url('/images/ghickman/categories.png') no-repeat top left;
+.sidebar_content.categories li {
+    background: url('/images/categories.png') no-repeat top left;
 }
 
-.sidebar_content.archives a {
-    background: url('/images/ghickman/archive2.png') no-repeat top left;
+.sidebar_content.archives li {
+    background: url('/images/archive2.png') no-repeat top left;
 }
 /*---------------------------------------------------------------------------**/
 
@@ -232,8 +236,6 @@ p, li, .feedback {
 
 .post {
     margin-bottom: 20px;
-/*    background: url('/images/ghickman/separator.png') center bottom middle;
-    border-bottom: 1px dotted black;*/
 }
 
 .post ul {
@@ -247,7 +249,7 @@ p, li, .feedback {
 /** POSTS */
 .title {
     border: 1px black solid;
-    background: url('/images/ghickman/title.png') repeat-x center;
+    background: url('/images/title.png') repeat-x center;
     margin: 15px 0 10px;
     padding: 5px 10px;
 }
@@ -288,7 +290,7 @@ ul.post_tags {
 
 .post_tags li a {
 	text-decoration: none;
-	background: url('/images/ghickman/tag_blue.png') no-repeat center left;
+	background: url('/images/tag_blue.png') no-repeat center left;
 	margin-left: 2px;
 	padding: 1px 0 0 18px;
 }
@@ -372,7 +374,7 @@ pre {
 
 /** FOOTER */
 #footer {
-    background: url('/images/ghickman/footer.png') repeat-x center center; 
+    background: url('/images/footer.png') repeat-x center center; 
     height: 60px;
     margin: 20px 0 0 0;
     border-top: 1px black solid;
