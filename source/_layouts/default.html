@@ -55,8 +55,14 @@
         <div class="sidebar_title archives"><h3>Archives</h3></div>
 	    <div class="sidebar_content archives">
 	        <ul>
-	            <li><a href="#">archive 1</a></li>
-	            <li><a href="#">archive 2</a></li>
+	            {% for year in site.collated_posts %}
+	                <li class="outer {{ year[0] }}"><a href="/{{ year[0] }}/">{{ year[0] }}</a></li>
+                    <ul class="inner {{ year[0] }}">
+                        {% for month in year[1] %}
+                            <li><a href="/{{ year[0] }}/{{ month[0] }}/">{{ month[0] }}</a></li>
+                        {% endfor %}
+                    </ul>
+	            {% endfor %}
 	        </ul>
 	    </div>
 	    
