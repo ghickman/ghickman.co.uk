@@ -5,10 +5,12 @@ extended: === read more ===
 categories:
   - xbmc
 ---
+
 I'm the first person to admit that I have some fairly obsessive habits when it comes to making things look nice and neat, more specifically in the media files department. So while playing around with getting my Films folder all neatly into XBox Media Centre (XBMC because I'm lazy and abbreviations FTW) when I found that my films in multiple files weren't stacking properly.
 
+=== read more ===
 
-What is Stacking and Why Should I Want This Ambrosia of the Gods?!
+#### What is Stacking and Why Should I Want This Ambrosia of the Gods?!
 
 For those of you unaware of this nifty little feature it lets you take those split film files you have, in formats such as Film (part 1).something and Film (part 2).something and turn them into Film.something with XBMC magic. In technical speak it literally stacks them on top of each other so you see one file instead of many based on the numbering.
 
