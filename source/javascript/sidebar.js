@@ -1,33 +1,31 @@
 $(function() {
-    $('a.categories').click(function() {
-        if($('a.categories').hasClass('hidden')) {
-            $('div.categories').slideDown()
-            $('a.categories').removeClass('hidden')
+    $('.categories.sidebar_title').click(function() {
+        if($('.categories.sidebar_title').hasClass('hidden')) {
+            $('.categories.sidebar_content').slideDown()
+            $('.categories.sidebar_title').removeClass('hidden')
         } else {
-            $('div.categories').slideUp()
-            $('a.categories').addClass('hidden')
-            // add a bottom border AFTER the slideUp event.
-            $('div.categories').css('border-bottom: 1px solid black')
+            $('.categories.sidebar_content').slideUp()
+            $('.categories.sidebar_title').addClass('hidden')
         }
     });
 
-    $('a.archives').click(function() {
-        if($('a.archives').hasClass('hidden')) {
-            $('div.archives').slideDown()
-            $('a.archives').removeClass('hidden')
+    $('.archives.sidebar_title').click(function() {
+        if($('.archives.sidebar_title').hasClass('hidden')) {
+            $('.archives.sidebar_content').slideDown()
+            $('.archives.sidebar_title').removeClass('hidden')
         } else {
-            $('div.archives').slideUp()
-            $('a.archives').addClass('hidden')
+            $('.archives.sidebar_content').slideUp()
+            $('.archives.sidebar_title').addClass('hidden')
         }
     });
 
-    $('a.twitter').click(function() {
-        if($('a.twitter').hasClass('hidden')) {
-            $('div.twitter').slideDown()
-            $('a.twitter').removeClass('hidden')
+    $('.twitter.sidebar_title').click(function() {
+        if($('.twitter.sidebar_title').hasClass('hidden')) {
+            $('.twitter.sidebar_content').slideDown()
+            $('.twitter.sidebar_title').removeClass('hidden')
         } else {
-            $('div.twitter').slideUp()
-            $('a.twitter').addClass('hidden')
+            $('.twitter.sidebar_content').slideUp()
+            $('.twitter.sidebar_title').addClass('hidden')
         }
     });
 });
