@@ -2,6 +2,7 @@
 layout: default
 title: Posts categorised as %cat%
 ---
+<h1>Posts categorised as: {{ page.category | capitalize }}</h1>
 {% for post in page.category_posts %}
 <div class="post">
     <div class="title">
