@@ -1,0 +1,15 @@
+---
+layout: default
+post_page: true
+---
+.post
+  .title
+    %h1#post_title= page.title
+    .info
+      %p== Posted on: #{page.date.strftime('%b %d %Y')}
+      %ul.post_tags
+        %li.first Tagged as:
+        - page.categories.each do |tag|
+          %li
+            %a{:href=>"/category/#{tag}"}=category_capitalize(tag)
+  .body= content
