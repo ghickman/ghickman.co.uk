@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Posts categorised as %cat%
+title: Archives for %str_month% %year%
 ---
-%h1==Posts categorised as: #{category_capitalize(page.category)}
-- page.category_posts.each do |post|
+%h1==Archives for #{page.month} #{page.year}
+- page.archive_posts.each do |post|
   .post
     .title
       %h1
