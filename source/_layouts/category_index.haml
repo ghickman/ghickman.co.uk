@@ -2,17 +2,17 @@
 layout: default
 title: Posts categorised as %cat%
 ---
-%h1==Posts categorised as: #{category_capitalise(page.category}
-- page.category_posts do |post|
-.post
-  .title
-    %h1
-      %a{:href=>"#{post.url}" :title=>"#{post.title}"}=post.title
-    .info
-      %p==Posted on: #{post.date.strftime('%b %d %Y')}
-      %ul.post_tags
-        %li.first Tagged as:
-        - post.categories.each do |tag|
-          %li
-            %a{:href=>"/category/#{tag}" :title=>"#{tag}"}=category_capitalize(tag)
-  - post.content
+%h1==Posts categorised as: #{category_capitalize(page.category)}
+- page.category_posts.each do |post|
+  .post
+    .title
+      %h1
+        %a{:href=>"#{post.url}", :title=>"#{post.title}"}=post.title
+      .info
+        %p==Posted on: #{post.date.strftime('%b %d %Y')}
+        %ul.post_tags
+          %li.first Tagged as:
+          - post.categories.each do |tag|
+            %li
+              %a{:href=>"/category/#{tag}", :title=>"#{tag}"}=category_capitalize(tag)
+  .body= post.content
