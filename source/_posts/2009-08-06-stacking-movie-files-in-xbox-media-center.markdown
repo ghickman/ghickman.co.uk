@@ -17,12 +17,10 @@ For those of you unaware of this nifty little feature it lets you take those spl
 
 Now, I prefer the format Film (1).something to all the others I've seen. I don't need to know it's a part or a disk, this is assumed by the simple action of just having the parenthesis (yes, it means brackets but I'll damned well sound fancy now I have a dictionary at my fingertips!). This of course lead to some hacking of XBMC, which as a very standard nerd I love doing because it involves hacking at something for ages to make the tiniest little change. This, as it turns out, is actually very easy. The folks over at the XBMC project let you fiddle with all sorts of things using XML files (a personal favourite of mine) to control various eccentricities of your media centre. They also document stuff, so I love them, big time. While perusing here I found the advancedsettings.xml file that basically lets you do everything, even the dishes in some lovely xml tags. The tag you'll want that lets you play with stacks within this file is the <moviestacking> tag where you can place a regex filter. Below is my version for your viewing pleasure:
 
-<pre>
-    <advancedsettings>
-        <moviestacking action="append">
-            <regexp>()[ ]+\(([0-9a-d]+)\)(\....)$</regexp>
-        </moviestacking>
-    </advancedsettings>
-</pre>
+<advancedsettings>
+    <moviestacking action="append">
+        <regexp>()[ ]+\(([0-9a-d]+)\)(\....)$</regexp>
+    </moviestacking>
+</advancedsettings>
  
-The append section means the rule is appended to the default XBMC rules and the advancedsettings tags are there because, well, it's the advanced settings file. Save the file in your userdata folder, restart XBMC and voila! you'll see the files that you've named in the format I (and [thetvdb.org](http://thetvdb.org) which I use as the default library for Tv Renamr) use will stack through what I can only gather is XBMC magic, or regex - which I'm reliably told involves ninjas anyway and they're practically magic. Enjoy!
+The append section means the rule is appended to the default XBMC rules and the advancedsettings tags are there because, well, it's the advanced settings file. Save the file in your userdata folder, restart XBMC and voila! you'll see the files that you've named in the format I (and [thetvdb.org](http://thetvdb.org) which I use as the default library for [Tv Renamr](http://github.com/ghickman/tvrenamr)) use will stack through what I can only gather is XBMC magic, or regex - which I'm reliably told involves ninjas anyway and they're practically magic. Enjoy!

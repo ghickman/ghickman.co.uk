@@ -15,6 +15,6 @@ Penderry.com is a small website written in the PHP framework CakePHP. Providing 
 
 
 ## [Trackr](/trackr.html)
-Trackr is a bug and defect tracking system built for my university dissertation. It was designed to overcome some of the short comings I saw in the workflow of the support team I was part of at a previous job. The system works on the philosophy that support tickets are open and available to all the relevant people thus decentralising the support process.
+Trackr is a bug and defect tracking system built for my university dissertation. It was designed to overcome some of the short comings I saw in the workflow of the support team I was part of at a previous job. The system works on the philosophy that support tickets are open and available to all the relevant people thus `decentralising` the support process.
 
 ![Trackr](/images/_posts/portfolio/trackr.jpg "Trackr")
