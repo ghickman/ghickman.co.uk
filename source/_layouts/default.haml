@@ -1,0 +1,76 @@
+!!!
+%html
+  %head
+    %title= page.title
+
+    %meta{'http-equiv' => 'content-type', :content=>'text/html'}
+    %meta{'http-equiv' => 'content-language', :content=>'en'}
+
+    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/master.css'}
+    %script{:type=>'text/javascript', :src=>'/javascript/jquery.js'}
+    %script{:type=>'text/javascript', :src=>'/javascript/sidebar.js'}
+
+%body
+  #header
+    #logo.wrapper
+      %a{:href=>'/', :title=>'Home'}
+        %img{:src=>'/images/ghickman/logo.png'}
+
+  #menu
+    .wrapper
+      %ul#menu_bar
+        %li
+          .menu_left
+          .menu_middle
+            %a{:href=>'/', :title=>'Home'} blog
+          .menu_right
+        %li
+          .menu_left
+          .menu_middle
+            %a{:href=>'portfolio.html', :title=>'Portfolio'} portfolio
+          .menu_right
+        %li
+          .menu_left
+          .menu_middle
+            %a{:href=>'about.html', :title=>'About'} about
+          .menu_right
+
+  .wrapper
+    #sidebar
+      .sidebar_title.categories
+        %h3 Categories
+      .sidebar_content.categories
+        %ul
+        - site.categories.sort.each do |tag, post|
+          %li
+            %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}== #{category_capitalize(tag)}
+      
+      .sidebar_title.archives
+        %h3 Archives
+      .sidebar_content.archives
+        %ul
+        - site.collated_posts.each do |year|
+          %li.outer
+            %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
+          %ul.inner
+            - year.last.to_a.each do |month|
+              %li
+                %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{mon(month.first)}"}== #{month.first}
+      
+      .sidebar_title.twitter
+        %h3 Twitter
+      .sidebar_content.twitter
+        %ul
+          %li
+            %a{:href=>''} A Tweet!
+  
+    #content== #{content}
+    .clr
+  #footer
+    .wrapper
+      #jekyll.left
+        Powered by 
+        %a{:href=>'http://github.com/richguk/jekyll', :title=>'Jekyll'} Jekyll
+      #copyright.left Copyright &copy; 2010 George Hickman, All Rights Reserved
+      #contact.right
+        %a{:href=>'contact', :title=>'Contact Me'} Contact
