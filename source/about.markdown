@@ -5,7 +5,9 @@ title: About
 
 <img class="right" src="images/me.jpg" />
 
-<div style="width:400px;"><h1>That's me</h1><img class="right" src="images/arrow.jpg" /></div>
+<div style="width:400px;">
+    <h1>That's me</h1>
+    <img class="right" src="images/arrow.jpg" /></div>
 <div class="clear"></div>
 
 My name is George Hickman, a 20 something developer from the west midlands and I write code. I specialise in beautiful, properly aligned and DRY code but anything's possible!
