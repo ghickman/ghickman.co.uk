@@ -266,7 +266,36 @@ img {
 /*    color: black;*/
 }
 
-/* info */
+.body {
+    padding: 0 10px;
+}
+
+.figure {
+    border: 1px solid black;
+    margin: 0 5px 0 0;
+    padding: 0 0 4px 0;
+}
+
+.figure img {
+    margin: 0;
+}
+
+.figure p {
+    height: 20px;
+    margin: -4px 0;
+    padding: 0 0 2px 0;
+    background-color: #043673;
+}
+
+img.cc {
+    margin: 3px 0 0 3px;
+}
+
+.figure p a {
+    font-weight: bold;
+}
+
+/** info */
 .info {
 	font-size: 10px;
 	color: #B3B3B2;
