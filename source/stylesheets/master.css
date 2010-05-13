@@ -332,22 +332,20 @@ ul.post_tags {
 .post_tags li img {
 	margin: 0 0 -3px;
 }
+/*-----**/
 
-.body {
-    padding: 0 10px;
-}
-
-/* Code */
+/** Code */
 pre {
     color: white;
     background: #043673;
     border: 1px solid black;
     font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
     margin: 3px 0 5px;
     padding: 3px;
     overflow: auto;
 }
+/*-----**/
 /*---------------------------------------------------------------------------**/
 
 
