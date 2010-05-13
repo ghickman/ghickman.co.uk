@@ -314,6 +314,31 @@ pre {
 
 
 
+/** PORTFOLIO */
+#portfolio {
+    padding: 10px 20px 0;
+}
+
+.project {
+    margin: 0 0 30px;
+}
+
+.project ul {
+/*    margin: 0 0 10px 25px;*/
+/*    float: right;*/
+}
+
+img.right {
+    margin: 0 0 0 15px;
+}
+
+img.left {
+    margin: 0 15px 0 0;
+}
+/*--------------------------------------------------------------------------**/
+
+
+
 /** COMMENTS */
 .comment {
     margin: 15px 0 0 0;
