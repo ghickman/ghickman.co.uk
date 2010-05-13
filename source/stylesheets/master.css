@@ -300,6 +300,10 @@ ul.post_tags {
 	margin: 0 0 -3px;
 }
 
+.body {
+    padding: 0 10px;
+}
+
 /* Code */
 pre {
     color: white;
@@ -309,6 +313,7 @@ pre {
     font-size: 13px;
     margin: 3px 0 5px;
     padding: 3px;
+    overflow: auto;
 }
 /*---------------------------------------------------------------------------**/
 
