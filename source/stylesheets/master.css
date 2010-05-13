@@ -226,12 +226,16 @@ h1 a {
 
 p {
     margin: 10px 0;
-    padding: 5px 0;
+    line-height: 1.4em;
 }
 
 p, li, .feedback {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
+}
+
+img {
+    margin: 5px 5px 0;
 }
 
 .post {
