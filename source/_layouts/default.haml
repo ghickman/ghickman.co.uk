@@ -35,36 +35,37 @@
             .menu_right
 
     .wrapper
-      #sidebar
-        .sidebar_title.categories
-          %h3 Categories
-        .sidebar_content.categories
-          %ul
-            - site.categories.sort.each do |tag, post|
+      - unless page.title == 'Portfolio' or page.title == 'About'
+        #sidebar
+          .sidebar_title.categories
+            %h3 Categories
+          .sidebar_content.categories
+            %ul
+              - site.categories.sort.each do |tag, post|
+                %li
+                  %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}== #{category_capitalize(tag)}
+      
+          .sidebar_title.archives
+            %h3 Archives
+          .sidebar_content.archives
+            %ul
+              - site.collated_posts.each do |year|
+                %li.outer
+                  %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
+                - year.last.to_a.each do |month|
+                  %li.inner
+                    %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
+      
+          .sidebar_title.twitter
+            %h3 Twitter
+          .sidebar_content.twitter
+            %ul
               %li
-                %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}== #{category_capitalize(tag)}
-      
-        .sidebar_title.archives
-          %h3 Archives
-        .sidebar_content.archives
-          %ul
-            - site.collated_posts.each do |year|
-              %li.outer
-                %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
-              / %ul.inner
-              - year.last.to_a.each do |month|
-                %li.inner
-                  %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
-      
-        .sidebar_title.twitter
-          %h3 Twitter
-        .sidebar_content.twitter
-          %ul
-            %li
-              %a{:href=>''} A Tweet!
-  
-      #content== #{content}
-      .clr
+                %a{:href=>''} A Tweet!
+        #content== #{content}
+        .clr
+      - else
+        #no_post== #{content}
     #footer
       .wrapper
         #jekyll.left
