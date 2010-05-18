@@ -44,7 +44,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: #e6791b;
+	color: #e6911b;
 }
 
 h1, h2, h3, h4 {
@@ -444,18 +444,18 @@ img.left {
 
 /** FOOTER */
 #footer {
-    background: url('/images/footer.png') repeat-x center center; 
-    height: 60px;
-    margin: 20px 0 0 0;
+    background: url('/images/footer.png') repeat-x center center;
     border-top: 1px black solid;
     border-bottom: 1px black solid;
+    height: 60px;
+    margin: 20px 0 0 0;
 }
 
-#copyright, #contact, #jekyll {
-    padding: 24px 0 0;
+#jekyll, #copyright, #contact {
     color: #fff;
     font-size: 12px;
     font-weight: bold;
+    padding: 24px 0 0;
 }
 
 #jekyll {
@@ -467,6 +467,10 @@ img.left {
 }
 
 #contact {
-    padding-right: 20px;
+    padding-right: 10px;
+}
+
+#feed {
+    padding: 15px 40px 0 0;
 }
 /*---------------------------------------------------------------------------**/

@@ -52,7 +52,7 @@
               - site.collated_posts.each do |year|
                 %li.outer
                   %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
-                - year.last.to_a.each do |month|
+                - year.last.to_a.reverse.each do |month|
                   %li.inner
                     %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
       
@@ -70,7 +70,10 @@
       .wrapper
         #jekyll.left
           Powered by 
-          %a{:href=>'http://github.com/richguk/jekyll', :title=>'Jekyll'} Jekyll
+          %a{:href=>"http://github.com/richguk/jekyll", :title=>"Jekyll"} Jekyll
         #copyright.left Copyright &copy; 2010 George Hickman, All Rights Reserved
+        #feed.right
+          %a{:href=>"http://feeds.feedburner.com/ghickman", :title=>"Ghickman.co.uk's Feed"}
+            %img{:src=>"/images/feed.png", :alt=>"RSS Feed"}
         #contact.right
-          %a{:href=>'contact', :title=>'Contact Me'} Contact
+          %a{:href=>"contact", :title=>"Contact Me"} Contact

@@ -1,0 +1,23 @@
+---
+layout: nil
+output_ext: .xml
+---
+!!! XML
+%feed{:xmlns => "http://www.w3.org/2005/Atom"}
+  %title ghickman
+  ==<link href="http://ghickman.co.uk/" />
+  ==<link href="http://ghickman.co.uk/atom.xml" rel="self" />
+  %updated= Time.now.xmlschema
+  %id tag:ghickman.co.uk,2007-07-03:1
+  %author
+    %name George Hickman
+  - site.posts.reverse[0..14].each do |post|
+    %entry
+      %title= post.title
+      ==<link href="http://ghickman.co.uk/#{post.url}" />
+      %updated= post.date.xmlschema
+      %id== tag:ghickman.co.uk,#{post.date.strftime('%Y-%m-%d')}:#{post.url}
+      %content{:type => 'html'}
+        = xml_escape(post.content)
+        - if post.respond_to?(:extended) && post.extended
+          = xml_escape(post.extended)
