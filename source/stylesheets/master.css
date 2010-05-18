@@ -231,7 +231,7 @@ p {
 
 p, li, .feedback {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 img {
@@ -254,7 +254,7 @@ img {
 .title {
     border: 1px black solid;
     background: url('/images/title.png') repeat-x center;
-    margin: 15px 0 10px;
+    margin: 10px 0 10px;
     padding: 5px 10px;
 }
 
@@ -305,6 +305,7 @@ img.cc {
 .info p {
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
 
 ul.post_tags {
