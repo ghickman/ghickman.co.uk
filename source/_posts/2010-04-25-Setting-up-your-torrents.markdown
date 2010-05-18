@@ -15,7 +15,7 @@ Deluge is an open source BitTorrent client written in Python and comes with a go
 
 ## Install Deluge
 #### Research Links
-* http://dev.deluge-torrent.org/wiki/Installing/Source
+* [Deluge Install from Source](http://dev.deluge-torrent.org/wiki/Installing/Source)
 
 There are many prebuilt versions of Deluge for a variety of platforms but I've always had the best results compiling from source so I'll be detailing that here.
 
