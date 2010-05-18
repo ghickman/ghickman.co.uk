@@ -28,14 +28,4 @@ $(function() {
     slide('.categories')
     slide('.archives')
     slide('.twitter')
-    
-    
-    // $('.outer').click(function () {
-        // id = $('.outer').getClass()
-        // if($('ul.inner').hasClass('hidden')) {
-        //     $('ul.inner').slideDown()
-        //     $('')
-        // }
-    
-        //grab id of li.outer and compare to ul.inner's id
 });
