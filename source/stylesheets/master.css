@@ -221,7 +221,7 @@ h4 {
 }
 
 h1 a {
-    color: #e6791b;
+    color: #e6911b;
 }
 
 p {
@@ -320,12 +320,14 @@ ul.post_tags {
 .post_tags li {
 	display: inline;
 	list-style: none;
-	margin: 0 10px 0 0;	
+	margin: 0 10px 0 0;
+	font-size: 13px;
 }
 
 .post_tags li a {
 	text-decoration: none;
 	background: url('/images/tag_blue.png') no-repeat center left;
+	color: #e6aa1b;
 	margin-left: 2px;
 	padding: 1px 0 0 18px;
 }
