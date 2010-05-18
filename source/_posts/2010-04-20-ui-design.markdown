@@ -3,13 +3,13 @@ layout: post
 title: UI Design IRL
 extended: === extra ===
 categories:
-  - UI
+  - ui
   - design
   - rant
   - personal
 ---
 
-Not quite so recently now I discovered how much I enjoy a well designed (superficially at least) product when I took the plunge and bought my first macbook. After a little bit of time spent in OSX I came to the realisation that I am a complete whore for nice looking things. Take my choice of operating system: I am a massive Linux nut and would never dream of running anything on a server other than Linux, but when it comes to the Desktop it looks terrible and it just takes a lot of effort to setup (especially if you've come from a windows background). However, my newly realised discovery has spoilt me. I look for good design in everything now, but it the self service tills in Tescos (which I think are terrible by the way) or the chip and pin reader at the customer service desk.
+Not quite so recently now I discovered how much I enjoy a well designed (superficially at least) product when I took the plunge and bought my first macbook. After a little bit of time spent in OSX I came to the realisation that I am a complete whore for nice looking things. Take my choice of operating system: I am a massive Linux nut and would never dream of running anything on a server other than Linux, but when it comes to the Desktop it looks terrible and it just takes a lot of effort to setup (especially if you've come from a windows background). However, my newly realised discovery has spoilt me. I look for good design in everything now, be it the self service tills in Tescos (which I think are terrible by the way) or the chip and pin reader at the customer service desk.
 
 And this is where I get onto the real topic of my rant. I recently bought some stamps from my local Tescos' customer service desk and happened to notice a sign on their chip and pin reader telling the customer 'Press the buttons hard!'. Now, having used one of these particular type of card reader in various shops (Tescos' choice in card reader is not really what I'm getting at here as it's a commonly used one in a lot of shops) I know that the buttons can be a pain if you don't press them quite hard enough.
 

@@ -2,7 +2,7 @@
 layout: post
 title: Playing with categories
 categories:
-  - Mothers
+  - mothers
   - test
   - how-to
   - personal
