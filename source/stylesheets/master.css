@@ -126,7 +126,7 @@ h4 {
     margin-top: -17px;
 }
 
-#menu_bar .menu_middle {
+.menu_middle {
     background: url('/images/menu_middle.png') center repeat-x;
 }
 
@@ -139,6 +139,19 @@ h4 {
 .menu_right {
     background: url('/images/menu_right.png') no-repeat top right;
     width: 27px;
+}
+/*---------------------------------------------------------------------------**/
+
+
+
+/** SEARCH */
+#search input#q {
+    background: url('/images/search.png') no-repeat left center;
+    border-radius: 12px;
+    border: none;
+    font-size: 13px;
+    margin: 3px 20px 0 0;
+    padding: 3px 5px 0 20px;
 }
 /*---------------------------------------------------------------------------**/
 
