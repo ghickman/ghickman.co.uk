@@ -336,11 +336,11 @@ ul.post_tags {
 
 /** Code */
 pre {
-    color: white;
-    background: #043673;
-    border: 1px solid black;
+    background: #333;
+    border-radius: 2px;
+    color: #efefef;
     font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-size: 12px;
+    font-size: 13px;
     margin: 3px 0 5px;
     padding: 3px;
     overflow: auto;
