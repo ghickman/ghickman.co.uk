@@ -216,7 +216,7 @@ h4 {
 }
 
 .sidebar_content.categories li {
-    background: url('/images/categories.png') no-repeat top left;
+    background: url('/images/tag.png') no-repeat top left;
 }
 
 .sidebar_content.archives li {
