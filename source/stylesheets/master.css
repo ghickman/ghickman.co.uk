@@ -392,6 +392,23 @@ img.left {
 
 
 
+/** CONTACT */
+#contact label {
+    color: black;
+/*    float: left;*/
+}
+
+#contact input {
+/*    float: right;*/
+}
+
+#contact input[type="submit"] {
+/*    float: right;*/
+}
+/*--------------------------------------------------------------------------**/
+
+
+
 /** COMMENTS */
 .comment {
     margin: 15px 0 0 0;
