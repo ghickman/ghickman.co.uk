@@ -13,14 +13,13 @@ $(function() {
                     .css('border-bottom-left-radius', '0px')
                     .css('border-bottom-right-radius', '0px')
             } else {
-                $(selector + '.sidebar_content').slideUp()
-                
-                // this needs to wait for slideUp to finish.
-                $(selector + '.sidebar_title')
-                    .addClass('hidden')
-                    .css('border-bottom', '1px solid black')
-                    .css('border-bottom-left-radius', '7px')
-                    .css('border-bottom-right-radius', '7px')
+                $(selector + '.sidebar_content').slideUp('slow', function() {
+                    $(selector + '.sidebar_title')
+                        .addClass('hidden')
+                        .css('border-bottom', '1px solid black')
+                        .css('border-bottom-left-radius', '7px')
+                        .css('border-bottom-right-radius', '7px')
+                    })
             }
         });
     }
