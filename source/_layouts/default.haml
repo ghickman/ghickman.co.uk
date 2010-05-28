@@ -1,85 +1,36 @@
-!!!
-%html
-  %head
-    %title= page.title
+= include 'header.haml'
+
+.wrapper
+  - unless page.title == 'Portfolio' or page.title == 'About'
+    #sidebar
+      .sidebar_title.categories
+        %h3 Categories
+      .sidebar_content.categories
+        %ul
+          - site.categories.sort.each do |tag, post|
+            %li
+              %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}== #{category_capitalize(tag)}
+  
+      .sidebar_title.archives
+        %h3 Archives
+      .sidebar_content.archives
+        %ul
+          - site.collated_posts.each do |year|
+            %li.outer
+              %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
+            - year.last.to_a.reverse.each do |month|
+              %li.inner
+                %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
+  
+      .sidebar_title.twitter
+        %h3 Twitter
+      .sidebar_content.twitter
+        %ul
+          %li
+            %a{:href=>''} A Tweet!
+    #content== #{content}
+    .clr
+  - else
+    #no_post== #{content}
     
-    %meta{:charset=>'UTF-8'}
-
-    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/master.css'}
-    %script{:type=>'text/javascript', :src=>'/javascript/jquery.js'}
-    %script{:type=>'text/javascript', :src=>'/javascript/sidebar.js'}
-
-  %body
-    #header
-      #logo.wrapper
-        %a{:href=>'/', :title=>'Home'}
-          %img{:src=>'/images/logo.png'}
-
-    #menu
-      .wrapper
-        %ul#menu_bar
-          %li
-            .menu_left
-            .menu_middle
-              %a{:href=>'/', :title=>'Home'} blog
-            .menu_right
-          %li
-            .menu_left
-            .menu_middle
-              %a{:href=>'/portfolio.html', :title=>'Portfolio'} portfolio
-            .menu_right
-          %li
-            .menu_left
-            .menu_middle
-              %a{:href=>'/about.html', :title=>'About'} about
-            .menu_right
-        #search.right
-          %form{:action => "http://www.google.com/cse", :id => "cse-search-box"}
-            %div
-              %input{:name => "cx", :type => "hidden", :value => "003452776527504715988:fpri-ti1_v0"}
-              %input{:name => "ie", :type => "hidden", :value => "UTF-8"}
-              %input{:name => "q", :id => "q", :type => "text", :size => "26"}
-
-    .wrapper
-      - unless page.title == 'Portfolio' or page.title == 'About'
-        #sidebar
-          .sidebar_title.categories
-            %h3 Categories
-          .sidebar_content.categories
-            %ul
-              - site.categories.sort.each do |tag, post|
-                %li
-                  %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}== #{category_capitalize(tag)}
-      
-          .sidebar_title.archives
-            %h3 Archives
-          .sidebar_content.archives
-            %ul
-              - site.collated_posts.each do |year|
-                %li.outer
-                  %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
-                - year.last.to_a.reverse.each do |month|
-                  %li.inner
-                    %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
-      
-          .sidebar_title.twitter
-            %h3 Twitter
-          .sidebar_content.twitter
-            %ul
-              %li
-                %a{:href=>''} A Tweet!
-        #content== #{content}
-        .clr
-      - else
-        #no_post== #{content}
-    #footer
-      .wrapper
-        #jekyll.left
-          Powered by 
-          %a{:href=>"http://github.com/richguk/jekyll", :title=>"Jekyll"} Jekyll
-        #copyright.left Copyright &copy; 2010 George Hickman, All Rights Reserved
-        #feed.right
-          %a{:href=>"http://feeds.feedburner.com/ghickman", :title=>"Ghickman.co.uk's Feed"}
-            %img{:src=>"/images/feed.png", :alt=>"RSS Feed"}
-        #contact.right
-          %a{:href=>"contact", :title=>"Contact Me"} Contact
+= include 'footer.haml'
