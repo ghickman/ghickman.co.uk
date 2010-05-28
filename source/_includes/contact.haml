@@ -1,0 +1,24 @@
+#contact
+  %form{:action=>"", :method=>"post"}
+    #name
+      %label{:for=>"name"} Name:
+      %input{:type=>"text", :name=>"name", :id=>"name", :class=>('error' if !@errors[:name].nil?)}
+  
+    #email
+      %label{:for=>"mail"} Email:
+      %input{:type=>"text", :id=>"mail", :name=>"mail", :class=>('error' if !@errors[:mail].nil?)}
+    
+    #subject
+      %label{:for=>"subject"} Subject:
+      %input{:type=>"text", :id=>"subject", :name=>"subject"}
+    
+    #message
+      %label{:for=>"message"} Message:
+      %textarea{:id=>"message", :name=>"message", :class=>('error' if !@errors[:message].nil?)}
+  
+    %input{:type=>"submit", :value=>"Send"}
+    
+#info
+  #twitter
+  
+  #irc
