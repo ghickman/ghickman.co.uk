@@ -26,6 +26,6 @@ namespace :services do
 end
 
 file '_site/index.html' => FileList['source/_includes/*.html'] do
-  sh '/opt/rubyee/bin/jekyll'
+  sh '/usr/bin/jekyll'
 end
 task :jekyll => '_site/index.html'
