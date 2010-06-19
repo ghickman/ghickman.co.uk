@@ -1,33 +1,38 @@
 #contact
   %form{:action=>"", :method=>"post"}
-    #name
-      %label{:for=>"name"} Name:
-      %input{:type=>"text", :name=>"name", :id=>"name", :class=>('error' if !@errors[:name].nil?)}
-    - if !@errors[:name].nil?
-      .error
-        %p=@errors[:name]
-  
-    #email
-      %label{:for=>"mail"} Email:
-      %input{:type=>"text", :id=>"mail", :name=>"mail", :class=>('error' if !@errors[:mail].nil?)}
-    - if !@errors[:mail].nil?
-      .error
-        %p=@errors[:mail]
+  #name.row
+    %label{:for=>"name"} Name:
+    %input{:type=>"text", :name=>"name", :id=>"name", :class=>('error' if !@errors[:name].nil?)}
+  - if !@errors[:name].nil?
+    .error
+      %p=@errors[:name]
+
+  #email.row
+    %label{:for=>"mail"} Email Address:
+    %input{:type=>"text", :id=>"mail", :name=>"mail", :class=>('error' if !@errors[:mail].nil?)}
+  - if !@errors[:mail].nil?
+    .error
+      %p=@errors[:mail]
     
-    #subject
-      %label{:for=>"subject"} Subject:
-      %input{:type=>"text", :id=>"subject", :name=>"subject"}
-    
-    #message
-      %label{:for=>"message"} Message:
-      %textarea{:id=>"message", :name=>"message", :class=>('error' if !@errors[:message].nil?)}
-    - if !@errors[:message].nil?
-      .error
-        %p=@errors[:message]
-  
-    %input{:type=>"submit", :value=>"Send"}
-    
+  #message.row
+    %label{:for=>"message"} Message:
+    %textarea{:id=>"message", :name=>"message", :class=>('error' if !@errors[:message].nil?)}
+  - if !@errors[:message].nil?
+    .error
+      %p=@errors[:message]
+  .clr
+  %input{:type=>"submit", :value=>"Send"}
+
 #info
   #twitter
-  
+    %p
+      I'm also available on
+      %a{:href=>"http://twitter.com/ghickman"} Twitter
+      if you're looking for extremely short ramblings.
   #irc
+    %p I'm usually available on freenode.net and quakenet.org as GHickman and tend to lurk around #python and #django.
+  
+  #cv
+    %p If you'd like to take a look at my CV I'm happy to respond to requests!
+
+.clr
