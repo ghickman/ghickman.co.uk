@@ -15,7 +15,7 @@ end
 get '/contact' do
   @errors={}
   haml :contact
-  # ;laksdjfasdfaasdasdad
+  # ;laksdjfasdfaasdasdadasd
 end
 
 post '/contact' do
