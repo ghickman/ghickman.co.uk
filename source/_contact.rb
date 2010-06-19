@@ -19,15 +19,14 @@ end
 
 post '/contact' do
   @errors={}
-  @errors[:name] = 'name error!' if params[:name].nil? || params[:name].empty?
-  @errors[:mail] = 'mail error!' if params[:mail].nil? || params[:mail].empty?
-  @errors[:message] = 'message error!' if params[:message].nil? || params[:message].empty?
+  @errors[:name] = 'Please enter your name so I know who sent me a message.' if params[:name].nil? || params[:name].empty?
+  @errors[:mail] = 'How can I can reply without an email address?!' if params[:mail].nil? || params[:mail].empty?
+  @errors[:message] = 'No message?! Sounds like heavy breathing on the phone to me.' if params[:message].nil? || params[:message].empty?
   
   if @errors.empty?
     Pony.mail(:to=>'george@ghickman.co.uk', :from=>"#{params[:mail]}", :subject=>"#{params[:subject]}", :body=>"#{params[:message]}")
     redirect 'http://localhost:4000/index.html'
   else
-    puts 'contact'
     haml :contact
   end
 end
