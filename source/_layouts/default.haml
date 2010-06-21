@@ -18,7 +18,7 @@
           - site.collated_posts.each do |year|
             %li.outer
               %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
-            - year.last.to_a.reverse.each do |month|
+            - year.last.to_a.sort.each do |month|
               %li.inner
                 %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}== #{to_month(month.first)}
   
