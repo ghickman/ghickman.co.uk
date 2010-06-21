@@ -1,6 +1,8 @@
 !!!
 %html
   %head
+    %title GHickman.co.uk
+    
     %meta{:charset=>'UTF-8'}
 
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/master.css'}
@@ -26,11 +28,11 @@
             .menu_middle
               %a{:href=>'/portfolio.html', :title=>'Portfolio'} portfolio
             .menu_right
-          %li
-            .menu_left
-            .menu_middle
-              %a{:href=>'/about.html', :title=>'About'} about
-            .menu_right
+          / %li
+          /   .menu_left
+          /   .menu_middle
+          /     %a{:href=>'/about.html', :title=>'About'} about
+          /   .menu_right
         #search.right
           %form{:action => "http://www.google.com/cse", :id => "cse-search-box"}
             %div
