@@ -1,7 +1,7 @@
 require 'rake'
 require 'spec/rake/spectask'
 
-task :deploy => ['services:twitter', 'services:flickr', :jekyll]
+task :deploy => ['services:twitter', :jekyll]
 
 namespace :services do
   desc 'Generate Twitter include file'
@@ -26,6 +26,6 @@ namespace :services do
 end
 
 file '_site/index.html' => FileList['source/_includes/*.html'] do
-  sh '/usr/bin/jekyll'
+  sh '/opt/rubyee/bin/jekyll'
 end
 task :jekyll => '_site/index.html'
