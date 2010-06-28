@@ -25,7 +25,7 @@ post '/contact' do
   
   if @errors.empty?
     Pony.mail(:to=>'george@ghickman.co.uk', :from=>"#{params[:mail]}", :subject=>"#{params[:subject]}", :body=>"#{params[:message]}")
-    redirect 'http://localhost:4000/index.html'
+    redirect '/index.html'
   else
     haml :contact
   end

@@ -1,27 +1,27 @@
 #contact
-  %form{:action=>"", :method=>"post"}
-  #name.row
-    %label{:for=>"name"} Name:
-    %input{:type=>"text", :name=>"name", :id=>"name", :class=>('error' if !@errors[:name].nil?)}
-  - if !@errors[:name].nil?
-    .error
-      %p=@errors[:name]
+  %form{:method=>"post"}
+    #name.row
+      %label{:for=>"name"} Name:
+      %input{:type=>"text", :name=>"name", :id=>"name", :class=>('error' if !@errors[:name].nil?)}
+    - if !@errors[:name].nil?
+      .error
+        %p=@errors[:name]
 
-  #email.row
-    %label{:for=>"mail"} Email Address:
-    %input{:type=>"text", :id=>"mail", :name=>"mail", :class=>('error' if !@errors[:mail].nil?)}
-  - if !@errors[:mail].nil?
-    .error
-      %p=@errors[:mail]
+    #email.row
+      %label{:for=>"mail"} Email Address:
+      %input{:type=>"text", :id=>"mail", :name=>"mail", :class=>('error' if !@errors[:mail].nil?)}
+    - if !@errors[:mail].nil?
+      .error
+        %p=@errors[:mail]
     
-  #message.row
-    %label{:for=>"message"} Message:
-    %textarea{:id=>"message", :name=>"message", :class=>('error' if !@errors[:message].nil?)}
-  - if !@errors[:message].nil?
-    .error
-      %p=@errors[:message]
-  .clr
-  %input{:type=>"submit", :value=>"Send"}
+    #message.row
+      %label{:for=>"message"} Message:
+      %textarea{:id=>"message", :name=>"message", :class=>('error' if !@errors[:message].nil?)}
+    - if !@errors[:message].nil?
+      .error
+        %p=@errors[:message]
+    .clr
+    %input{:type=>"submit", :value=>"Send"}
 
 #info
   #twitter
