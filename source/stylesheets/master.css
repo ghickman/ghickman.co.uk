@@ -248,7 +248,7 @@ p, li, .feedback {
 }
 
 img {
-    margin: 5px 5px 0;
+/*    margin: 5px 5px 0;*/
 }
 
 .post {
@@ -279,30 +279,31 @@ img {
     padding: 0 10px;
 }
 
-.figure {
+/** Photos */
+div.photo {
     border: 1px solid black;
-    margin: 0 5px 0 0;
-    padding: 0 0 4px 0;
+    padding: 3px;
+    margin: 3px;
 }
 
-.figure img {
-    margin: 0;
+p.photo a, img.cc {}
+
+p.photo {
+    margin: 3px 3px 1px 5px;
+    
 }
 
-.figure p {
-    background-color: #043673;
-    height: 20px;
-    margin: -4px 0;
-    padding: 0 0 2px 0;
+.photo a {
+    vertical-align: baseline;
+    display: inline-block;
 }
 
 img.cc {
-    margin: 3px 0 0 3px;
+    line-height: 1.5em;
+    display: inline;
+    vertical-align: baseline;
 }
-
-.figure p a {
-    font-weight: bold;
-}
+/*-----**/
 
 /** info */
 .info {
