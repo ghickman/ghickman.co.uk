@@ -68,6 +68,20 @@ h3 {
 h4 {
     font-size: 14px;
 }
+
+h1 a {
+    color: #e6911b;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.4em;
+}
+
+p, li, .feedback {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
 /*---------------------------------------------------------------------------**/
 
 
@@ -233,31 +247,12 @@ h4 {
     width: 730px;
 }
 
-h1 a {
-    color: #e6911b;
-}
-
-p {
-    margin: 10px 0;
-    line-height: 1.4em;
-}
-
-p, li, .feedback {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
-}
-
-img {
-/*    margin: 5px 5px 0;*/
-}
-
 .post {
     margin-bottom: 20px;
 }
 
 .post ul {
     padding: 0 0 10px 25px;
-    
 }
 /*---------------------------------------------------------------------------**/
 
