@@ -15,7 +15,7 @@
         %h3 Archives
       .sidebar_content.archives
         %ul
-          - site.collated_posts.each do |year|
+          - site.collated_posts.to_a.sort.reverse.each do |year|
             %li.outer
               %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}== #{year.first}
             - year.last.to_a.sort.each do |month|
