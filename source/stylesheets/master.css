@@ -416,7 +416,7 @@ img.left {
   margin: 0 20px 0;
 }
 
-.row {
+.input {
   float: right;
   margin: 20px 0 0;
 }
@@ -431,6 +431,7 @@ img.left {
 }
 
 #contact input[type="text"],
+#contact input[type="email"],
 #contact textarea {
   border: 2px solid #4f4f4f;
   font-size: 18px;
@@ -438,14 +439,16 @@ img.left {
   width: 400px;
 }
 
-#contact textarea {
-  height: 150px;
-}
-
 #contact input[type="submit"] {
   float: right;
   margin: 10px 0 0;
   width: auto;
+}
+
+#contact label:after {
+  color: red;
+  content: '*';
+  display: inline;
 }
 
 /** errors */
@@ -456,17 +459,20 @@ img.left {
   width: 400px;
 }
 
-input.error, textarea.error {
+input.error,
+textarea.error {
   border: 2px solid red;
 }
 
 div.error {
-  background-color: red;
+  color: red;
+  float: right;
+  margin: 2px 5px;
 }
 
-.error p {
-  color: black;
-  margin: 2px;
+div.error p {
+  margin: 0;
+  padding: 2px 3px;
   text-align: center;
 }
 /*--------------**/
