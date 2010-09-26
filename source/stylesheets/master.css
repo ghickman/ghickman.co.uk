@@ -109,6 +109,7 @@ p, li, .feedback {
 }
 
 #menu_bar {
+  display: inline-block;
   margin: 0 0 0 5px;
   padding: 7px 0 0;
 }
@@ -155,13 +156,17 @@ p, li, .feedback {
 
 
 /** SEARCH */
+#search {
+  display: inline-block;
+  margin: 10px 20px 0;
+}
+
 #search input#q {
   background: url('/images/search.png') no-repeat left center;
   border-radius: 12px;
   border: none;
   font-size: 13px;
-  margin: 3px 20px 0 0;
-  padding: 3px 5px 0 20px;
+  padding: 3px 5px 2px 20px;
 }
 /*---------------------------------------------------------------------------**/
 
@@ -236,8 +241,9 @@ p, li, .feedback {
 
 /** CONTENT */
 #content {
-	padding: 0 20px;
 	float: left;
+	margin-top: 10px;
+	padding: 0 20px;
   width: 730px;
 }
 
