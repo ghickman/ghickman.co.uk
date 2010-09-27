@@ -3,7 +3,7 @@ layout: default
 title: Archives for %str_month%, %year%
 ---
 %h1==Archives for #{to_month(page.month)}, #{page.year}
-- page.archive_posts.each do |post|
+- page.archive_posts.reverse.each do |post|
   .post
     .title
       %h1
