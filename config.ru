@@ -3,8 +3,8 @@ require 'source/_contact'
 set :run, false
 set :environment, :production
 
-FileUtils.mkdir_p 'log' unless File.exists?('log')
-log = File.new("log/sinatra.log", "a")
+FileUtils.mkdir_p 'logs' unless File.exists?('logs')
+log = File.new("logs/sinatra.log", "a")
 $stdout.reopen(log)
 $stderr.reopen(log)
 
