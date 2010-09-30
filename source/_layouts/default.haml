@@ -49,7 +49,7 @@
             %ul
               - site.categories.sort.each do |tag, post|
                 %li
-                  %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}=category_capitalize(tag)
+                  %a{:href=>"/category/#{category_slug(tag)}/index.html", :title=>"#{category_capitalize(tag)}"}=category_capitalize(tag)
   
           .sidebar_title.archives
             %h3 Archives
@@ -57,10 +57,10 @@
             %ul
               - site.collated_posts.to_a.sort.reverse.each do |year|
                 %li.outer
-                  %a{:href=>"/#{year.first}/", :title=>"#{year.first}"}=year.first
+                  %a{:href=>"/#{year.first}/index.html", :title=>"#{year.first}"}=year.first
                 - year.last.to_a.sort.each do |month|
                   %li.inner
-                    %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/", :title=>"#{to_month(month.first)}"}=to_month(month.first)
+                    %a{:href=>"/#{year.first}/#{to_month_i(month.first)}/index.html", :title=>"#{to_month(month.first)}"}=to_month(month.first)
   
           / .sidebar_title.twitter
           /   %h3 Twitter
