@@ -189,6 +189,7 @@ p, li, .feedback {
 .sidebar_title, .sidebar_content {
   border-left: 1px solid black;
   border-right: 1px solid black;
+  -moz-box-shadow: 5px 5px 5px #888;
   -webkit-box-shadow: 5px 5px 5px #888;
 }
 
@@ -225,6 +226,14 @@ p, li, .feedback {
   margin: 0 0 0 20px;
 }
 
+.hidden {
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-bottomright: 7px;
+}
+
 .sidebar_content.categories a, .sidebar_content.archives a {
   padding: 2px 0 2px;
 }
@@ -235,6 +244,10 @@ p, li, .feedback {
 
 .sidebar_content.archives li {
   background: url('/images/archive2.png') no-repeat top left;
+}
+
+.sidebar_content.blogroll li {
+  background: url('/images/http-icon.png') no-repeat top left;
 }
 /*---------------------------------------------------------------------------**/
 
