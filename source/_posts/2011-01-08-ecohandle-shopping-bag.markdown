@@ -6,7 +6,7 @@ categories:
   - misc
 ---
 <div class="right photo">
-    <img src="/images/posts/2011-01-08-ecohandle-shopping-bag/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag">
+    <img src="https://s3-eu-west-1.amazonaws.com/ghickman/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag">
 </div>
 
 This year's Christmas Haul brought me an interesting little gem: The Ecohandle Shopping Bag. I got round to giving it a bit of a go today when I did a veg shop and thought doing a review on it would be fun.
