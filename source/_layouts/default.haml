@@ -59,7 +59,7 @@
               - site.categories.sort.each do |tag, post|
                 %li
                   %a{:href => "/category/#{category_slug(tag)}/index.html", :title => "#{category_capitalize(tag)}"}=category_capitalize(tag)
-  
+
           .sidebar_title.archives
             %h3 Archives
           .sidebar_content.archives
@@ -70,9 +70,9 @@
                 - year.last.to_a.sort.each do |month|
                   %li.inner
                     %a{:href => "/#{year.first}/#{to_month_i(month.first)}/index.html", :title => "#{to_month(month.first)}"}=to_month(month.first)
-  
+
           .sidebar_title.blogroll
-            %h3 Blog Roll
+            %h3 Link Roll
           .sidebar_content.blogroll
             %ul
               %li
@@ -98,11 +98,11 @@
         .clr
       - else
         #no_post== #{content}
-    
+
     #footer
       .wrapper
         #jekyll.left
-          Powered by 
+          Powered by
           %a{:href => "http://github.com/richguk/jekyll", :title => "Jekyll"} Jekyll
         #copyright.left Copyright &copy; 2010 George Hickman, All Rights Reserved
         #feed.right
