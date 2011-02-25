@@ -15,7 +15,7 @@
     %meta{:name => 'keywords', :content => 'george hickman, george, hickman, python, travelling, coding, software, ruby, php, development'}
     %meta{:name => 'robots', :content => 'ALL'}
 
-    %script{:type => 'text/javascript', :src => '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => '//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'}
     %script{:type => 'text/javascript', :src => '/javascript/sidebar.js'}
 
   %body
@@ -70,6 +70,23 @@
                 - year.last.to_a.sort.each do |month|
                   %li.inner
                     %a{:href => "/#{year.first}/#{to_month_i(month.first)}/index.html", :title => "#{to_month(month.first)}"}=to_month(month.first)
+
+          .sidebar_title.linkroll
+            %h3 Around the Web
+          .sidebar_content.linkroll
+            %ul
+              %li
+                %a{:href => 'https://github.com/ghickman'}
+              %li
+                %a{:href => 'http://stackoverflow.com/users/158304/ghickman'}
+              %li
+                %a{:href => 'http://superuser.com/users/51835/ghickman'}
+              %li
+                %a{:href => 'https://twitter.com/ghickman'}
+              %li
+                %a{:href => 'https://www.amazon.co.uk/wishlist/V6J2GGDHIQ1W'}
+              %li
+                %a{:href => 'https://bitbucket.org/ghickman'}
 
           .sidebar_title.blogroll
             %h3 Link Roll
