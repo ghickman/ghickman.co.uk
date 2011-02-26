@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
 
   slide('.categories');
   slide('.archives');
+  slide('.linkroll');
   slide('.blogroll');
   slide('.twitter');
 });

@@ -239,15 +239,24 @@ p, li, .feedback {
 }
 
 .sidebar_content.categories li {
-  background: url('/images/tag.png') no-repeat top left;
+  background: url('/images/sidebar/tag.png') no-repeat top left;
 }
 
 .sidebar_content.archives li {
-  background: url('/images/archive2.png') no-repeat top left;
+  background: url('/images/sidebar/archive.png') no-repeat top left;
 }
 
 .sidebar_content.blogroll li {
-  background: url('/images/http-icon.png') no-repeat top left;
+  background: url('/images/sidebar/http-icon.png') no-repeat top left;
+}
+
+.linkroll li {
+  float: left;
+  padding-left: 7px;
+}
+
+.linkroll li img {
+  width: 48px;
 }
 /*---------------------------------------------------------------------------**/
 
