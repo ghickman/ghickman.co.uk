@@ -1,16 +1,4 @@
-/** reset CSS for all browsers*/
-* {
-  padding:0;
-  margin:0;
-}
-
-h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, 
-ul, ol, dl, fieldset, address, li, dd {margin:0;}
-fieldset {padding: .5em;}
-
-select option {padding: 0 5px;}
-
-.hide, .print-logo, .close-button {display:none;}
+/** GENERIC SECTIONS */
 .left {float:left;}
 .right {float:right;}
 .clr {clear:both; height:1px; font-size:1px; line-height:1px;}
@@ -18,17 +6,7 @@ select option {padding: 0 5px;}
 .no_margin_right{margin-right:0;}
 .no_margin_bottom{margin-bottom:0;}
 .no_margin_left{margin-left:0;}
-a img {border:none;}
 
-/* mac hide\*/
-html, body {
-  height: 100%
-}
-/* end hide */
-/*---------------------------------------------------------------------------**/
-
-
-/** GENERIC SECTIONS */
 .wrapper {
 	width: 999px;
 	margin: 0 auto;
