@@ -397,6 +397,31 @@ img.left {
 
 
 /** ABOUT */
+#pic {
+  clear: right;
+  margin-top: 20px;
+}
+
+#pic h1 {
+  display: inline;
+}
+
+#pic img {
+  float: right;
+}
+
+#me {
+  margin: 0 20px;
+}
+
+#django {
+  margin: 20px auto;
+  width: 250px;
+}
+
+#django p {
+  font-weight: bold;
+}
 /*--------------------------------------------------------------------------**/
 
 
