@@ -340,6 +340,13 @@ ul.post_tags {
 .post_tags li img {
   margin: 0 0 -3px;
 }
+
+.info .comments {
+  color: #e6aa1b;
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 8px;
+}
 /*-----**/
 
 /** Code */
