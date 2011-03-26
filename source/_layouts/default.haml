@@ -6,6 +6,7 @@
     %link{:rel => 'shortcut icon', :href => '/favicon.ico', :type => 'image/x-icon'}
     %link{:rel => 'openid.server', :href => 'http://www.myopenid.com/server'}
     %link{:rel => 'openid.delegate', :href => 'http://ghickman.myopenid.com/'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => '/stylesheets/reset.css'}
     %link{:rel => 'stylesheet', :type => 'text/css', :href => '/stylesheets/master.css'}
 
     %meta{:"http-equiv" => 'Content-type', :content => 'text/html; charset=utf-8'}
@@ -15,7 +16,7 @@
     %meta{:name => 'keywords', :content => 'george hickman, george, hickman, python, travelling, coding, software, ruby, php, development'}
     %meta{:name => 'robots', :content => 'ALL'}
 
-    %script{:type => 'text/javascript', :src => '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => '//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'}
     %script{:type => 'text/javascript', :src => '/javascript/sidebar.js'}
 
   %body
@@ -71,6 +72,30 @@
                   %li.inner
                     %a{:href => "/#{year.first}/#{to_month_i(month.first)}/index.html", :title => "#{to_month(month.first)}"}=to_month(month.first)
 
+          .sidebar_title.linkroll
+            %h3 Around the Web
+          .sidebar_content.linkroll
+            %ul
+              %li
+                %a{:href => 'https://github.com/ghickman'}
+                  %img{:src => '/images/sidebar/github.png', :alt => 'Github'}
+              %li
+                %a{:href => 'http://stackoverflow.com/users/158304/ghickman'}
+                  %img{:src => '/images/sidebar/stackoverflow.png', :alt => 'StackOverflow'}
+              %li
+                %a{:href => 'http://superuser.com/users/51835/ghickman'}
+                  %img{:src => '/images/sidebar/superuser.png', :alt => 'SuperUser'}
+              %li
+                %a{:href => 'https://twitter.com/ghickman'}
+                  %img{:src => '/images/sidebar/twitter.png', :alt => 'Twitter'}
+              %li
+                %a{:href => 'https://www.amazon.co.uk/wishlist/V6J2GGDHIQ1W'}
+                  %img{:src => '/images/sidebar/amazon.png', :alt => 'Amazon Wish List'}
+              %li
+                %a{:href => 'https://bitbucket.org/ghickman'}
+                  %img{:src => '/images/sidebar/bitbucket.png', :alt => 'BitBucket'}
+            .clr
+
           .sidebar_title.blogroll
             %h3 Link Roll
           .sidebar_content.blogroll
@@ -83,8 +108,6 @@
                 %a{:href => 'http://abermtb.co.uk/'} Aber Uni MTB
               %li
                 %a{:href => 'http://icodesolutions.co.uk/'} iCode Solutions
-              %li
-                %a{:href => 'http://jamesturnbull.org/'} James Turnbull
               %li
                 %a{:href => 'http://rotacoo.com/'} Rotacoo
 
@@ -110,3 +133,21 @@
             %img{:src => "/images/feed.png", :alt => "RSS Feed"}
         #contact_link.right
           %a{:href => "/contact", :title => "Contact Me"} Contact
+
+    - if page.post_page?
+      %script{:type => 'text/javascript', :src => 'http://disqus.com/forums/ghickman/embed.js'}
+
+    - if page.front_page?
+      :javascript
+        (function() {
+          var links = document.getElementsByTagName('a');
+          var query = '?';
+          for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+              query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+          }
+          document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/ghickman/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+
+    %script{:type => "text/javascript", :src => '/javascript/analytics.js'}
