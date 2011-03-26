@@ -363,6 +363,7 @@ code {
 /* Gists */
 .line {
   display: block;
+  margin: 4px 0;
 }
 
 .gist-meta {
