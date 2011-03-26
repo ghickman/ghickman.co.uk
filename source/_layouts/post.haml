@@ -13,3 +13,8 @@ post_page: true
           %li
             %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}=category_capitalize(tag)
   .body= content
+
+  #comments
+    #disqus_thread
+      %noscript <a href="http://disqus.com/forums/ghickman/?url=ref">View the discussion thread.</a>
+      %a{:href => 'http://disqus.com', :class => 'dsq-brlink'} blog comments powered by <span class="logo-disqus">Disqus</span>
