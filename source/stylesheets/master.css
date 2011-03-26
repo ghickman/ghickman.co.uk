@@ -280,6 +280,10 @@ div.photo {
   margin: 3px;
 }
 
+div.photo.left {
+  margin-right: 15px;
+}
+
 p.photo {
   margin: 3px 3px 1px 5px;
 }
