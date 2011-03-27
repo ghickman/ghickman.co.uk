@@ -341,7 +341,7 @@ ul.post_tags {
   margin: 0 0 -3px;
 }
 
-.info .comments {
+.comments {
   color: #e6aa1b;
   display: inline-block;
   font-size: 13px;
@@ -517,59 +517,20 @@ div.error p {
 
 
 /** COMMENTS */
-.comment {
-  margin: 15px 0 0 0;
-  padding: 3px 0 3px 3px;
+#comments {
+  padding: 0 10px;
 }
 
-.comment p {
-  margin: 3px 0;
+#comments .dsq-brlink {
+  font-size: 13px;
 }
 
-.even {
-  background: #C6DEFF;
+#comments button.dsq-button {
+  padding: 5px !important;
 }
 
-#postcomment {
-  margin: 10px 0 0 0;
-}
-
-#commentform #submit {
-  float: right;
-  border: 2px outset buttonface;
-}
-
-#commentform #author, #commentform #email, #commentform #url, #commentform textarea {
-  padding: .2em;
-}
-
-#commentform input, #commentform textarea {
-  border: 2px solid #BFBFBF;
-}
-
-#commentform input:focus, #commentform textarea:focus {
-  border: 2px solid #4f4f4f;
-}
-
-#commentform textarea {
-  width: 100%;
-}
-
-#commentlist {
-  list-style-type: none;
-}
-
-#commentlist li ul {
-  border-left: 1px solid #ddd;
-  font-size: 110%;
-  list-style-type: none;
-}
-
-#commentlist li .avatar {
-  float: right;
-  margin-right: 25px;
-  border: 1px dotted #ccc;
-  padding: 2px;
+#comments button.dsq-button-small {
+  padding: 4px !important;
 }
 /*---------------------------------------------------------------------------**/
 
