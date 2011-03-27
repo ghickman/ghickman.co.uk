@@ -16,5 +16,5 @@ front_page: true
             %li
               %a{:href=>"/category/#{tag}", :title=>"#{tag}"}=category_capitalize(tag)
         - if !post.data.disable_comments?
-          %a.comments{:href => "#{post.url}/#disqus_thread"}
+          %a.comments{:href => "#{post.url}#disqus_thread"}
     .body= post.content
