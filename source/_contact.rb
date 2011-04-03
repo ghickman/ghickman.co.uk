@@ -12,6 +12,14 @@ class Page
   def title
     'Contact'
   end
+
+  def post_page?
+    false
+  end
+
+  def front_page?
+    false
+  end
 end
 
 def contact
