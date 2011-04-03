@@ -6,6 +6,7 @@ categories:
   - coding
   - projects
   - ruby
+  - sinatra
 ---
 <div class="right photo">
     <img src="https://s3-eu-west-1.amazonaws.com/ghickman/jekyll.jpg" width="300" height="169" title="Jekyll" alt="James Nesbitt in Jekyll">
