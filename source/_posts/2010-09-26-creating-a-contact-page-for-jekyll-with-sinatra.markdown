@@ -30,9 +30,9 @@ My test app is hosted on [Github](http://github.com/ghickman/jekyll_contact) for
 
 {{ 463598 | gist: 'default.haml' }}
 
-Nothing special here, just a bog standard Jekyll layout (well almost, this one is in HAML as I use [RickGuk's Jekyll fork](http://github.com/richguk/jekyll)) with 
+Nothing special here, just a bog standard Jekyll layout (well almost, this one is in HAML as I use [RickGuk's Jekyll fork](http://github.com/richguk/jekyll)) with a HAML interpreter bolted on.
 
-The contact page itself is nothing special. An HTML(5) form that displays some extra bits if we find errors. The test app is done using some HTML 5 specific elements like the email input box but there's no big leaps from HTML 4.
+The contact page itself is an HTML(5) form that displays some extra bits if we find errors. The test app is done using some HTML 5 specific elements like the email input box but there's no big leaps from HTML 4.
 
 {{ 463598 | gist: 'contact.haml' }}
 
