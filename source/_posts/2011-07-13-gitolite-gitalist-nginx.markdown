@@ -27,53 +27,51 @@ I followed the [root install instructions](http://sitaramc.github.com/gitolite/d
 
 and then run the `su - git` command with `sudo` so you can enter your own password.
 
+Now push your projects to the server!
+
 ## Gitalist
-### Installation
+### Installation (CPAN)
+After some fruitless attempts to install from source and [bootstrap](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#BOOTSTRAPPING) I turned to the IRC channel where a kindly internet hero pointed me at CPAN as the "Way to Go".
+
+On different systems I found CPAN to be installed in different states. Run `cpan` to see where you need to start from. If you're dropped into a shell straight away then you're probably set to go so jump to [Already Configured](#already-configured), otherwise you should get asked a bunch of questions to set your default options. Set them all to default (hit enter) except `prerequisites_policy` which I changed to `follow`. After the proxies section you'll be asked for a CPAN url mirror, local ones can be found [here](http://www.cpan.org/SITES.html).
+
+<h4 id="already-configured">Already Configured</h4>
+Still in the cpan shell type:
+
+`o conf prerequisites_policy follow`
+
+then
+
+`o conf commit`
+
+This sets the `prerequisites_policy` to `follow` the default option, which saves you from hitting enter everytime CPAN discovers a dependency, or a dependency on a dependency and so on...
 
 <!-- http://twitter.com/ghickman/statuses/89982230209904641 -->
 <!-- http://twitter.com/ghickman/statuses/89982230209904641 --> <style type='text/css'>.bbpBox89982230209904641 {background:url(http://a1.twimg.com/images/themes/theme2/bg.gif) #C6E2EE;padding:20px;} p.bbpTweet{background:#fff;padding:10px 12px 10px 12px;margin:0;min-height:48px;color:#000;font-size:18px !important;line-height:22px;-moz-border-radius:5px;-webkit-border-radius:5px} p.bbpTweet span.metadata{display:block;width:100%;clear:both;margin-top:8px;padding-top:12px;height:40px;border-top:1px solid #fff;border-top:1px solid #e6e6e6} p.bbpTweet span.metadata span.author{line-height:19px} p.bbpTweet span.metadata span.author img{float:left;margin:0 7px 0 0px;width:38px;height:38px} p.bbpTweet a:hover{text-decoration:underline}p.bbpTweet span.timestamp{font-size:12px;display:block}</style> <div class='bbpBox89982230209904641'><p class='bbpTweet'>"Module X is required, shall I install it?" Well… yea…<span class='timestamp'><a title='Sun Jul 10 09:00:10 +0000 2011' href='http://twitter.com/ghickman/statuses/89982230209904641'>less than a minute ago</a> via <a href="http://itunes.apple.com/us/app/twitter/id409789998?mt=12" rel="nofollow">Twitter for Mac</a> <a href='http://twitter.com/intent/favorite?tweet_id=89982230209904641'><img src='http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png' /> Favorite</a> <a href='http://twitter.com/intent/retweet?tweet_id=89982230209904641'><img src='http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png' /> Retweet</a> <a href='http://twitter.com/intent/tweet?in_reply_to=89982230209904641'><img src='http://si0.twimg.com/images/dev/cms/intents/icons/reply.png' /> Reply</a></span><span class='metadata'><span class='author'><a href='http://twitter.com/ghickman'><img src='http://a0.twimg.com/profile_images/1258522839/gravatar_normal.jpeg' /></a><strong><a href='http://twitter.com/ghickman'>George Hickman</a></strong><br/>ghickman</span></span></p></div> <!-- end of tweet -->
 
-#### CPAN
-'CPAN opens the First Time Setup'
+Thanks to whoever helped me on IRC with this one, and sorry I don't have a record of your name. Drop me a message if you see this.
 
-Allow it to do the defaults if it asks!
+Back in your favourite flavour of shell it's time for some installations! First up is [YAML](http://yaml.org) which doesn't seem to be required, but every install complains that it's not there because all the package descriptors seem to be in YAML. Installing packages from CPAN is as easy as: `cpan YAML`
 
-First time setup - follow the instructions, following defaults. Change `prerequisites_policy` to `follow`.
-
-After the proxies section I was asked for a CPAN url mirror. http://www.cpan.org/SITES.html
-
-'CPAN Already Configured'
-
-Tell cpan to agree to all the default options when asking about new modules to install. Thanks to whoever helped me on IRC with this one, and sorry I don't have a record of your name!
-
-`cpan` to open the shell
-
-`o conf` to show the conf values available -> looking for the `prerequisites_policy`
-
-`o conf prerequisites_policy follow` -> tells cpan to accept the default options when installing.
-
-`o conf commit`
-
-
-`cpan YAML` -> otherwise it complains on every dependency install
+When that's done, it's time for Gitalist finally.
 
 `cpan Gitalist`
 
-X is needed temporarily during building or testing. Do you want to install it permanently? [yes] - Yes
+Unfortunately some questions still come up, so it's not a completely unattended installation and did take quite a while for me (at least an hour). Default answers again seem fine here.
 
-Some questions still come up unfortunately, so it's not a completely unattended installation and did take quite a while for me. I answered yes to everything that came up and it seemed to install fine.
+Test the install by running `sudo gitalist_server.pl` and having a look at `http://<server>:3000/`.
 
-copied the conf from the git checkout because it couldn't find the one that CPAN installed.
+If you get an error about the location of the config then try the methods suggested [here](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#FOR_CPAN_INSTALLS). I found none of these worked for me and it was easier to grab the source from [Github](https://github.com/broquaint/Gitalist) and copy `gitalist.conf` to `/usr/local/share/perl/5.10.x/Gitalist/`.
 
-Test with `gitalist_server.pl --repo_dir /path/to/repos`
+### Combining with Gitolite
+Combining Gitolite and Gitalist essentially means pointing Gitalist at the repositories directory of Gitolite. Since this is running under your `git` user it makes life a lot easier if your Gitalist has access to read your Gitolite repositories
 
-Probably see nothing - see the next section
-
-### Combining Gitosis
 Gitosis is running under the `git` user and stores the repositories under `/home/git/repositories/` which won't be accessible to you under a normal user. The easiest way around this is to run the `gitalist_server.pl` command as the git user like so:
 
 `sudo -u git gitalist_server.pl --repo_dir /home/git/repositories/`
 
-test on `http://<server>:3000/
+
+
+Running as www-data user, more correct for the web.
 
 
