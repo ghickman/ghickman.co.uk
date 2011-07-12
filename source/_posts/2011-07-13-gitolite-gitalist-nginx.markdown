@@ -23,11 +23,9 @@ My instructions for this setup are based on setting up on a variety of Ubuntu Se
 
 I followed the [root install instructions](http://sitaramc.github.com/gitolite/doc/1-INSTALL.html#_root_method) with one caveat when adding the git user, rather than just doing a plain `useradd git` I set some options:
 
-`sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --home /home/git git`
+`sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git`
 
-and then a password so I could run the `su - git` command, which always asks for one:
-
-`sudo passwd git`
+and then run the `su - git` command with `sudo` so you can enter your own password.
 
 ## Gitalist
 ### Installation
