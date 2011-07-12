@@ -73,6 +73,19 @@ Gitosis is running under the `git` user and stores the repositories under `/home
 `sudo -u git gitalist_server.pl --repo_dir /home/git/repositories/`
 
 
+`cpan FCGI::ProcManager` -> needed to run the fcgi bit
+build the fastcgi script http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#RUNNING
+setup the config with repo dir
+nginx config with fastcgi pass params -> http://wiki.catalystframework.org/wiki/adventcalendararticles/2008/02-catalyst_and_nginx
+fastcgi socket
+
+vhost   /etc/nginx/sites-available/git
+conf    /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf
+wrapper /usr/local/bin/gitalist.fcgi
+fcgi    /usr/local/bin/gitalist_fastcgi.pl
+
+sudo gitalist.fcgi -> run the wrapper
+
 
 Running as www-data user, more correct for the web.
 
