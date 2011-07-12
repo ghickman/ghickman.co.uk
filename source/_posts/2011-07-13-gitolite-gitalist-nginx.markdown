@@ -86,6 +86,11 @@ fcgi    /usr/local/bin/gitalist_fastcgi.pl
 
 sudo gitalist.fcgi -> run the wrapper
 
+-listen for port or socket
+-pid for pid
+-daemon to daemonise
+all require listen
+
 
 Running as www-data user, more correct for the web.
 
