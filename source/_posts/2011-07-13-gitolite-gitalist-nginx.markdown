@@ -16,7 +16,7 @@ Diving into [Gitalist](http://www.gitalist.com/) there were a couple of surprise
 
 Gitalist also presented an opporunity to coax my workplace from Mercurial/Bitbucket (Github's corporate pricing has so far been the major reason not to use Git) onto Git, but to do so some sort of access control would be needed, thus Gitolite.
 
-My instructions for this setup are based on setting up on a variety of Ubuntu Server machines: 10.04 plain VM, 10.04 Vagrant and 10.10 real server so they should work reasonably reliable on other Ubuntu versions and children distros.
+My instructions for this setup are based on setting up on a variety of Ubuntu Server machines: 10.04 plain VM, 10.04 Vagrant and 10.10 real server so they should work reasonably reliably on other Ubuntu versions and children distros.
 
 ## Gitolite
 [Gitolite](https://github.com/sitaramc/gitolite) is an access control system for Git repositories, a natural successor to [Gitosis](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way), providing access control on a per branch basis. I won't bother going into much detail as there's so much to it and [Sitraramc](http://sitaramc.blogspot.com/) provides a far more comprehensive description on the Github [page](https://github.com/sitaramc/gitolite/wiki/).
@@ -66,11 +66,40 @@ Test the install by running `sudo gitalist_server.pl` and having a look at `http
 If you get an error about the location of the config then try the methods suggested [here](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#FOR_CPAN_INSTALLS). I found none of these worked for me and it was easier to grab the source from [Github](https://github.com/broquaint/Gitalist) and copy `gitalist.conf` to `/usr/local/share/perl/5.10.x/Gitalist/`.
 
 ### Combining with Gitolite
-Combining Gitolite and Gitalist essentially means pointing Gitalist at the repositories directory of Gitolite. Since this is running under your `git` user it makes life a lot easier if your Gitalist has access to read your Gitolite repositories
-
-Gitosis is running under the `git` user and stores the repositories under `/home/git/repositories/` which won't be accessible to you under a normal user. The easiest way around this is to run the `gitalist_server.pl` command as the git user like so:
+Combining Gitolite and Gitalist is as "simple" as pointing Gitalist at Gitolite's repository directory. Gitosis is running under the `git` user and stores the repositories under `/home/git/repositories/` which won't be accessible to you under another user. The easiest way around this is to run the `gitalist_server.pl` command as the git user like so:
 
 `sudo -u git gitalist_server.pl --repo_dir /home/git/repositories/`
+
+Of course you don't want to be stuck with a command running in the terminal all the time, or having to suffix it with `&` just to have it run in the background so we'll setup [Supervisor](http://supervisord.org/) to handle all of that for us.
+
+#### Supervisor
+Supervisor looks after a process and can be configured to perform useful duties like autorestarting and running your process under a different user, both of which we're going to take advantage of. Thankfully supervisor can be installed with ease, like so:
+
+`sudo aptitude install supervisor`
+
+Next you'll need a config file for Gitalist:
+
+`sudo vim /etc/supervisor/conf.d/gitalist.conf`
+
+Paste in the following - setting the path to your gitalist_server.pl to the appropriate place if it's not in the default location.
+
+{{ 1084154 | gist: 'gitalist.conf' }}
+
+Supervisor has a nifty console front end for controlling the processes it looks after. Open it up with `sudo supervisor` and update it to use the Gitalist config with `update`. `status` will show you a list programs you've setup which you can `restart`, `start`, `stop` and `tail` (for program output, `-f` for continuous output). The gitatlist server should now be running under Supervisor, you can check by doing `tail gitalist` Supervisor's console and looking at `http://<server>:3000/`.
+
+#### Nginx
+The simplest way to setup Nginx with Gitalist is to reverse proxy connections back to the gitalist_server process. I did play around with setting it up over FastCGI, but that [didn't work out](#fastcgi).
+
+Create yourself a virtual host in nginx's sites-availabe directory and add the following, changing the server name to something suitable
+
+{{ 1084154 | gist: 'vhost' }}
+
+I've setup the logs under `/var/log/gitalist/` since Gitalist installed via CPAN doesn't really have an install directory as such and that's the next logical place. However you'll have to create that directory and make it writable by `www-data` so Nginx has access to it.
+
+Link the virtual host into sites-enabled and test with `sudo nginx -t` to check there are no errors, then reload nginx `sudo /etc/init.d/nginx reload` (or use upstart) and your Gitalist should now be accessible on your domain!
+
+<strong id="fastcgi">A Note on FastCGI:</strong> I originally tried to setup Gitalist and Nginx using FastCGI and went through a lot of pain and suffering over a few evenings. I got pretty close to it working (I had a good half a page of notes for this post) with it only missing styles, images and the ability to display more than the front page before I was pointed at reverse proxying (another hat tip to Mithaldu).
+
 
 
 `cpan FCGI::ProcManager` -> needed to run the fcgi bit
@@ -90,8 +119,4 @@ sudo gitalist.fcgi -> run the wrapper
 -pid for pid
 -daemon to daemonise
 all require listen
-
-
-Running as www-data user, more correct for the web.
-
 
