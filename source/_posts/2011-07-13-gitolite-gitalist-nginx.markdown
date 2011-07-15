@@ -14,7 +14,7 @@ Diving into [Gitalist](http://www.gitalist.com/) there were a couple of surprise
 
 === read more ===
 
-Gitalist also presented an opporunity to coax my workplace from Mercurial/Bitbucket (Github's corporate pricing has so far been the major reason not to use Git) onto Git, but to do so some sort of access control would be needed, thus Gitolite.
+Gitalist also presented an opportunity to coax my workplace from Mercurial/Bitbucket (Github's corporate pricing has so far been the major reason not to use Git) onto Git, but to do so some sort of access control would be needed, thus Gitolite.
 
 My instructions for this setup are based on setting up on a variety of Ubuntu Server machines: 10.04 plain VM, 10.04 Vagrant and 10.10 real server so they should work reasonably reliably on other Ubuntu versions and children distros.
 
