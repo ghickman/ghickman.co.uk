@@ -84,7 +84,7 @@ Next you'll need a config file for Gitalist:
 
 Paste in the following - setting the path to your gitalist_server.pl to the appropriate place if it's not in the default location.
 
-{{ 1084154 | gist: 'gitalist.conf' }}
+{{ 1084154 | gist: 'supervisor' }}
 
 Supervisor has a nifty console front end for controlling the processes it looks after. Open it up with `sudo supervisor` and update it to use the Gitalist config with `update`. `status` will show you a list programs you've setup which you can `restart`, `start`, `stop` and `tail` (for program output, `-f` for continuous output). The gitatlist server should now be running under Supervisor, you can check by doing `tail gitalist` Supervisor's console and looking at `http://<server>:3000/`.
 
@@ -111,8 +111,8 @@ fastcgi socket
 
 vhost   /etc/nginx/sites-available/git
 conf    /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf
-wrapper /usr/local/bin/gitalist.fcgi
 fcgi    /usr/local/bin/gitalist_fastcgi.pl
+supervsr/etc/supervisor/conf.d/gitalist.conf
 
 sudo gitalist.fcgi -> run the wrapper
 
