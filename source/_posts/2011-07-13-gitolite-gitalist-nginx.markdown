@@ -66,6 +66,10 @@ Test the install by running `sudo gitalist_server.pl` and having a look at `http
 
 If you get an error about the location of the config then try the methods suggested [here](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#FOR_CPAN_INSTALLS). I found none of these worked for me so I grabbed the source from [Github](https://github.com/broquaint/Gitalist) and copied `gitalist.conf` to `/usr/local/share/perl/5.10.x/Gitalist/`.
 
+The Gitalist FastCGI script requires a ProcessManager, by default this is Perl's `FCGI::ProcManager` which needs to be installed as well:
+
+`cpan FCGI::ProcManager`
+
 ### Combining with Gitolite
 Combining Gitolite and Gitalist is as "simple" as pointing Gitalist at Gitolite's repository directory. Gitolite is running under the `git` user and stores the repositories under `/home/git/repositories/` which won't be accessible to you under another user. The easiest way around this is to run the `gitalist_server.pl` command as the git user like so:
 
@@ -86,24 +90,38 @@ Paste in the following - setting the path to your gitalist_server.pl to the appr
 
 {{ 1084154 | gist: 'supervisor' }}
 
-Supervisor has a nifty console front end for controlling the processes it looks after. Open it up with `sudo supervisor` and update it to use the Gitalist config with `update`. `status` will show you a list programs you've setup which you can `restart`, `start`, `stop` and `tail` (for program output, `-f` for continuous output). The gitatlist server should now be running under Supervisor, you can check by doing `tail gitalist` Supervisor's console and looking at `http://<server>:3000/`.
+I've put the socket and pid files in `/var/run/` since Gitalist is installed via CPAN into and [doesn't really](#gitalist-install-dir) have an install directory as such so that's the next logical place. However you'll need to create the gitalist directory there and `chown` it to your `git` user so it can be written to by the FastCGI script.
+
+Open up Supervisor's nifty console with `sudo supervisorctl` and tell it to `update` so that it uses your Gitalist config (you'll need to do this after any updates to a configuration file). `status` will show you a list programs you've setup which you can `start`, `stop`, `restart` and `tail` (for program output, with `-f` for continuous output). The gitatlist server should now be running under Supervisor, check with the `tail gitalist` to make sure there are no errors in the output.
+
+#### Gitalist Config
+Since we're using FastCGI to pass requests from Nginx through to Gitalist we'll use the Gitalist config file (you can't pass Gitalist configuration values to the FastCGI script):
+
+`sudo vim /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf`
+
+and set the `repo_dir` option to `/home/git/repositories/`:
+
+{{ 1084154 | gist: 'gitalist.conf' }}
 
 #### Nginx
-I've connected Nginx and Gitalist via FastCGI which took a bit of fiddling, but I got there in the end. Along the way I toyed around with using Nginx to reverse proxy to the built in Catalyst development server, but had issues with hiding the port number and it felt a bit nasty.
-
-Create yourself a virtual host in nginx's sites-available directory and add the following, changing the server name to something suitable
+Create yourself a virtual host in nginx's sites-available directory and add the following, changing the server name to something suitable:
 
 {{ 1084154 | gist: 'vhost' }}
 
-I've setup the logs under `/var/log/gitalist/` since Gitalist installed via CPAN doesn't really have an install directory as such and that's the logical place. However you'll have to create that directory and make it writable by `www-data` so Nginx has access to it.
-
-
+I've setup the logs under `/var/log/gitalist/` for the same reason as the socket and the pid files, again you'll have to create that directory but make it writable by `www-data` so Nginx has access to it.
 
 Link the virtual host into sites-enabled and test with `sudo nginx -t` to check there are no errors, then reload nginx `sudo /etc/init.d/nginx reload` (or use upstart) and your Gitalist should now be accessible on your domain!
 
-<strong id="fastcgi">A Note on FastCGI:</strong> I originally tried to setup Gitalist and Nginx using FastCGI and went through a lot of pain and suffering over a few evenings. I got pretty close to it working (I had a good half a page of notes for this post) with it only missing styles, images and the ability to display more than the front page before I was pointed at reverse proxying (another hat tip to Mithaldu).
+## Notes
+#### FastCGI
 
+While getting FastCGI setup I toyed with Nginx to reverse proxying to the one or more instances of the Catalyst development server, but had issues with hiding the port number and it felt a bit wrong to use a development server in production.
 
+<h4 id="gitalist-install-dir">Gitalist Install Directory</h4>
+
+Having installed Gitalist via CPAN it lives under `/usr/local/share/perl/5.10.1/Gitalist/` which seems a bad place to store a socket file, a pid file or any logs which is why I chose to put them all under `/var/`.
+
+I originally tried to setup Gitalist and Nginx using FastCGI and went through a lot of pain and suffering over a few evenings. I got pretty close to it working (I had a good half a page of notes for this post) with it only missing styles, images and the ability to display more than the front page before I was pointed at reverse proxying (another hat tip to Mithaldu).
 
 `cpan FCGI::ProcManager` -> needed to run the fcgi bit
 build the fastcgi script http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#RUNNING
@@ -116,11 +134,6 @@ conf    /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf
 fcgi    /usr/local/bin/gitalist_fastcgi.pl
 supervsr/etc/supervisor/conf.d/gitalist.conf
 
-sudo gitalist.fcgi -> run the wrapper
-
 -listen for port or socket
 -pid for pid
--daemon to daemonise
-all require listen
 
-The simplest way to setup Nginx with Gitalist is to reverse proxy connections back to the gitalist_server process. I did play around with setting it up over FastCGI, but that [didn't work out](#fastcgi).
