@@ -89,13 +89,15 @@ Paste in the following - setting the path to your gitalist_server.pl to the appr
 Supervisor has a nifty console front end for controlling the processes it looks after. Open it up with `sudo supervisor` and update it to use the Gitalist config with `update`. `status` will show you a list programs you've setup which you can `restart`, `start`, `stop` and `tail` (for program output, `-f` for continuous output). The gitatlist server should now be running under Supervisor, you can check by doing `tail gitalist` Supervisor's console and looking at `http://<server>:3000/`.
 
 #### Nginx
-The simplest way to setup Nginx with Gitalist is to reverse proxy connections back to the gitalist_server process. I did play around with setting it up over FastCGI, but that [didn't work out](#fastcgi).
+I've connected Nginx and Gitalist via FastCGI which took a bit of fiddling, but I got there in the end. Along the way I toyed around with using Nginx to reverse proxy to the built in Catalyst development server, but had issues with hiding the port number and it felt a bit nasty.
 
-Create yourself a virtual host in nginx's sites-availabe directory and add the following, changing the server name to something suitable
+Create yourself a virtual host in nginx's sites-available directory and add the following, changing the server name to something suitable
 
 {{ 1084154 | gist: 'vhost' }}
 
-I've setup the logs under `/var/log/gitalist/` since Gitalist installed via CPAN doesn't really have an install directory as such and that's the next logical place. However you'll have to create that directory and make it writable by `www-data` so Nginx has access to it.
+I've setup the logs under `/var/log/gitalist/` since Gitalist installed via CPAN doesn't really have an install directory as such and that's the logical place. However you'll have to create that directory and make it writable by `www-data` so Nginx has access to it.
+
+
 
 Link the virtual host into sites-enabled and test with `sudo nginx -t` to check there are no errors, then reload nginx `sudo /etc/init.d/nginx reload` (or use upstart) and your Gitalist should now be accessible on your domain!
 
@@ -121,3 +123,4 @@ sudo gitalist.fcgi -> run the wrapper
 -daemon to daemonise
 all require listen
 
+The simplest way to setup Nginx with Gitalist is to reverse proxy connections back to the gitalist_server process. I did play around with setting it up over FastCGI, but that [didn't work out](#fastcgi).
