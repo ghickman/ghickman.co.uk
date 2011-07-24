@@ -14,14 +14,20 @@ Diving into [Gitalist](http://www.gitalist.com/) there were a couple of surprise
 
 === read more ===
 
-Gitalist also presented an opportunity to coax my workplace from Mercurial/Bitbucket (Github's corporate pricing has so far been the major reason not to use Git) onto Git, but to do so some sort of access control would be needed, thus Gitolite.
+Gitalist also presented an opportunity to coax my workplace from Mercurial/Bitbucket (Github's corporate pricing has so far been the major reason not to use Git) onto Git, but to do so some sort of access control would be needed, thus [Gitolite](https://github.com/sitaramc/gitolite).
 
-My instructions for this setup are based on setting up on a variety of Ubuntu Server machines: 10.04 plain VM, 10.04 Vagrant and 10.10 real server so they should work reasonably reliably on other Ubuntu versions and child distros.
+I've tested these instructions on Ubuntu Server 10.04 so they should work reasonably well on other Ubuntu versions and child distros.
 
 ## Gitolite
-[Gitolite](https://github.com/sitaramc/gitolite) is an access control system for Git repositories, a natural successor to [Gitosis](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way), providing fine grained control on a per branch basis. I won't bother going into much detail as there's so much to it and [Sitraramc](http://sitaramc.blogspot.com/) provides a far more comprehensive description on the Github [page](https://github.com/sitaramc/gitolite/wiki/).
+Gitolite is an access control system for Git repositories, a natural successor to [Gitosis](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way), providing fine grained control on a per branch basis. I won't bother going into much detail as there's so much to it and [Sitraramc](http://sitaramc.blogspot.com/) provides a far more comprehensive description on the Github [page](https://github.com/sitaramc/gitolite/wiki/).
 
-I followed the [root install instructions](http://sitaramc.github.com/gitolite/doc/1-INSTALL.html#_root_method) with one caveat when adding the git user, rather than just doing a plain `useradd git` I set some options:
+I followed the [root install instructions](http://sitaramc.github.com/gitolite/doc/1-INSTALL.html#_root_method) with a couple of caveats:
+
+I specify the folder locations when running `src/gl-system-install` as it didn't seem to use the default one's listed for me:
+
+`src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks`
+
+When adding the git user, rather than just doing a plain `useradd git` I set some options:
 
 `sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git`
 
@@ -31,7 +37,7 @@ Check you can push your projects to the server and you're away!
 
 ## Gitalist
 ### Installation (CPAN)
-After some fruitless attempts to install from source and [bootstrap](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#BOOTSTRAPPING) I turned to the IRC channel where a noble Internet Hero pointed me at CPAN as the "Way to Go".
+After some fruitless attempts to install from source and [bootstrap](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#BOOTSTRAPPING) I turned to the IRC channel where a Big Damn Hero pointed me at CPAN as the "Way to Go".
 
 First of all CPAN needs a little love. By default it asks you what to do when it finds a dependency it doesn't have.
 
@@ -40,7 +46,7 @@ First of all CPAN needs a little love. By default it asks you what to do when it
 
 Thankfully it's easy enough to configure CPAN to follow the default options with the `prerequisites_policy` option. Open the CPAN console by running `cpan`.
 
-__Note:__ If it asks you a set of questions instead of giving you a prompt then CPAN wasn't configured when you started. Set them all to default (hit enter) except `prerequisites_policy` which needs to be changed to `follow`. After the proxies section you'll be asked for a [local CPAN mirror](http://www.cpan.org/SITES.html).
+__Note:__ If CPAN hasn't been configured before you'll be asked if you want it to "configure as much as possible automatically", choose yes then follow the instructions below. However if you do want to go through them manually you'll be asked for a [local CPAN mirror](http://www.cpan.org/SITES.html) after the proxies section.
 
 To configure type the following into the CPAN console:
 
@@ -50,25 +56,27 @@ then
 
 `o conf commit`
 
-This sets the `prerequisites_policy` to `follow` the default option for each dependency. Thanks to Mithaldu on #gitalist for helping me out with this.
+This sets the `prerequisites_policy` to `follow` the default option for each dependency. Thanks to Mithaldu on #gitalist for helping me out and saving hours of tedium.
 
-Back in your favourite flavour of shell it's time for some installations! First up is [YAML](http://yaml.org), which isn't required, but every install complains that it's not there because all the package descriptors seem to be written in it. Installing packages from CPAN is as easy as:
+Finally it's time for some installations! First up is [YAML](http://yaml.org), which isn't required, but every install complains that it's not there because all the package descriptors are written in it. Installing packages from CPAN is as easy as:
 
-`cpan YAML`
+`install YAML`
 
-When that's done, it's finally time for Gitalist:
+__Note:__ CPAN might update itself at this point, which can take a significant amount of time depending on the power of your machine.
 
-`cpan Gitalist`
+When that's done, it's time for Gitalist:
 
-Unfortunately some questions still come up, so it's not a completely unattended installation and did take quite a while for me (at least an hour). Default answers again seem fine here.
+`install Gitalist`
+
+Unfortunately some questions still come up, so it's not a completely unattended installation and did take quite a while for me (at least an hour). Default answers seem fine though.
 
 Test the install by running `sudo gitalist_server.pl` and having a look at `http://<server>:3000/`.
 
 If you get an error about the location of the config then try the methods suggested [here](http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#FOR_CPAN_INSTALLS). I found none of these worked for me so I grabbed the source from [Github](https://github.com/broquaint/Gitalist) and copied `gitalist.conf` to `/usr/local/share/perl/5.10.x/Gitalist/`.
 
-The Gitalist FastCGI script requires a ProcessManager, by default this is Perl's `FCGI::ProcManager` which needs to be installed as well:
+Later on we'll setup Gitalist with FastCGI, at which point you'll need Perl's `FCGI::ProcManager` installed as it's the default "Process Manager" for the Gitalist FastCGI script:
 
-`cpan FCGI::ProcManager`
+`install FCGI::ProcManager`
 
 ### Combining with Gitolite
 Combining Gitolite and Gitalist is as "simple" as pointing Gitalist at Gitolite's repository directory. Gitolite is running under the `git` user and stores the repositories under `/home/git/repositories/` which won't be accessible to you under another user. The easiest way around this is to run the `gitalist_server.pl` command as the git user like so:
@@ -90,12 +98,12 @@ Paste in the following - setting the path to your gitalist_server.pl to the appr
 
 {{ 1084154 | gist: 'supervisor' }}
 
-I've put the socket and pid files in `/var/run/` since Gitalist is installed via CPAN into and [doesn't really](#gitalist-install-dir) have an install directory as such so that's the next logical place. However you'll need to create the gitalist directory there and `chown` it to your `git` user so it can be written to by the FastCGI script.
+I've put the socket and pid files in `/var/run/` since Gitalist is installed via CPAN into and [doesn't really](#gitalist-install-dir) have an install directory as such so that's the next logical place. However you'll need to create the gitalist directory there and `chown` it to your `git` user so it can be written to by the FastCGI script (which is now running under the `git` user). The `--nproc` switch tells the script how many processes to run, like Nginx's workers directive. To see all the options run `/usr/local/bin/gitalist_fastcgi.pl --help` in your terminal.
 
 Open up Supervisor's nifty console with `sudo supervisorctl` and tell it to `update` so that it uses your Gitalist config (you'll need to do this after any updates to a configuration file). `status` will show you a list programs you've setup which you can `start`, `stop`, `restart` and `tail` (for program output, with `-f` for continuous output). The gitatlist server should now be running under Supervisor, check with the `tail gitalist` to make sure there are no errors in the output.
 
 #### Gitalist Config
-Since we're using FastCGI to pass requests from Nginx through to Gitalist we'll use the Gitalist config file (you can't pass Gitalist configuration values to the FastCGI script):
+Since we're using FastCGI to pass requests from Nginx through to Gitalist we'll use the Gitalist config file (you can't pass Gitalist configuration values to the FastCGI script). Open it up in your favourite editor:
 
 `sudo vim /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf`
 
@@ -113,15 +121,20 @@ I've setup the logs under `/var/log/gitalist/` for the same reason as the socket
 Link the virtual host into sites-enabled and test with `sudo nginx -t` to check there are no errors, then reload nginx `sudo /etc/init.d/nginx reload` (or use upstart) and your Gitalist should now be accessible on your domain!
 
 ## Notes
-#### FastCGI
+#### FastCGI vs. Reverse Proxying
 
-While getting FastCGI setup I toyed with Nginx to reverse proxying to the one or more instances of the Catalyst development server, but had issues with hiding the port number and it felt a bit wrong to use a development server in production.
+While getting FastCGI setup I toyed with Nginx as a reverse proxy to the one or more instances of the Catalyst development server, but had issues with hiding the port number and it felt a bit wrong to use a development server in production.
 
 <h4 id="gitalist-install-dir">Gitalist Install Directory</h4>
 
 Having installed Gitalist via CPAN it lives under `/usr/local/share/perl/5.10.1/Gitalist/` which seems a bad place to store a socket file, a pid file or any logs which is why I chose to put them all under `/var/`.
 
-I originally tried to setup Gitalist and Nginx using FastCGI and went through a lot of pain and suffering over a few evenings. I got pretty close to it working (I had a good half a page of notes for this post) with it only missing styles, images and the ability to display more than the front page before I was pointed at reverse proxying (another hat tip to Mithaldu).
+## Extra Reading
+* [Catalyst and Nginx (Catalyst Docs)](http://wiki.catalystframework.org/wiki/adventcalendararticles/2008/02-catalyst_and_nginx)
+* [Gitalist, FastCGI and Nginx (Catalyst Docs on CPAN)](http://search.cpan.org/~bobtfish/Catalyst-Runtime-5.80032/lib/Catalyst/Engine/FastCGI.pm#nginx)
+* [Catalyst Standalone Server (Gitalist Docs on CPAN))](http://search.cpan.org/dist/Catalyst-Manual/lib/Catalyst/Manual/Cookbook.pod#Standalone_server_mode)
+
+=============================================================================================
 
 `cpan FCGI::ProcManager` -> needed to run the fcgi bit
 build the fastcgi script http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#RUNNING
@@ -133,7 +146,4 @@ vhost   /etc/nginx/sites-available/git
 conf    /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf
 fcgi    /usr/local/bin/gitalist_fastcgi.pl
 supervsr/etc/supervisor/conf.d/gitalist.conf
-
--listen for port or socket
--pid for pid
 
