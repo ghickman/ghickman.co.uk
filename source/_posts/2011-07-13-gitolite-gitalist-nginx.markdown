@@ -132,18 +132,5 @@ Having installed Gitalist via CPAN it lives under `/usr/local/share/perl/5.10.1/
 ## Extra Reading
 * [Catalyst and Nginx (Catalyst Docs)](http://wiki.catalystframework.org/wiki/adventcalendararticles/2008/02-catalyst_and_nginx)
 * [Gitalist, FastCGI and Nginx (Catalyst Docs on CPAN)](http://search.cpan.org/~bobtfish/Catalyst-Runtime-5.80032/lib/Catalyst/Engine/FastCGI.pm#nginx)
-* [Catalyst Standalone Server (Gitalist Docs on CPAN))](http://search.cpan.org/dist/Catalyst-Manual/lib/Catalyst/Manual/Cookbook.pod#Standalone_server_mode)
-
-=============================================================================================
-
-`cpan FCGI::ProcManager` -> needed to run the fcgi bit
-build the fastcgi script http://search.cpan.org/dist/Gitalist/lib/Gitalist.pm#RUNNING
-setup the config with repo dir
-nginx config with fastcgi pass params -> http://wiki.catalystframework.org/wiki/adventcalendararticles/2008/02-catalyst_and_nginx
-fastcgi socket
-
-vhost   /etc/nginx/sites-available/git
-conf    /usr/local/share/perl/5.10.1/Gitalist/gitalist.conf
-fcgi    /usr/local/bin/gitalist_fastcgi.pl
-supervsr/etc/supervisor/conf.d/gitalist.conf
+* [Catalyst Standalone Server (Gitalist Docs on CPAN)](http://search.cpan.org/dist/Catalyst-Manual/lib/Catalyst/Manual/Cookbook.pod#Standalone_server_mode)
 
