@@ -7,7 +7,7 @@ categories:
   - django
 ---
 
-We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on it's way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
+We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on its way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
 
 Enter [Django Social Auth](http://django-social-auth.readthedocs.org/en/latest/index.html). A cover-all-the-bases authentication app that provides backends for pretty much every service you can think of.
 
@@ -42,7 +42,7 @@ Add `social_auth` to your `INSTALLED_APPS` and the other settings below:
 
 {{ 3118490 | gist: 'settings.py' }}
 
-Here I white list our Apps domain to only allow authentication by users from work email addresses and tell Social Auth to use `auth.User` model when creating new users which it will do by default (I believe you can turn this off with another setting). This lets met forget about registration completely which is perfect for internal applications.
+Here I white list our Google Apps domain to only allow authentication by users from work email addresses and tell Social Auth to use `auth.User` model when creating new users which it will do by default (I believe you can turn this off with another setting). This lets met forget about registration completely which is perfect for internal applications.
 
 Make sure you've set `GOOGLE_OAUTH2_CLIENT_ID` and `GOOGLE_OAUTH2_CLIENT_SECRET` in your environment when you do `runserver` or you'll get the crappy settings error message `Unknown command: 'runserver'`. You can avoid this using `.get()` instead of square braces notation when getting the Google credentials however the error may be more archaic. I'm currently favouring square braces notation and getting used to fixing my environment!
 
@@ -54,7 +54,7 @@ Make sure you've set `GOOGLE_OAUTH2_CLIENT_ID` and `GOOGLE_OAUTH2_CLIENT_SECRET`
 
 Social Auth requires you add a view for when login fails. So far this hasn't been an issue for me so I've done the pure basics here.
 
-The second view was to cope with the white listing of domains which, pleasing, raises an `AuthFailed` exception when you try to authenticate with a domain not in the white list.
+The second view was to cope with the white listing of domains which, pleasingly, raises an `AuthFailed` exception when you try to authenticate with a domain not in the white list.
 
 Now all we need is to plumb this in with some URLs:
 
