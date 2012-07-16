@@ -7,7 +7,7 @@ categories:
   - django
 ---
 
-We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on it's way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
+We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on its way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
 
 Enter [Django Social Auth](http://django-social-auth.readthedocs.org/en/latest/index.html). A cover-all-the-bases authentication app that provides backends for pretty much every service you can think of.
 
