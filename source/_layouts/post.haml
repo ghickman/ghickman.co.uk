@@ -11,7 +11,7 @@ post_page: true
         %li.first Tagged as:
         - page.categories.each do |tag|
           %li
-            %a{:href=>"/category/#{category_slug(tag)}", :title=>"#{category_capitalize(tag)}"}=category_capitalize(tag)
+            %a{:href=>"/category/#{category_slug(tag)}/index.html", :title=>"#{category_capitalize(tag)}"}=category_capitalize(tag)
   .body= content
 
   #comments
