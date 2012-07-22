@@ -53,7 +53,7 @@ Make sure you've set `GOOGLE_OAUTH2_CLIENT_ID` and `GOOGLE_OAUTH2_CLIENT_SECRET`
 
 {{ 3118490 | gist: 'views.py' }}
 
-Social Auth requires you add a view for when login fails. So far this hasn't been an issue for me so I've done the pure basics here.
+Social Auth requires you add a view for when login fails. So far this hasn't been an issue for me so I've done the pure basics here with `LoginError`.
 
 The second view was to cope with the whitelisting of domains which, pleasingly, raises an `AuthFailed` exception when you try to authenticate with a domain not in the whitelist.
 
