@@ -23,7 +23,7 @@ The most common problem I've seen with this style of branching (as with all prog
 
 
 ## Pull Requests
-As an extension of our branching we try to use pull requests as our main area of code review. When we first started using this as a formal method it worked quite well but more recently we've started to see the benefit of using the pull request as the main area of conversation around a bug/feature. We're still slowly moving Designers and Account Managers onto this flow but once they get into it it seems to work really well.
+As an extension of our branching we try to use pull requests as our main area of code review. When we first started using this as a formal method it worked quite well but more recently we've started to see the benefit of using the pull request as the main area of conversation around a bug/feature. We're still slowly moving Designers and Account Managers onto this flow but it seems to work well once they get into it.
 
 
 ## Code Review
