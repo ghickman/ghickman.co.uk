@@ -33,7 +33,7 @@ The most important part of this for us is to have more than one set of eyes look
 
 
 ## Testing
-Always a sticky subject, but we're slowly getting better at it. [Charlie](http://github.com/meshy) & Marc have made great headway in setting up our large internal libraries with proper test suites and a general purge of all fixture based unit tests in favour of factories using the very awesome [Factory Boy](https://github.com/dnerdy/factory_boy). I'm hoping [travis](http://travis-ci.org) bring out pro/private accounts soon as their testing suite would suit our pull request flow perfectly and we're already moving our open source projects to them.
+Always a sticky subject, but we're slowly getting better at it. [Charlie](http://github.com/meshy) & [Marc](http://github.com/mjtamlyn) have made great headway in setting up our large internal libraries with proper test suites and a general purge of all fixture based unit tests in favour of factories using the very awesome [Factory Boy](https://github.com/dnerdy/factory_boy). I'm hoping [travis](http://travis-ci.org) bring out pro/private accounts soon as their testing suite would suit our pull request flow perfectly and we're already moving our open source projects to them.
 
 
 ## What Can We Do Better?
