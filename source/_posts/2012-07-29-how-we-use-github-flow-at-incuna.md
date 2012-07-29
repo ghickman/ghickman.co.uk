@@ -6,7 +6,7 @@ categories:
   - git
 ---
 
-Our team at Incuna has been growing rapidly of late and like most businesses at this stage of growth we've had to come up with some development flows to cope with the influx of new [Incunanuts](http://twitter.com/incuna/incunanauts). Currently we have three (technical) teams: Design, Front End and Back End with work flowing through them in roughly that order. (Technically we have an Ops team, but really that's just me part time).
+Our team at Incuna has been growing rapidly of late and like most businesses at this stage of growth we've had to come up with some development flows to cope with the influx of new [Incunanauts](http://twitter.com/incuna/incunanauts). Currently we have three (technical) teams: Design, Front End and Back End with work flowing through them in roughly that order. (Technically we have an Ops team, but really that's just me part time).
 
 We currently use GitHub to host our code, track issues and do pull requests with [hub]() for extra features like attaching code to an issue to make a pull request.
 
