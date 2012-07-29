@@ -17,13 +17,13 @@ When do we branch?
 
 ![](http://f.cl.ly/items/3F0H2q0P41091O162b3N/Image%202012.07.21%2000:17:22.png)
 
-Anything other than a trivial change goes on a branch so it can be pull requested (more on this later). Following GitHub Flow we try to keep a project's master branch production ready which branching allows us to do easily. However, sometimes we have a large, long running, feature to implement which requires it's own feature master branch. This is a bit more involved as you have to make sure you pull request onto the right branch but otherwise works well.
+Anything other than a trivial change goes on a branch so it can be pull requested (more on this later). Following GitHub Flow we try to keep a project's master branch production ready which branching allows us to do easily. However, sometimes we have a large, long running, feature to implement which requires it's own master feature branch. This is a bit more involved as you have to make sure you pull request onto the right branch but otherwise works well.
 
 The most common problem I've seen with this style of branching (as with all programming) is "What do I call my branches". We try to name our branches directly around the piece of work, even if it isn't immediately obvious to every developer, that's what [git log](http://www.kernel.org/pub/software/scm/git/docs/git-log.html) is for.
 
 
 ## Pull Requests
-As an extension of our branching we try to use pull requests as our main area of code review. When we first started using this as a formal method it worked quite well but more recently we've started to see the benefit of using the pull request as the main area of conversation around a bug/feature. We're still slowly moving Designers and Account Managers onto this flow but it seems to work well once they get into it.
+As an extension of our branching we try to use pull requests as our main area of code review. When we first started using this as a formal method it worked quite well but more recently we've started to see the benefit of using the pull request as a forum of conversation around a bug/feature. We're still slowly moving Designers and Account Managers onto this flow and it seems to work well once they get into it.
 
 
 ## Code Review
