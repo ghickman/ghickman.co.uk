@@ -10,6 +10,9 @@ categories:
 `raspbmc.com` down for you? Never fear, the internet has your back.
 
 
+=== read more ===
+
+
 ## Install Script
 Copy and paste the python code (starts with `#!/usr/bin/python`) from [here](http://webcache.googleusercontent.com/search?q=cache:http://svn.stmlabs.com/vn/raspbmc/testing/installers/python/install.py) into a file and save it as `install.py`.
 
