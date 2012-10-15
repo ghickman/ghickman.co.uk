@@ -2,8 +2,6 @@
 layout: post
 title: Ecohandle Shopping Bag
 extended: === read more ===
-categories:
-  - misc
 ---
 <div class="right photo">
     <img src="https://s3-eu-west-1.amazonaws.com/ghickman/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag">
