@@ -1,9 +1,0 @@
-haml:
-  format: :html5
-markdown: rdiscount
-source: source
-destination: site
-gist_cache: ./cache/gist
-
-permalink: /:year/:month/:day/:title.html
-blog_title: ghickman

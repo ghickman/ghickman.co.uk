@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="openid.server" href="http://www.myopenid.com/server">
+    <link rel="openid.delegate" href="http://ghickman.myopenid.com/">
+    <link rel="openid2.local_id" href="http://ghickman.myopenid.com/">
+    <link rel="openid2.provider" href="http://my.myopenid.com/server">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/main.css">
+    <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed">
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ghickman.myopenid.com">
+    <meta name="author" content="George Hickman">
+    <meta name="description" content="George Hickman is a Software Engineer currently living in Oxford">
+    <meta name="google-site-verification" content="HME0VcoccfLfgFuwOwPH-QrJgg2FiB5FmaM0mN9uy8E">
+    <meta name="keywords" content="george hickman, george, hickman, python, travelling, coding, software, development">
+    <meta name="robots" content="ALL">
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="logo">
+            <a href="/" title="Home">
+                <img src="/theme/images/logo.png" alt="GHickman.co.uk">
+            </a>
+        </header>
+
+        <aside>{% include "aside.html" %}</aside>
+
+        <div id="content">{% block content %}{% endblock %}</div>
+
+        <div class="clr"></div>
+
+        <footer>
+            <div id="pelican" class="left">Powered by <a href="http://getpelican.com" title="Pelican">Pelican</a></div>
+            <div id="copyright" class="left">Copyright © 2013 George Hickman, All Rights Reserved</div>
+            <div id="feed" class="right">
+                <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">
+                    <img src="{{ SITEURL }}/theme/images/feed.png" alt="RSS Feed">
+                </a>
+            </div>
+            <div id="contact-link" class="right">
+                <a href="mailto:george@ghickman.co.uk" title="Contact Me">Contact</a>
+            </div>
+        </footer>
+    </div>
+    {% include "analytics.html" %}
+</body>
+</html>

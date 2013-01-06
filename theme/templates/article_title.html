@@ -1,0 +1,16 @@
+<header>
+    <h1 class="post-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+    <div class="info">
+        <p>Posted on: <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p>
+        {% if article.tags %}
+        <span class="post-tags">Tagged as:
+            <ul>
+                {% for tag in article.tags %}
+                <li><a href="{{ tag.url }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </span>
+        {% endif %}
+    </div>
+</header>
+

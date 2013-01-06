@@ -1,0 +1,22 @@
+<div id="categories">
+    <h3>Tags</h3>
+    <div class="body">
+        <ul>
+            {% for tag, article_list in tags %}
+            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div id="linkroll">
+    <header><h3>Around the Web</h3></header>
+    <div class="body">
+        <ul>
+            {% for name, link in SOCIAL %}
+            <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+<div>
+

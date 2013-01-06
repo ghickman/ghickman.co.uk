@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+
+<article class="content">
+    {% include "post-title.html" %}
+    <div class="body">{{ page.content }}</div>
+</article>
+{% endblock %}
