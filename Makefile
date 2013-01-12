@@ -49,4 +49,4 @@ s3: publish
 	rm -r $(OUTPUTDIR)
 	@echo 'Published ghickman.co.uk'
 
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
+.PHONY: html help clean regenerate serve devserver publish s3
