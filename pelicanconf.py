@@ -21,10 +21,10 @@ SITENAME = u'GHickman.co.uk'
 
 # Around the web
 SOCIAL = (
-    ('Twitter', 'https://twitter.com/ghickman'),
-    ('GitHub', 'https://github.com/ghickman'),
-    ('Amazon', ''),
-    ('Bitbucket', ''),
+    ('twitter', 'https://twitter.com/ghickman'),
+    ('gitHub', 'https://github.com/ghickman'),
+    ('amazon', 'http://www.amazon.co.uk/registry/wishlist/V6J2GGDHIQ1W'),
+    ('stackoverflow', 'http://stackoverflow.com/users/158304/ghickman'),
 )
 
 SUMMARY_MAX_LENGTH = 50

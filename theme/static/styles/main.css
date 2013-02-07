@@ -107,11 +107,16 @@ aside li {
   font-size: 14px;
   font-weight: bold;
   list-style: none;
-  padding: 0px 0 5px 25px;
 }
 
 aside #categories li {
   background: url('/theme/images/tag.png') no-repeat top left;
+  padding: 0px 0 5px 25px;
+}
+
+aside #linkroll li {
+    float: left;
+    margin: 0 15px 15px 10px;
 }
 /*---------------------------------------------------------------------------**/
 
