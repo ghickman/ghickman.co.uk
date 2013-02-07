@@ -46,7 +46,6 @@ publish:
 
 s3: publish
 	s3cmd sync $(OUTPUTDIR)/* S3://$(S3_BUCKET)
-	rm -r $(OUTPUTDIR)
 	@echo 'Published ghickman.co.uk'
 
 .PHONY: html help clean regenerate serve devserver publish s3
