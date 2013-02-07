@@ -17,6 +17,8 @@ MENUITEMS = (
     ('Tags', '/tags.html'),
 )
 
+PAGE_DIR = 'pages'
+
 RELATIVE_URLS = False
 
 SITENAME = u'GHickman.co.uk'
