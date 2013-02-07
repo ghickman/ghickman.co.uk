@@ -17,8 +17,6 @@ MENUITEMS = (
     ('Tags', '/tags.html'),
 )
 
-PAGE_DIR = 'pages'
-
 RELATIVE_URLS = False
 
 SITENAME = u'GHickman.co.uk'
@@ -32,6 +30,8 @@ SOCIAL = (
 )
 
 SUMMARY_MAX_LENGTH = 50
+
+TEMPLATE_PAGES = {'404.html': '404.html'}
 
 THEME = 'theme'
 
