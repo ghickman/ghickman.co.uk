@@ -1,5 +1,5 @@
 Title: Using Passenger with RVM and Sinatra
-Tags: RVM, Sinatra
+Tags: Ruby
 
 After making the move to [Linode](http://linode.com) (finally!) I had some issues with getting the contact pages on this site and [Penderry](http://Penderry.com) up and running. RVM was throwing an error about the sinatra gem missing. A quick scan of the error message and it was obvious that Passenger wasn't using my gemsets.
 
