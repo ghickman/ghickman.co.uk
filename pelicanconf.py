@@ -17,7 +17,7 @@ MENUITEMS = (
 
 RELATIVE_URLS = False
 
-SITENAME = u'ghickman.co.uk'
+SITENAME = u'GHickman.co.uk'
 
 # Around the web
 SOCIAL = (
