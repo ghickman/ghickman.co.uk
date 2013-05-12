@@ -146,6 +146,11 @@ article header h1 {
   margin-top: 0;
 }
 
+article h2,
+article h3 {
+    margin-top: 20px;
+}
+
 /** Photos */
 div.photo {
   border: 1px solid black;
