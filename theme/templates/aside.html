@@ -2,7 +2,7 @@
     <h3>Tags</h3>
     <div class="body">
         <ul>
-            {% for tag, article_list in tags %}
+            {% for tag, article_list in tags|sort %}
             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
             {% endfor %}
         </ul>
