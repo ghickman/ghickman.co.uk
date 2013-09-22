@@ -212,14 +212,13 @@ img.cc {
 
 /** Code */
 code, pre {
-  font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-family: Monaco, 'Courier New', monospace;
   font-size: 12px;
 }
 
 pre {
   background: #333;
   border-radius: 2px;
-  color: #efefef;
   margin: 3px 0 5px;
   overflow: auto;
   padding: 3px 5px;
@@ -231,17 +230,8 @@ code {
   color: #444;
   padding: 0 0.2em;
 }
-
-/* Gists */
-.line {
-  display: block;
-  margin: 4px 0;
-}
-
-.gist-meta {
-  font-size: 12px;
-}
 /*-----**/
+
 /*---------------------------------------------------------------------------**/
 
 

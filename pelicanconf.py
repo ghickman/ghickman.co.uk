@@ -17,6 +17,8 @@ MENUITEMS = (
     ('Tags', '/tags.html'),
 )
 
+PLUGINS = ('pelican_gist',)
+
 RELATIVE_URLS = False
 
 SITENAME = u'GHickman.co.uk'

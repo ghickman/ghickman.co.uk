@@ -5,4 +5,4 @@ After making the move to [Linode](http://linode.com) (finally!) I had some issue
 
 A bit of googling turned up this little snippet which, when placed in `app/config/`, will tell RVM to use the gemset associated with the folder.
 
-{{ 900934 | gist }}
+[gist:id=900934]

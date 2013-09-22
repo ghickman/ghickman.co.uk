@@ -19,17 +19,17 @@ To combine the two I needed both of them to display the same layout since I didn
 
 My test app is hosted on [Github](http://github.com/ghickman/jekyll_contact) for your viewing pleasure but I'll go through the important parts here too.
 
-{{ 463598 | gist: 'default.haml' }}
+[gist:id=463598,file=default.haml]
 
 Nothing special here, just a bog standard Jekyll layout (well almost, this one is in HAML as I use [RickGuk's Jekyll fork](http://github.com/richguk/jekyll)) with a HAML interpreter bolted on.
 
 The contact page itself is an HTML(5) form that displays some extra bits if we find errors. The test app is done using some HTML 5 specific elements like the email input box but there's no big leaps from HTML 4.
 
-{{ 463598 | gist: 'contact.haml' }}
+[gist:id=463598,file=contact.haml]
 
 The actual Sinatra application is nice and simple given that we're plugging it into a different layout.
 
-{{ 463598 | gist: '_contact.rb' }}
+[gist:id=463598,file=_contact.rb]
 
 I've started off by setting the views path to Jekyll's source directory so Sinatra knows where to find the contact page and since you can specify a subdirectory the site layout can easily be found later.
 
@@ -44,6 +44,6 @@ The last thing to note in the script is the redirect on a successful submission.
 ### Setting it up in a Production Environment
 Setting this all up in production requires a bit more than Jekyll since you're running a ruby application in the background now. Luckily this is where [Phusion Passenger](http://www.modrails.com/) comes in. You'll need a rack file in your Jekyll root that looks like this:
 
-{{ 463598 | gist: 'config.ru' }}
+[gist:id=463598,file=config.ru]
 
 Don't forget to update the redirect path back from Sinatra to Jekyll, then you're good to go!

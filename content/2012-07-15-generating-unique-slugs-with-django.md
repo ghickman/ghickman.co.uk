@@ -11,14 +11,14 @@ The functions make the slug unique by appending a count to the end and checking 
 
 ## Model Specific
 
-{{ 3116929 | gist: 'specific.py' }}
+[gist:id=3116929,file=specific.py]
 
 *example usage*: `MyModel.objects.create(name='foo', slug=MyModel.generate_slug('foo'))`
 
 
 ## Generic
 
-{{ 3116929 | gist: 'generic.py' }}
+[gist:id=3116929,file=generic.py]
 
 *example usage*: `AnotherModel.objects.create(name='bar', slug=generate_slug(AnotherModel, 'foo'))`
 

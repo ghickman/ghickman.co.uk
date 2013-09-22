@@ -32,7 +32,7 @@ Click `Create client id` and grab your `Client ID`/`Client secret` combo for the
 ## Setup Django Social Auth
 Add `social_auth` to your `INSTALLED_APPS` and the other settings below:
 
-{{ 3118490 | gist: 'settings.py' }}
+[gist:id=3118490,file=settings.py]
 
 Here I whitelist our Google Apps domain to only allow authentication by users from work email addresses and tell Social Auth to use the `auth.User` model when creating new users which it will do by default (I believe you can turn this off with another setting). This lets met forget about registration completely which is perfect for internal applications.
 
@@ -42,7 +42,7 @@ Make sure you've set `GOOGLE_OAUTH2_CLIENT_ID` and `GOOGLE_OAUTH2_CLIENT_SECRET`
 
 ## Create Some Basic Views
 
-{{ 3118490 | gist: 'views.py' }}
+[gist:id=3118490,file=views.py]
 
 Social Auth requires you add a view for when login fails. So far this hasn't been an issue for me so I've done the pure basics here with `LoginError`.
 
@@ -50,7 +50,7 @@ The second view was to cope with the whitelisting of domains which, pleasingly, 
 
 Now all we need is to plumb this in with some URLs:
 
-{{ 3118490 | gist: 'urls.py' }}
+[gist:id=3118490,file=urls.py]
 
 
 ## Profit

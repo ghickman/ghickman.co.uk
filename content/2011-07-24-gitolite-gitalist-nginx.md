@@ -90,7 +90,7 @@ Next you'll need a config file for Gitalist:
 
 Paste in the following - setting the path to your gitalist_server.pl to the appropriate place if it's not in the default location.
 
-{{ 1084154 | gist: 'supervisor' }}
+[gist:id=1084154,file=supervisor]
 
 I've put the socket and pid files in `/var/run/` since Gitalist is installed via CPAN into and [doesn't really](#gitalist-install-dir) have an install directory as such so that's the next logical place. However you'll need to create the gitalist directory there and `chown` it to your `git` user so it can be written to by the FastCGI script (which is now running under the `git` user). The `--nproc` switch tells the script how many processes to run, like Nginx's workers directive. To see all the options run `/usr/local/bin/gitalist_fastcgi.pl --help` in your terminal.
 
@@ -103,12 +103,12 @@ Since we're using FastCGI to pass requests from Nginx through to Gitalist we'll 
 
 and set the `repo_dir` option to `/home/git/repositories/`:
 
-{{ 1084154 | gist: 'gitalist.conf' }}
+[gist:id=1084154,file=gitalist.conf]
 
 #### Nginx
 Create yourself a virtual host in nginx's sites-available directory and add the following, changing the server name to something suitable:
 
-{{ 1084154 | gist: 'vhost' }}
+[gist:id=1084154,file=vhost]
 
 I've setup the logs under `/var/log/gitalist/` for the same reason as the socket and the pid files, again you'll have to create that directory but make it writable by `www-data` so Nginx has access to it.
 

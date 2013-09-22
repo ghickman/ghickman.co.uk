@@ -13,6 +13,6 @@ This initially prompted me to split the front end script's options into a [separ
 
 This seems to have affected at least [one](http://ionelmc.wordpress.com/2008/04/24/setuptools-nosetests-oddness/) other person, whose post finally gave me the lightbulb today. [Ionel](http://ionelmc.wordpress.com/) mentions in his post "Luckily, setuptools has aliases for commands and instead of" and a snippet of a config file. It's only taken me a couple of years (I've tried to fix this at least 3 times now and always drawn blanks sadly) to realise that he was using a config file. A quick google for the appropriate section in the [nose docs](http://somethingaboutorange.com/mrl/projects/nose/1.0.0/man.html#configuration) turned up enough information to construct a useful rc file:
 
-{{ 949702 | gist .noserc }}
+[gist:id=949702,file=.noserc]
 
 And so I finally have my lovely coloured output, with [Growl](https://bitbucket.org/crankycoder/nosegrowl) integration, back. This is shaping up to be quite the productive weekend.

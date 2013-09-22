@@ -5,13 +5,13 @@ Using Django formsets on a new section for a project at work I came across somet
 
 The idea behind the script is pretty simple: duplicate an existing form then update the form counter.
 
-{{ 1020463 | gist: 'add_inline.js' }}
+[gist:id=1020463,file=add_inline.js]
 
 Which is setup to work on html that looks like this:
 
 _Note: I'm using [Django UniForm][1] to output the form in `<div>'s`_
 
-{{ 1020463 | gist: 'forms.html' }}
+[gist:id=1020463,file=forms.html]
 
 ### So How Does it Work?
 _Skip to [Gotchas][2] if you already understand my javascript_
