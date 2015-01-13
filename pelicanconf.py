@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+from __future__ import unicode_literals
+
+
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
@@ -22,6 +25,7 @@ PLUGINS = ('pelican_gist',)
 RELATIVE_URLS = False
 
 SITENAME = u'GHickman.co.uk'
+SITEURL = ''
 
 # Around the web
 SOCIAL = (
@@ -38,4 +42,3 @@ TEMPLATE_PAGES = {'404.html': '404.html'}
 THEME = 'theme'
 
 TIMEZONE = 'Europe/London'
-

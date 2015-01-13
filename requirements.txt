@@ -5,12 +5,12 @@ jinja2==2.7.1
 markdown==2.3.1
 markupsafe==0.18
 pelican-gist==0.2.1
-pelican==3.2.2
+pelican==3.5.0
 pygments==1.6
 pytz==2013d
 requests==1.2.3
 s3cmd==1.1.0-beta3
-six==1.4.1
+six==1.9.0
 unidecode==0.04.14
 wheel==0.22.0
 wsgiref==0.1.2
