@@ -35,6 +35,13 @@ SOCIAL = (
     ('stackoverflow', 'http://stackoverflow.com/users/158304/ghickman'),
 )
 
+STATIC_PATHS = [
+    'static/keybase.txt',
+]
+EXTRA_PATH_METADATA = {
+    'static/keybase.txt': {'path': 'keybase.txt'},
+}
+
 SUMMARY_MAX_LENGTH = 50
 
 TEMPLATE_PAGES = {'404.html': '404.html'}
