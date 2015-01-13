@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/ghickman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://ghickman.co.uk
+  * I am ghickman (https://keybase.io/ghickman) on keybase.
+  * I have a public key with fingerprint D05C 5A1C 502A 3734 9698  2B15 EEC6 7845 093B 01FD
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.3"
+        },
+        "key": {
+            "fingerprint": "d05c5a1c502a373496982b15eec67845093b01fd",
+            "host": "keybase.io",
+            "key_id": "EEC67845093B01FD",
+            "uid": "20c56a3d78e832fbf97ca98e0d082700",
+            "username": "ghickman"
+        },
+        "merkle_root": {
+            "ctime": 1421146888,
+            "hash": "0c41144e0676ab0baa5133fc79b41faad903fcafe80774807b1502f766cc99331c2a10612e39a064464446584b7b0422a31ba31f8f9bcd62471f9a3275a1c10b",
+            "seqno": 130052
+        },
+        "service": {
+            "hostname": "ghickman.co.uk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421147237,
+    "expire_in": 157680000,
+    "prev": "9ac073c4af6dabab4d65983af3613840199e1c5da5ffebac272831624f1e5a56",
+    "seqno": 24,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFdUltsFUUYPqelVIoaRRqJaNMs0aDW49x2Z/YojVxaCFHTaIkv6Mlce5bT7p7u
+2Raa2kgiDyIvPACGiJDYcGuiItIgNHiJ2kpAawMm1CjGqImoKcFoQhpFZ5sSxcnM
+ZGb+b775vn/+7bdUZ6qyU6ObWuY9kv0re+aSyLQf+1P3OyJSfU6+35GdgQ6TdBXy
+Lu3knZLuE7yic0HUGEZK5zZUGmcxTU6vjitBFFoUyNEcdgaaUnh62QRhh47LcZBy
+OQq40uVQugBxTDHxPZ8hAV2tpUcZcYGPBYBGWcpiVElueNWZ4SwEyp62tKy8jl8B
+YOsqG+uZCSAgXY9jRZlmGBlhfCq5zzRQgCEKQAqs6HjWUkcxkKUuHqZ6u3Rc6tSF
+OIpmTMskSCGQIAiJxxizinilmDqUxB4RDTzqcQEE5y7E2EjqCwIN58oHdseNZoBS
+YifrDyBDPU9K38cYSsQh8CDS2OfAI8R24rmMCCoAQTYxUNhhmPGFVB4iFBqfY0TT
+xEEgrIWK7g4jKw4D4KKBdB/3BlKnutO0/c9dTka5npK9Vo6jJJJRp40Vk6ScT20n
+feUUu1EfEYVZmoIIQmW/7b//Ci30hpRQhGmTozeVg1gXghThUo8B29J3dK/l9LkE
+FEvCjae44IIoz/UZ5gZ7EDMCoO9rWwqKu8ZowSWiiGFoDRuoXe56/xpFxArlHZaz
+EnSEPOmJtTOwNXv3nEy2KjO3piqt3EzdvNuul/PYVO3fy5uzL30RrJlEXx0qL751
+5wcLVr7xffuibc8WD49mh+Dq04f6pz9q+GEk33DuoWunl6x7/9eFg49dpCNmx4bn
+3z3VPH+9em1/e+mFA2r32npn9NXWzU33Tn65uXZg2j1y7r7a8ccHi+HBl59kFz4X
+u1nj8NGrv7cdPP7z1466Z2Rtfd3i7vjNh38aath1PNr26ZVHu85PrK8fT36svmv6
+WN2e+TddPnX7yf45f1RPfjzy3RP5b4fHPnnql+maOx5Ys7f15ufyg1cmXhwuXv7m
+nUXvXViqrm6ce6lm6LNd+xZcm3gQLp9qXvJM9+F1k/verh7fserDunLbsjHyypb7
+257eL89efGvrzjuXndj72+tb9jj/AA==
+=NwOG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ghickman
+
+==================================================================
