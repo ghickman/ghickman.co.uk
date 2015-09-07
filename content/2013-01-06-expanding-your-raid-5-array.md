@@ -1,4 +1,5 @@
 Title: Expanding your RAID-5 Array
+Status: published
 Tags: Fileserver, RAID
 
 Every so often the time comes around again where I run out of space on my fileserver. Thankfully I'm using RAID-5 so expanding the array is easy enough and the wonderful `mdadm` utility means I can have software RAID so the expansion won't take eons.

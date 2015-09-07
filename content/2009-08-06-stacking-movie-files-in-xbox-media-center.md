@@ -1,4 +1,5 @@
 Title: Stacking Movie Files in XBox Media Center
+Status: published
 Tags: XBMC
 
 I'm the first person to admit that I have some fairly obsessive habits when it comes to making things look nice and neat, more specifically in the media files department. So while playing around with getting my Films folder all neatly into XBox Media Centre (XBMC because I'm lazy and abbreviations FTW) when I found that my films in multiple files weren't stacking properly.

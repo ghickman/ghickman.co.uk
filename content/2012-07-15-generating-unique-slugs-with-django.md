@@ -1,4 +1,5 @@
 Title: Generating unique slugs with Django
+Status: published
 Tags: Django
 
 This is something I've come across a couple of times over the last few months and each time ended up acking through various projects so putting this up here to save myself the pain next time!

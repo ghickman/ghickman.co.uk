@@ -1,4 +1,5 @@
 Title: Phase Two, Ahmedabad
+Status: published
 Tags: India, Travel
 
 We'd pre-booked our flight from Delhi to Ahmedabad which added a nice respite from working out what to do. Delhi's domestic terminal was an experience in itself, at the doorway and right up until you pass through security there are heavily armed guards wherever you look. Since everyone stared at us wherever we went this shouldn't have been a problem in the airport but having guards with machine guns staring at me was not a pleasant experience.

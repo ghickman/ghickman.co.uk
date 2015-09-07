@@ -1,4 +1,5 @@
 Title: Creating a Contact Page for Jekyll with Sinatra
+Status: published
 Tags: Ruby
 
 <div class="right photo">

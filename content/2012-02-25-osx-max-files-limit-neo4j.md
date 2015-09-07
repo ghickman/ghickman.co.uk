@@ -1,4 +1,5 @@
 Title: Extending OS X Lion's Maxfiles Limit for Neo4J
+Status: published
 
 After upgrading to Neo4j 1.6 today I got this warning when starting the server:
 

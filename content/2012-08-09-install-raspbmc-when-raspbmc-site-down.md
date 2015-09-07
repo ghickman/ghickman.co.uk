@@ -1,4 +1,5 @@
 Title: How to Install Raspbmc when raspbmc.com is Down
+Status: published
 
 `raspbmc.com` down for you? Never fear, the internet has your back.
 

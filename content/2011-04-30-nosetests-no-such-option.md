@@ -1,4 +1,5 @@
 Title: Nose Tests - no such option
+Status: published
 Tags: Python, Testing
 
 Some time ago now I added proper command line options to [Tv Renamr](http://github.com/ghickman/tvrenamr), followed shortly by a test suite with Python's [Nose](http://somethingaboutorange.com/mrl/projects/nose/1.0.0/). Along the way I ran into a bug that has frustrated me for a long long time, until today when I finally found a work around - hooray, go me!

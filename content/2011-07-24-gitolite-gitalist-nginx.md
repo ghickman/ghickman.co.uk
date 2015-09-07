@@ -1,4 +1,5 @@
 Title: Setup Gitalist with Gitolite on Nginx
+Status: published
 Tags: Git
 
 I recently gave [Github's](https://github.com/) paid service a go when my vimrc ended up needing some passwords in it. While I'm a big fan of Github and what it's done for the Git community as a whole I just can't justify paying the £5 a month so I can use my vimrc at home, work and a few servers. Of course the downside is the loss of being able to quickly view code on the web, but as fate would have it Twitter came to my rescue within a couple of days via the sagely [Joel Moss](http://developwithstyle.com/).
