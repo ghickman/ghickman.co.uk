@@ -1,5 +1,5 @@
 Title: Managing Your Pythons with Pyenv
-Status: draft
+Status: published
 Tags: Python
 
 With the [impending](http://legacy.python.org/dev/peps/pep-0478/) release of Python 3.5 it's that time of year when everyone wants to update their Python 3 version or add another Python to the list of installed versions.
