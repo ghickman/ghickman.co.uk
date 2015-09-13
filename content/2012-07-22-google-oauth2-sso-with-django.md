@@ -1,4 +1,5 @@
 Title: Setup Single Sign On in Django using Google OAuth2
+Status: published
 Tags: Django, Python
 
 We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on its way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.

@@ -11,6 +11,10 @@ AUTHOR = u'George Hickman'
 
 DEFAULT_LANG = u'en'
 
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
+
 DEFAULT_PAGINATION = 5
 
 FEED_DOMAIN = 'http://ghickman.co.uk'

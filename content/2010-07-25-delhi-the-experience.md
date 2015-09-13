@@ -1,4 +1,5 @@
 Title: Delhi, the Experience
+Status: published
 Tags: India, Travel
 
 Back at the beginning of the year while I was travelling around South-East Asia with friends my partner, who I'd had to leave at home, came up with the idea of visiting an orphanage in India that her family had ties to. Being quite taken with this travelling thing I thought it was a fantastic opportunity for her with the bonus of getting to teach some kids who haven't had the best luck. Later in my first trip I decided I'd like to go with her and we decided we'd make a mini trip of it and take in some more of what India has to offer. She drew up an itinerary, flights got booked, bags packed and off we trotted (with only one hiccup of almost not getting a visa in time, I probably should have thought of that one...).

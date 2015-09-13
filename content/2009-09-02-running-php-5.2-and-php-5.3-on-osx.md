@@ -1,4 +1,5 @@
 Title: Running PHP 5.2 and PHP 5.3 on OSX
+Status: published
 Tags: PHP, OSX
 
 With the release of Snow Leopard Mac users have been provided with version 5.3 of PHP already installed and are one commented line away from running it with Apache. Upon installing Snow Leopard I thought "great! shiny new things!", then discovered all my projects down and out from all the shiny goodness. So I needed to get my PHP 5.2 working again. Back on Leopard I'd been using the Entropy PHP package created by Marc Liyange since it comes with all the extensions I needed. Now I didn't want to lose PHP 5.3 as I'd like to play around in it when I have some more spare time. So the ideal situation would be to have both installed and be able to switch between them with as little as an Apache restart.

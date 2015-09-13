@@ -1,4 +1,5 @@
 Title: Postgres Won't Start
+Status: published
 Tags: Postgres
 
 This problem has caught me out 3 times now so this post is partly just so I don't forget the cause again.

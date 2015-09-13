@@ -1,4 +1,5 @@
 Title: Ecohandle Shopping Bag
+Status: published
 
 <div class="right photo">
     <img src="https://s3-eu-west-1.amazonaws.com/ghickman/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag">

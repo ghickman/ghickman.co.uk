@@ -1,4 +1,5 @@
 Title: Inspect's Hidden Gem: classify_class_attrs
+Status: published
 Tags: Python
 
 Inspect provides a wealth of functionality for inspecting code, however one of it's most useful features is undocumented. Say hello to `classify_class_attrs`.

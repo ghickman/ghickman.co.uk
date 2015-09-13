@@ -1,4 +1,5 @@
 Title: Adding Django Inline Forms with Javascript
+Status: published
 Tags: Django, Javascript, Python
 
 Using Django formsets on a new section for a project at work I came across something I haven't considered before: adding new inline forms to a formset without reloading the page. Javascript was the obvious choice. Two pages required the functionality: one with six formsets, the other with one, which meant the solution needed to take into account formset prefixes. I found various solutions around the Internet, but all were outdated (lots of table based layouts!) or not generic enough (didn't deal with multiple formsets).

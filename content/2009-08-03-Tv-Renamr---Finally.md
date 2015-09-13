@@ -1,5 +1,6 @@
 Title: TV Renamr - Finally
 Slug: tv-renamr-finally
+Status: published
 Tags: Python, TV Renamr
 
 For the last few years I've always wanted to create a program that renamed the TV files I had into the nice neat format that I seem to spend so much of my spare time doing manually. Well, on my birthday I decided to take the plunge, stop talking about it and get my arse in gear. On that day, 22 years after my mother labouriously gave birth to me Tv Renamr was created in what I have no doubt was a far less spectacular fashion than the miracle of child birth. I started off with a short script in Python with various bits taken de facto from the internet. It sort of worked, as long as your files were in the correct format to begin with, which was a pretty narrow groove for your files to be. Which of course mine weren't.

@@ -1,4 +1,5 @@
 Title: Back to School
+Status: published
 Tags: India, Travel
 
 One of our main aims in India was to help out at a school we had vague ties to. The school had been variously described to us as an orphanage (and is indeed for children who have not had the best start in life, but also for others) and a hostel. We had assumed, before arrival, that it was a small school with 200 girls attending where we could help with teaching English. It actually turns out the 'school' is more of a community. Based on 5000 acres of land it is a charity run organisation with a large school, hostel for the children, various (large scale) cooking facilities, a water treatment plant, enough farm land to be self sufficient for 9 months of the year, a college/university, an old peoples home, a blind school, a general farm and more. Our initial figure of 200 girls is about right, however no-one thought to mention the other 2000 male students living here! Almost all staff live on-site and their are a good number of administrators and other personnel for things like building, farming, cooking, etc.
