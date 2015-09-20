@@ -3,7 +3,7 @@ Status: published
 Tags: Ruby
 
 <div class="right photo">
-    <img src="https://s3-eu-west-1.amazonaws.com/ghickman/jekyll.jpg" width="300" height="169" title="Jekyll" alt="James Nesbitt in Jekyll">
+    <img src="/images/jekyll.jpg" width="300" height="169" title="Jekyll" alt="James Nesbitt in Jekyll">
     <p class="photo">
         <a href="http://thetvdb.com/?tab=artistbanners&amp;id=513">Freneticvirus</a>
         <img class="cc" src="/images/cc.png" width="16" height="16" title="Creative Commons Icon" alt="CC">

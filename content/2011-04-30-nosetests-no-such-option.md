@@ -6,9 +6,7 @@ Some time ago now I added proper command line options to [Tv Renamr](http://gith
 
 The bug is hardly a game stopper as it only affects the UI candy on my tests. Simply put, I couldn't use options with nose. Every time I did, an error was thrown saying no such option existed for nose while displaying the usage string for tvr:
 
-<div>
-  <img src="http://ghickman.s3.amazonaws.com/posts/2011-04-30-nosetest-no-such-option/screenshot.png" width="700">
-</div>
+![](/images/nose-tests.png)
 
 This initially prompted me to split the front end script's options into a [separate](https://github.com/ghickman/tvrenamr/commit/b77e16d97f7712de38625381e194d43e090a3fde) file which didn't solve the issue, but did wonders for cleaning up the codebase.
 
