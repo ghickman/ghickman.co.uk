@@ -5,7 +5,8 @@ I've had pet peeves with standard layout keyboards for as long as I can remember
 
 My first attempt at doing something about this was an [ErgoDox](http://deskthority.net/wiki/ErgoDox), which is a matrix layout, fully firmware programmable split keyboard. Building it involved buying all the parts from Massdrop, learning to solder, "borrowing" the kitchen table for a weekend, and a couple of singed fingers.This was the first time I've really done a hardware project and it was fascinating to dive into that world.
 
-I have the standard edition (as opposed to full hand which has wrist wrests built into the case) with Cherry Brown switches and black, blank PBT DCS keycaps.
+![ErgoDox Buildstation](/images/ergodox-buildstation.jpg)
+
 
 I adore it.
 

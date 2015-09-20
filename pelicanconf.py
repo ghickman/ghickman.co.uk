@@ -41,6 +41,7 @@ SOCIAL = (
 
 STATIC_PATHS = [
     'static/keybase.txt',
+    'images',
 ]
 EXTRA_PATH_METADATA = {
     'static/keybase.txt': {'path': 'keybase.txt'},
