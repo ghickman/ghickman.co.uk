@@ -26,7 +26,7 @@ help:
 	@echo '   make serve [PORT=8000]           serve site at http://localhost:8000'
 	@echo '   make devserver [PORT=8000]       start/restart develop_server.sh    '
 	@echo '   make stopserver                  stop local server                  '
-	@echo '   make s3                          upload the web site via s3cmd      '
+	@echo '   make deploy                      upload the web site via s3cmd      '
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo '                                                                       '
@@ -62,8 +62,8 @@ stopserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-s3: publish
+deploy: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
 	@echo 'Published ghickman.co.uk'
 
-.PHONY: html help clean regenerate serve devserver publish s3
+.PHONY: html help clean regenerate serve devserver publish deploy
