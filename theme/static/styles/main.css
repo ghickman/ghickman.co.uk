@@ -59,6 +59,13 @@ p {
   line-height: 1.8em;
 }
 
+blockquote {
+    color: #666;
+    border-left: 2px solid #999;
+    padding-left: 10px;
+    -webkit-margin-start: 20px;
+}
+
 p, li, .feedback {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 18px;
