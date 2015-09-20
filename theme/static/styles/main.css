@@ -55,13 +55,13 @@ img {
 }
 
 p {
-  margin: 0 0 10px;
-  line-height: 1.6em;
+  margin: 0 0 20px;
+  line-height: 1.8em;
 }
 
 p, li, .feedback {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 /*---------------------------------------------------------------------------**/
 
