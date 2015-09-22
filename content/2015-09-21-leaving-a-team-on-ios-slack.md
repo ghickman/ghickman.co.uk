@@ -15,7 +15,7 @@ SCROLL DOWN. It's really not obvious that there is more to the settings page.
 <img class="center" alt="Team Settings" title="Scroll down…"
      src="/images/slack-team-settings.png" style="width:50%;" />
 
-<p style="text-align:center;">Tap the Sign out of `Team` link.</p>
+Tap the "Sign out of Team" link.
 
 <img class="center" alt="Sign Out Link" title="Click the Magical Button!"
      src="/images/slack-team-signout.png" style="width:50%;" />
