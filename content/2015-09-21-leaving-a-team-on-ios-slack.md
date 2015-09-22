@@ -1,5 +1,5 @@
 Title: Leaving a Team on Slack for iOS
-Status: draft
+Status: published
 
 
 I recently tried to sign out of a team on Slack for iOS and found the process to be non-obvious and a lack of documentation made it harder. I'm writing this mostly for the next time I need to do it and have forgotten how.
