@@ -10,7 +10,7 @@ Open the Team menu with the hamburger icon in the top right and tap Settings
      src="/images/slack-team-menu.png" style="width:50%;" />
 
 
-SCROLL DOWN. It's really not obvious there is more to the settings page.
+SCROLL DOWN. It's really not obvious that there is more to the settings page.
 
 <img class="center" alt="Team Settings" title="Scroll down…"
      src="/images/slack-team-settings.png" style="width:50%;" />
