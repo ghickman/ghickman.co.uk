@@ -1,5 +1,5 @@
 Title: Switching to ErgoDox
-Status: draft
+Status: published
 
 I've had pet peeves with standard layout keyboards for as long as I can remember. The slanted and unbalanced layout has always seemed so illogical to me. I'm aware of the history behind their design, but whereas so many other things have been improved on computers, keyboards have remained essentially untouched (at least in layout).
 
