@@ -1,5 +1,5 @@
 Title: Archiving Banking Transactions
-Status: draft
+Status: published
 Tags: Process
 
 I'm a long term user of internet banking and for a few years I've done so without paper records. This left me in the position of having no form of backup outside my bank; hardly an ideal situation. Most banks provide a way to download your transactions, usually in CSV or PDF, within a given date range. However, keeping track of the dates covered in these files is laborious and error prone.
