@@ -8,14 +8,18 @@
 .no_margin_bottom{margin-bottom:0;}
 .no_margin_left{margin-left:0;}
 
+html {
+    font-size: 100%;
+  }
+
 .wrapper {
   width: 999px;
   margin: 0 auto;
 }
 
 body {
-  color: #000;
-  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -27,24 +31,24 @@ a {
 
 h1, h2, h3, h4 {
   color: #69C;
+  font-weight: 600;
   margin: 10px 0 1px;
 }
 
 h1 {
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 1.25rem;
 }
 
 h1 a {
@@ -57,7 +61,7 @@ img {
 
 p {
   margin: 0 0 20px;
-  line-height: 1.8em;
+  line-height: 1.8rem;
 }
 
 blockquote {
@@ -68,8 +72,8 @@ blockquote {
 }
 
 p, li, .feedback {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
 }
 /*---------------------------------------------------------------------------**/
 
@@ -87,8 +91,9 @@ p, li, .feedback {
 /** SIDEBAR */
 aside {
   float: right;
-  width: 200px;
+  font-size: 0.9rem;
   padding: 0 20px 0 0;
+  width: 200px;
 }
 
 aside > div {
@@ -109,8 +114,6 @@ aside ul {
 }
 
 aside li {
-  font-size: 14px;
-  font-weight: bold;
   list-style: none;
 }
 
@@ -186,12 +189,12 @@ img.cc {
 /** info */
 .info {
   color: #B3B3B2;
-  font-size: 10px;
+  font-size: .9rem;
   margin: 0px 0 3px;
 }
 
 .info p {
-  font-size: 13px;
+  font-size: inherit;
   margin: 0;
   padding: 0;
 }
@@ -204,7 +207,7 @@ img.cc {
 
 .post-tags li {
   display: inline;
-  font-size: 13px;
+  font-size: inherit;
   list-style: none;
   margin: 0 10px 0 0;
 }
@@ -225,12 +228,13 @@ img.cc {
 /** Code */
 code, pre {
   font-family: Monaco, 'Courier New', monospace;
-  font-size: 12px;
 }
 
 pre {
   background: #333;
   border-radius: 2px;
+  color: #fff;
+  font-size: .8rem;
   margin: 3px 0 5px;
   overflow: auto;
   padding: 3px 5px;
@@ -240,6 +244,7 @@ code {
   background-color: ghostWhite;
   border: 1px solid #dedede;
   color: #444;
+  font-size: .9rem;
   padding: 0 0.2em;
 }
 /*-----**/
@@ -259,7 +264,7 @@ footer {
 }
 
 #pelican, #copyright, #contact-link {
-  font-size: 12px;
+  font-size: .8rem;
   padding: 24px 0 0;
 }
 
