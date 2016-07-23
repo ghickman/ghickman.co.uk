@@ -89,6 +89,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+li {
+  list-style: none;
+}
 /*---------------------------------------------------------------------------**/
 
 
@@ -108,7 +112,6 @@ ul {
 #mast-head li {
   display: inline-block;
   margin: 0 10px;
-  list-style: none;
 }
 #mast-head a {
   line-height: 50px;
@@ -192,7 +195,6 @@ img.cc {
 .post-tags li {
   display: inline;
   font-size: inherit;
-  list-style: none;
   margin: 0 10px 0 0;
 }
 
