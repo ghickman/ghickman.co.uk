@@ -8,6 +8,10 @@
 .no_margin_bottom{margin-bottom:0;}
 .no_margin_left{margin-left:0;}
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 html {
     font-size: 100%;
   }
@@ -232,6 +236,15 @@ iframe.twitter-tweet {
     margin: 30px auto !important;
 }
 /*-----**/
+/*---------------------------------------------------------------------------**/
+
+
+/** Archives */
+.row:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
 /*---------------------------------------------------------------------------**/
 
 
