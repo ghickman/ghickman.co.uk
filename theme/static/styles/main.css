@@ -79,11 +79,35 @@ p, li, .feedback {
 
 
 /** HEADER */
-#logo {
-    background: url('/theme/images/logo.png') center center no-repeat;
-    display: block;
-    text-decoration: none;
-    height: 200px;
+#mast-head {
+  background-color: #f2f3f3;
+  border-top: 9px solid #323232;
+  height: 50px;
+  width: 100%;
+}
+#mast-head .wrapper {
+  box-sizing: border-box;
+  padding: 0 50px 0 20px;
+}
+#mast-head .wrapper > a {
+  color: #515151;
+}
+#mast-head .wrapper > a:hover {
+  border-bottom: none;
+}
+#mast-head ul {
+  margin: 0;
+}
+#mast-head li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+}
+#mast-head a {
+  line-height: 50px;
+}
+#mast-head a:hover {
+  border-bottom: 2px solid #323232;
 }
 /*---------------------------------------------------------------------------**/
 
