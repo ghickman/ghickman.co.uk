@@ -32,7 +32,18 @@
         </div>
     </header>
     <div class="wrapper">
-        <aside>{% include "aside.html" %}</aside>
+        <aside>
+            <div>
+              <h3>Tags</h3>
+              <div class="body">
+                <ul>
+                  {% for tag, article_list in tags|sort %}
+                  <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+        </aside>
 
         <div id="content">{% block content %}{% endblock %}</div>
 

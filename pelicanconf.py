@@ -31,14 +31,6 @@ RELATIVE_URLS = False
 SITENAME = u'GHickman.co.uk'
 SITEURL = ''
 
-# Around the web
-SOCIAL = (
-    ('twitter', 'https://twitter.com/ghickman'),
-    ('github', 'https://github.com/ghickman'),
-    ('amazon', 'http://www.amazon.co.uk/registry/wishlist/V6J2GGDHIQ1W'),
-    ('stackoverflow', 'http://stackoverflow.com/users/158304/ghickman'),
-)
-
 STATIC_PATHS = [
     'static/keybase.txt',
     'images',
