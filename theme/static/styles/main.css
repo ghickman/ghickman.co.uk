@@ -78,6 +78,11 @@ p, li, .feedback {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   font-size: 1rem;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
 /*---------------------------------------------------------------------------**/
 
 
@@ -97,9 +102,6 @@ p, li, .feedback {
 }
 #mast-head .wrapper > a:hover {
   border-bottom: none;
-}
-#mast-head ul {
-  margin: 0;
 }
 #mast-head li {
   display: inline-block;
@@ -131,12 +133,6 @@ aside h3 {
 aside .body {
     padding-left: 0px;
 }
-
-aside ul {
-    margin: 0;
-    padding-left: 0;
-}
-
 aside li {
   background: url('/theme/images/tag.png') no-repeat top left;
   list-style: none;
@@ -156,10 +152,6 @@ aside li a:hover {
 
 article {
   margin-bottom: 40px;
-}
-
-article ul {
-  padding: 0 0 10px 25px;
 }
 
 .paginator {
@@ -209,7 +201,7 @@ img.cc {
 .info {
   color: #B3B3B2;
   font-size: .9rem;
-  margin: 0px 0 3px;
+  margin-bottom: 15px;
 }
 
 .info p {
@@ -221,7 +213,6 @@ img.cc {
 .post-tags ul {
   display: inline-block;
   margin-top: 3px;
-  padding: 0;
 }
 
 .post-tags li {
