@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="openid.server" href="http://www.myopenid.com/server">
-    <link rel="openid.delegate" href="http://ghickman.myopenid.com/">
-    <link rel="openid2.local_id" href="http://ghickman.myopenid.com/">
-    <link rel="openid2.provider" href="http://my.myopenid.com/server">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/normalize.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/main.css">
-    <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="openid.server" href="http://www.myopenid.com/server">
+  <link rel="openid.delegate" href="http://ghickman.myopenid.com/">
+  <link rel="openid2.local_id" href="http://ghickman.myopenid.com/">
+  <link rel="openid2.provider" href="http://my.myopenid.com/server">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/styles/main.css">
+  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed">
 
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ghickman.myopenid.com">
-    <meta name="author" content="George Hickman">
-    <meta name="description" content="George Hickman is a Software Engineer currently living in Wales">
-    <meta name="google-site-verification" content="HME0VcoccfLfgFuwOwPH-QrJgg2FiB5FmaM0mN9uy8E">
-    <meta name="keywords" content="george hickman, george, hickman, python, travelling, coding, software, development">
-    <meta name="robots" content="ALL">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ghickman.myopenid.com">
+  <meta name="author" content="George Hickman">
+  <meta name="description" content="George Hickman is a Software Engineer currently living in Wales">
+  <meta name="google-site-verification" content="HME0VcoccfLfgFuwOwPH-QrJgg2FiB5FmaM0mN9uy8E">
+  <meta name="keywords" content="george hickman, george, hickman, python, travelling, coding, software, development">
+  <meta name="robots" content="ALL">
 </head>
 
 <body>
-    <header id="mast-head">
-        <div class="wrapper">
-            <a href="/">ghickman.co.uk</a>
-            <ul class="right">
-                <li><a href="/archives.html">Archive</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <header id="mast-head">
     <div class="wrapper">
-        <aside>
-            <div>
-              <h3>Tags</h3>
-              <div class="body">
-                <ul>
-                  {% for tag, article_list in tags|sort %}
-                  <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-        </aside>
-
-        <div id="content">{% block content %}{% endblock %}</div>
-
-        <div class="clr"></div>
-
-        <footer>
-            <div id="pelican" class="left">Powered by <a href="http://getpelican.com" title="Pelican">Pelican</a></div>
-            <div id="copyright" class="left">Copyright © 2013 George Hickman, All Rights Reserved</div>
-            <div id="feed" class="right">
-                <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">
-                    <img src="{{ SITEURL }}/theme/images/feed.png" alt="RSS Feed">
-                </a>
-            </div>
-            <div id="contact-link" class="right">
-                <a href="mailto:george@ghickman.co.uk" title="Contact Me">Contact</a>
-            </div>
-        </footer>
+      <a href="/">ghickman.co.uk</a>
+      <ul class="right">
+        <li><a href="/archives.html">Archive</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
     </div>
-    {% include "analytics.html" %}
+  </header>
+  <div class="wrapper">
+    <aside>
+      <div>
+        <h3>Tags</h3>
+        <div class="body">
+          <ul>
+            {% for tag, article_list in tags|sort %}
+            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+
+    <div class="clr"></div>
+
+    <footer>
+      <div id="pelican" class="left">Powered by <a href="http://getpelican.com" title="Pelican">Pelican</a></div>
+      <div id="copyright" class="left">Copyright © 2013 George Hickman, All Rights Reserved</div>
+      <div id="feed" class="right">
+        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">
+          <img src="{{ SITEURL }}/theme/images/feed.png" alt="RSS Feed">
+        </a>
+      </div>
+      <div id="contact-link" class="right">
+        <a href="mailto:george@ghickman.co.uk" title="Contact Me">Contact</a>
+      </div>
+    </footer>
+  </div>
+  {% include "analytics.html" %}
 </body>
 </html>
