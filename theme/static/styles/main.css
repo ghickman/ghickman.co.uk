@@ -18,25 +18,28 @@ html {
 }
 
 body {
-  color: #333;
+  color: #515151;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 a {
+  color: #777;
   text-decoration: none;
-  color: #e6911b;
 }
 
 h1, h2, h3, h4 {
-  color: #69C;
+  color: #515151;
   font-weight: 600;
   margin: 10px 0 1px;
 }
 
 h1 {
   font-size: 2rem;
+}
+h1 a {
+  color: #515151;
 }
 
 h2 {
@@ -51,10 +54,6 @@ h4 {
   font-size: 1.25rem;
 }
 
-h1 a {
-  color: #e6911b;
-}
-
 img {
     width: 100%;
 }
@@ -62,6 +61,10 @@ img {
 p {
   margin: 0 0 20px;
   line-height: 1.8rem;
+}
+p a {
+  border-bottom: 2px solid #515151;
+  color: #515151;
 }
 
 blockquote {
@@ -117,7 +120,7 @@ aside {
   float: right;
   font-size: 0.9rem;
   padding: 0 20px 0 0;
-  width: 200px;
+  width: 180px;
 }
 
 aside > div {
@@ -144,6 +147,9 @@ aside li {
 aside #categories li {
   background: url('/theme/images/tag.png') no-repeat top left;
   padding: 0px 0 5px 25px;
+}
+aside #categories li a:hover {
+  border-bottom: 2px solid #515151;
 }
 
 aside #linkroll li {
@@ -238,10 +244,8 @@ img.cc {
 
 .post-tags li a {
   background: url('/theme/images/tag.png') no-repeat center left;
-  color: #e6aa1b;
   margin-left: 2px;
   padding: 1px 0 0 18px;
-  text-decoration: none;
 }
 
 .post-tags li img {
