@@ -5,12 +5,12 @@
 {% for year, articles in dates|groupby('date.year')|reverse %}
 <div class="row" style="margin-bottom:40px;padding-left:120px;">
 
-  <div style="float:left;width:20%">
-  <h1>{{ year }}</h1>
+  <div class="col-xs-2">
+    <h1>{{ year }}</h1>
   </div>
 
-  <div style="float:left">
-    <ul>
+  <div class="col-xs-9 mt-10" style="padding-left:30px">
+    <ul class="list-unstyled">
       {% for article in articles %}
       <li class="mt-10"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
       {% endfor %}

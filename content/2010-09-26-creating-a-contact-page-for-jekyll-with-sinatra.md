@@ -3,11 +3,11 @@ Status: published
 Tags: Ruby
 
 <div class="right photo">
-    <img src="/images/jekyll.jpg" width="300" height="169" title="Jekyll" alt="James Nesbitt in Jekyll">
-    <p class="photo">
-        <a href="http://thetvdb.com/?tab=artistbanners&amp;id=513">Freneticvirus</a>
-        <img class="cc" src="/images/cc.png" width="16" height="16" title="Creative Commons Icon" alt="CC">
-    </p>
+  <img src="/images/jekyll.jpg" width="300" height="169" title="Jekyll" alt="James Nesbitt in Jekyll">
+  <p class="photo">
+    <a href="http://thetvdb.com/?tab=artistbanners&amp;id=513">Freneticvirus</a>
+    <img class="pull-right mt-5" src="/theme/images/cc.png" style="width:20px;" title="Creative Commons Icon" alt="CC">
+  </p>
 </div>
 
 Jekyll is a fantastic static site generator with a great little community of modifications around it and I've used it for my own [blog](http://ghickman.co.uk) and [Penderry.com](http://penderry.com). However my biggest problem with it is the lack of a way to deal with a contact form. Of course, this really isn't Jekyll's fault as it's only built to create HTML pages.

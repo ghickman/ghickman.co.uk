@@ -1,8 +1,8 @@
 Title: Ecohandle Shopping Bag
 Status: published
 
-<div class="right photo">
-    <img src="/images/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag">
+<div class="pull-right photo">
+  <img src="/images/ecohandle.jpg" width="300" title="Ecohandle" alt="Ecohandle Shopping Bag" />
 </div>
 
 This year's Christmas Haul brought me an interesting little gem: The Ecohandle Shopping Bag. I got round to giving it a bit of a go today when I did a veg shop and thought doing a review on it would be fun.
