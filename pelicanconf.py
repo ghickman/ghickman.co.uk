@@ -36,7 +36,10 @@ EXTRA_PATH_METADATA = {
 
 SUMMARY_MAX_LENGTH = 50
 
-TEMPLATE_PAGES = {'404.html': '404.html'}
+TEMPLATE_PAGES = {
+    '404.html': '404.html',
+    'pages/contact.html': 'contact.html',
+}
 
 THEME = 'theme'
 

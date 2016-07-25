@@ -1,66 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Contact Me</h1>
-
-<p>
-  
-email: first at this domain, not real time
-</p>
-
-<div class="row">
-
-  <div class="col-xs-3 col-xs-offset-1">
-    <a href="https://github.com/ghickman">
-      <img src="/theme/images/github.svg" style="width:80%;" class="mt-10" />
-    </a>
-  </div>
-
-  <div class="col-xs-3 col-xs-offset-1">
-    <a href="https://twitter.com/ghickman">
-      <img src="/theme/images/twitter.png" />
-    </a>
-  </div>
-
-  <div class="col-xs-3 col-xs-offset-1">
-    <a href="https://stackoverflow.com/users/158304/ghickman">
-      <img src="/theme/images/stackoverflow.png" />
-    </a>
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-xs-">
-    <p>
-      You can find me elsewhere around the internet as <code>ghickman</code>,
-      typically I look like this:
-    </p>
-  </div>
-
-</div>
-
 <div class="row">
   <div class="col-xs-12">
-    <img src="/theme/images/me.jpg" style="width:170px;border-radius:100%;" />
+    <h1>Contact Me</h1>
   </div>
 </div>
 
 <div class="row">
+
+  <div class="col-xs-8 mt-10">
+    <p>
+      My email address is <code>george [at] ghickman [dot] co [dot] uk</code>.
+    </p>
+
+    <p>
+      Typically I go by <code>ghickman</code> around the internets and look
+      like that ->
+    </p>
+
+    <p>
+      You can frequently find me at these places:
+    </p>
+    <ul>
+      <li><a href="https://github.com/ghickman">GitHub</a></li>
+      <li><a href="https://twitter.com/ghickman">Twitter</a></li>
+      <li><a href="https://stackoverflow.com/users/158304/ghickman">Stack Overflow</a></li>
+      <li><a href="https://freenode.net">Freenode</a></li>
+    </ul>
+  </div>
+
+  <div class="col-xs-4">
+    <img src="/theme/images/me.jpg" style="width:170px;border-radius:100%;" />
+  </div>
+
+</div>
+
+<hr />
+
+<div class="row">
+
   <div class="col-xs-12">
     <p>
       If you'd prefer to communicate with me securely then you can import my
       public key from the following places:
     </p>
-  </div>
 
     <ul>
-      <li><a href="/">this domain</a></li>
-      <li><a href="">Keybase</a></li>
-      <li><a href="">MIT</a></li>
+      <li><a href="/093B01FD.asc">this domain</a></li>
+      <li><a href="https://keybase.io/ghickman/key.asc">Keybase</a></li>
+      <li><a href="https://pgp.mit.edu/pks/lookup?op=get&search=0xEEC67845093B01FD">MIT</a></li>
     </ul>
   </div>
+
 </div>
 
 {% endblock content %}
