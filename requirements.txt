@@ -9,7 +9,7 @@ pelican==3.5.0
 pygments==1.6
 pytz==2013d
 requests==1.2.3
-s3cmd==1.1.0-beta3
+s3cmd==1.6.0
 six==1.9.0
 unidecode==0.04.14
 wheel==0.22.0
