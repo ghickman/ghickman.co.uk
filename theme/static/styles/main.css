@@ -112,9 +112,8 @@ nav a {
 
 
 /** CONTENT */
-.info ul {
-  display: inline-block;
-  margin-left: 3px;
+article {
+  margin-bottom: 40px;
 }
 .paginator {
     text-align: center;
@@ -138,7 +137,7 @@ p.photo {
 .info {
   color: #B3B3B2;
   font-size: .9rem;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .info p {
   font-size: inherit;
@@ -147,7 +146,7 @@ p.photo {
 }
 .info ul {
   display: inline-block;
-  margin-left: 5px;
+  margin: 0;
 }
 .info li {
   font-size: inherit;
