@@ -17,14 +17,12 @@ DEFAULT_METADATA = {
 
 DEFAULT_PAGINATION = 5
 
-FEED_DOMAIN = 'http://ghickman.co.uk'
-
 PLUGINS = ('pelican_gist',)
 
-RELATIVE_URLS = False
+RELATIVE_URLS = True
 
 SITENAME = u'GHickman.co.uk'
-SITEURL = ''
+SITEURL = 'http://ghickman.co.uk'
 
 STATIC_PATHS = [
     'static/keybase.txt',
