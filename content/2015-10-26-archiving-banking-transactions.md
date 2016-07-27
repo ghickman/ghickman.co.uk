@@ -14,10 +14,10 @@ The NatWest script differs slightly since it must deal with multiple accounts in
 
 These scripts are managed with [Hazel](https://www.noodlesoft.com/hazel.php) watching my `~/Downloads` directory for new files. Each bank has a rule tailored to its download naming scheme that runs the appropriate script before moving the file to the Trash.
 
-![](/images/banking-downloads-rule.png)
+![Hazel Banking Rules Configuration](/images/banking-downloads-rule.png)
 
 Hazel lets you pass the matched file to a script with `$1` but this needs to be wrapped in quotes in case your files have spaces in them. When shell scripts interpret arguments they delimit on spaces and errors here can be hard to track down!
 
-![](/images/banking-downloads-rule-script.png)
+![Hazel Banking Rules Script Runner](/images/banking-downloads-rule-script.png)
 
 This is all topped off by making the scripts [installable](https://github.com/ghickman/banking-tools#install) using a [Homebrew tap](https://github.com/ghickman/banking-tools/blob/master/banking-tools.rb).

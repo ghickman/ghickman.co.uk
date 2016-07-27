@@ -9,7 +9,7 @@ We currently use GitHub to host our code, track issues and do pull requests with
 ## Branching
 When do we branch?
 
-![](http://f.cl.ly/items/3F0H2q0P41091O162b3N/Image%202012.07.21%2000:17:22.png)
+![Branch All The Things](http://f.cl.ly/items/3F0H2q0P41091O162b3N/Image%202012.07.21%2000:17:22.png)
 
 Anything other than a trivial change goes on a branch so it can be pull requested (more on this later). Following GitHub Flow we try to keep a project's master branch production ready which branching allows us to do easily. However, sometimes we have a large, long running, feature to implement which requires it's own master feature branch. This is a bit more involved as you have to make sure you pull request onto the right branch but otherwise works well.
 
