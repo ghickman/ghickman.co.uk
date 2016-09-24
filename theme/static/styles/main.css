@@ -195,3 +195,22 @@ footer > div {
   padding-top: 24px;
 }
 /*---------------------------------------------------------------------------**/
+
+/** WASGIJ */
+.puzzle {
+  position: relative;
+}
+.puzzle h4 {
+  margin: 20px 0 10px;
+}
+.puzzle .number {
+  background-color: #4078c0;
+  border-radius: 100%;
+  bottom: 20px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  width: 42px;
+}
+/*--------------------------------------------------------------------------**/

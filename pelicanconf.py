@@ -37,6 +37,7 @@ SUMMARY_MAX_LENGTH = 50
 TEMPLATE_PAGES = {
     '404.html': '404.html',
     'pages/contact.html': 'contact.html',
+    'pages/wasgij.html': 'wasgij.html',
 }
 
 THEME = 'theme'
