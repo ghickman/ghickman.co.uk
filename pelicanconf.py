@@ -22,7 +22,6 @@ PLUGINS = ('pelican_gist',)
 RELATIVE_URLS = True
 
 SITENAME = u'GHickman.co.uk'
-SITEURL = 'http://ghickman.co.uk'
 
 STATIC_PATHS = [
     'static/keybase.txt',
