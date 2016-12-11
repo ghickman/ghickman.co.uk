@@ -63,7 +63,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 deploy: publish
-	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
+	aws s3 sync --acl=public-read --delete $(OUTPUTDIR)/ s3://$(S3_BUCKET)/
 	@echo 'Published ghickman.co.uk'
 
 .PHONY: html help clean regenerate serve devserver publish deploy
