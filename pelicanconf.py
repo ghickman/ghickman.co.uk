@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-
-from __future__ import unicode_literals
-
-
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
-AUTHOR = u'George Hickman'
+AUTHOR = 'George Hickman'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 DEFAULT_METADATA = {
     'status': 'draft',
@@ -21,7 +17,7 @@ PLUGINS = ('pelican_gist',)
 
 RELATIVE_URLS = True
 
-SITENAME = u'GHickman.co.uk'
+SITENAME = 'GHickman.co.uk'
 
 STATIC_PATHS = [
     'static/keybase.txt',
