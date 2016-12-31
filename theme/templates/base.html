@@ -3,14 +3,17 @@
 <head>
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="openid.server" href="http://www.myopenid.com/server">
+  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed">
+
   <link rel="openid.delegate" href="http://ghickman.myopenid.com/">
+  <link rel="openid.server" href="http://www.myopenid.com/server">
   <link rel="openid2.local_id" href="http://ghickman.myopenid.com/">
   <link rel="openid2.provider" href="http://my.myopenid.com/server">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/theme/styles/main.css">
-  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Atom Feed">
 
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=ghickman.myopenid.com">
