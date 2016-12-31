@@ -22,11 +22,13 @@ RELATIVE_URLS = True
 SITENAME = 'GHickman.co.uk'
 
 STATIC_PATHS = [
-    'static/keybase.txt',
     'images',
+    'static/keybase.txt',
+    'static/manifest.webmanifest',
 ]
 EXTRA_PATH_METADATA = {
     'static/keybase.txt': {'path': 'keybase.txt'},
+    'static/manifest.webmanifest': {'path': 'manifest.webmanifest'},
 }
 
 SUMMARY_MAX_LENGTH = 50
