@@ -48,6 +48,11 @@ WASGIJS = OrderedDict([(
         'name': 'Fishy Business',
         'number': '20',
     }, {
+        'image': 'http://www.wasgij.com/images/uploads/puzzles/17_Ballroom_Blushes.jpg',
+        'link': 'http://www.wasgij.co.uk/collections/original/ballroom-blushes',
+        'name': 'Ballroom Blushes',
+        'number': '17',
+    }, {
         'image': 'http://www.wasgij.com/images/uploads/puzzles/9_Home_Improvements.jpg',
         'link': 'http://www.wasgij.co.uk/collections/original/home-improvements',
         'name': 'Home Improvements',
@@ -70,6 +75,11 @@ WASGIJS = OrderedDict([(
         'number': '01'
     }]), (
     'Destiny', [{
+        'image': 'http://www.wasgij.com/images/uploads/puzzles/Wasgij-Destiny-13-Collections-Thumbnail-PuzzleImage.png',
+        'link': 'http://www.wasgij.co.uk/collections/destiny/commuting-chaos',
+        'name': 'Commuting Chaos',
+        'number': '13',
+    }, {
         'image': 'http://www.wasgij.com/images/uploads/puzzles/12_Market_Mayhem.jpg',
         'link': 'http://www.wasgij.co.uk/collections/destiny/market-mayhem',
         'name': 'Market Mayhem',
