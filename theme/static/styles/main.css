@@ -66,8 +66,10 @@ p {
   margin: 0 0 20px;
   line-height: 1.8rem;
 }
-p a:hover {
+p a {
   border-bottom: 2px solid #515151;
+  color: #515151;
+  text-decoration: none;
 }
 
 blockquote {
