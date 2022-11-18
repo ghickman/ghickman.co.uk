@@ -2,11 +2,11 @@ Title: Managing Your Pythons with Pyenv
 Status: published
 Tags: Python
 
-With the [impending](http://legacy.python.org/dev/peps/pep-0478/) release of Python 3.5 it's that time of year when everyone wants to update their Python 3 version or add another Python to the list of installed versions.
+With the [impending](https://legacy.python.org/dev/peps/pep-0478/) release of Python 3.5 it's that time of year when everyone wants to update their Python 3 version or add another Python to the list of installed versions.
 
-I use [`pyenv`](https://github.com/yyuu/pyenv) to manage my Python versions. It allows you to install various versions of Python (including different interpreters), select the order they appear in your `PATH`, and pin your versions ([just like](http://nvie.com/posts/pin-your-packages/) you do in your `requirements.txt`s, right?!).
+I use [`pyenv`](https://github.com/yyuu/pyenv) to manage my Python versions. It allows you to install various versions of Python (including different interpreters), select the order they appear in your `PATH`, and pin your versions ([just like](https://nvie.com/posts/pin-your-packages/) you do in your `requirements.txt`s, right?!).
 
-As an OS X user I previously used Homebrew for this (and there's already at least [one](http://blog.tim-smith.us/2015/08/python-35-transition/) article explaining how to do this if you prefer to do this). However I found this method fell down as soon as I needed multiple versions of either Python 2 or, more recently, Python 3. It also had the added downside of breaking Tox envs when upgrading the `python3` recipe. `pyenv` gives you control of this, much in the same way Virtualenv did for package versions.
+As an OS X user I previously used Homebrew for this (and there's already at least [one](https://blog.tim-smith.us/2015/08/python-35-transition/) article explaining how to do this if you prefer to do this). However I found this method fell down as soon as I needed multiple versions of either Python 2 or, more recently, Python 3. It also had the added downside of breaking Tox envs when upgrading the `python3` recipe. `pyenv` gives you control of this, much in the same way Virtualenv did for package versions.
 
 This makes getting Python 3.5 installed a simple matter of telling pyenv to install, then activate it. You can then use it from any tool that looks on the `PATH`, such as Tox.
 

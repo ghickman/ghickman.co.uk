@@ -2,18 +2,18 @@ Title: How we use GitHub Flow at Incuna
 Status: published
 Tags: Git
 
-Our team at Incuna has been growing rapidly of late and like most businesses at this stage of growth we've had to come up with some development flows to cope with the influx of new [Incunanauts](http://twitter.com/incuna/incunanauts). Currently we have three (technical) teams: Design, Front End and Back End with work flowing through them in roughly that order. (Technically we have an Ops team, but really that's just me part time).
+Our team at Incuna has been growing rapidly of late and like most businesses at this stage of growth we've had to come up with some development flows to cope with the influx of new [Incunanauts](https://twitter.com/incuna/incunanauts). Currently we have three (technical) teams: Design, Front End and Back End with work flowing through them in roughly that order. (Technically we have an Ops team, but really that's just me part time).
 
 We currently use GitHub to host our code, track issues and do pull requests with [hub]() for extra features like attaching code to an issue to make a pull request.
 
 ## Branching
 When do we branch?
 
-![Branch All The Things](http://f.cl.ly/items/3F0H2q0P41091O162b3N/Image%202012.07.21%2000:17:22.png)
+![Branch All The Things](https://f.cl.ly/items/3F0H2q0P41091O162b3N/Image%202012.07.21%2000:17:22.png)
 
 Anything other than a trivial change goes on a branch so it can be pull requested (more on this later). Following GitHub Flow we try to keep a project's master branch production ready which branching allows us to do easily. However, sometimes we have a large, long running, feature to implement which requires it's own master feature branch. This is a bit more involved as you have to make sure you pull request onto the right branch but otherwise works well.
 
-The most common problem I've seen with this style of branching (as with all programming) is "What do I call my branches". We try to name our branches directly around the piece of work, even if it isn't immediately obvious to every developer, that's what [git log](http://www.kernel.org/pub/software/scm/git/docs/git-log.html) is for.
+The most common problem I've seen with this style of branching (as with all programming) is "What do I call my branches". We try to name our branches directly around the piece of work, even if it isn't immediately obvious to every developer, that's what [git log](https://www.kernel.org/pub/software/scm/git/docs/git-log.html) is for.
 
 
 ## Pull Requests
@@ -27,7 +27,7 @@ The most important part of this for us is to have more than one set of eyes look
 
 
 ## Testing
-Always a sticky subject, but we're slowly getting better at it. [Charlie](http://github.com/meshy) & [Marc](http://github.com/mjtamlyn) have made great headway in setting up our large internal libraries with proper test suites and a general purge of all fixture based unit tests in favour of factories using the very awesome [Factory Boy](https://github.com/dnerdy/factory_boy). I'm hoping [Travis CI](http://travis-ci.org) will bring out pro/private accounts soon as their testing suite would suit our pull request flow perfectly and we're already moving our open source projects to them.
+Always a sticky subject, but we're slowly getting better at it. [Charlie](https://github.com/meshy) & [Marc](https://github.com/mjtamlyn) have made great headway in setting up our large internal libraries with proper test suites and a general purge of all fixture based unit tests in favour of factories using the very awesome [Factory Boy](https://github.com/dnerdy/factory_boy). I'm hoping [Travis CI](https://travis-ci.org) will bring out pro/private accounts soon as their testing suite would suit our pull request flow perfectly and we're already moving our open source projects to them.
 
 
 ## What Can We Do Better?

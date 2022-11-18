@@ -5,9 +5,9 @@ Tags: Python
 Google distinguishes between applications that require user interaction and those that don't using the terminology of "online" and "offline" respectively. Offline applications cover things like scheduled jobs on a web application or command line scripts where the application is accessing Google's API with a user's consent but without their interaction.
 
 ## Set Up Your Application
-Just like setting up an application to use [Google for SSO](http://ghickman.co.uk/2012/07/22/setup-single-sign-on-in-django-using-google-oauth2.html) you need to create an "API Application" using Google's [API Console](https://code.google.com/apis/console).
+Just like setting up an application to use [Google for SSO](https://ghickman.co.uk/2012/07/22/setup-single-sign-on-in-django-using-google-oauth2.html) you need to create an "API Application" using Google's [API Console](https://code.google.com/apis/console).
 
-![Create a Project](http://f.cl.ly/items/1i353P2Q162K3G440o0R/Screen%20Shot%202012-07-15%20at%2021.11.02.png)
+![Create a Project](https://f.cl.ly/items/1i353P2Q162K3G440o0R/Screen%20Shot%202012-07-15%20at%2021.11.02.png)
 
 Unlike using Google for SSO you'll need to activate the service(s) you want to access with your application. In this post I'll be using the Calendar API as an example:
 

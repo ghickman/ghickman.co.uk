@@ -5,7 +5,7 @@ Status: published
 
 
 ## Install Script
-Copy and paste the python code (starts with `#!/usr/bin/python`) from [here](http://webcache.googleusercontent.com/search?q=cache:http://svn.stmlabs.com/vn/raspbmc/testing/installers/python/install.py) into a file and save it as `install.py`.
+Copy and paste the python code (starts with `#!/usr/bin/python`) from [here](https://webcache.googleusercontent.com/search?q=cache:https://svn.stmlabs.com/vn/raspbmc/testing/installers/python/install.py) into a file and save it as `install.py`.
 
 Set permissions on it: `chmod +x install.py`.
 
@@ -15,7 +15,7 @@ When you've downloaded the binary (below) run it with `sudo ./install.py`
 ## Pre-Download the Install Binary
 The install script will use `installer.img.gz` if it finds it in the same directory so grab that off the University of Arizona mirror:
 
-`curl -O http://mirrors.arizona.edu/raspbmc/downloads/bin/ramdistribution/installer.img.gz`
+`curl -O https://mirrors.arizona.edu/raspbmc/downloads/bin/ramdistribution/installer.img.gz`
 
 Now run the install script and you're away!
 
@@ -25,11 +25,11 @@ To [Sam Nazarko](https://twitter.com/SamNazarko) for all his hard working actual
 
 
 ## Problems?
-It's more than likely that the information above will be out of date pretty soon after I post this entry but don't let that deter you. You can always browse raspbmc.com using Google's Cache by placing any URL from the site after `http://webcache.googleusercontent.com/search?q=cache:`.
+It's more than likely that the information above will be out of date pretty soon after I post this entry but don't let that deter you. You can always browse raspbmc.com using Google's Cache by placing any URL from the site after `https://webcache.googleusercontent.com/search?q=cache:`.
 
 You should get automatically routed to a download mirror by going to:
 
-[http://webcache.googleusercontent.com/search?q=cache:http://download.raspbmc.com/](http://mirrors.arizona.edu/raspbmc/downloads/bin/ramdistribution/installer.img.gz)
+[https://webcache.googleusercontent.com/search?q=cache:https://download.raspbmc.com/](https://mirrors.arizona.edu/raspbmc/downloads/bin/ramdistribution/installer.img.gz)
 
 Then find the install image, it's path should look like
 

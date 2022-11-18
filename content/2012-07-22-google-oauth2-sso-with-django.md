@@ -2,30 +2,30 @@ Title: Setup Single Sign On in Django using Google OAuth2
 Status: published
 Tags: Django, Python
 
-We recently had our second Incuna Hack Day where [Charlie](http://www.github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on its way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
+We recently had our second Incuna Hack Day where [Charlie](https://github.com/meshy) and I made the decision to start breaking up the main internal site, our venerable Dashboard. It was well on its way to becoming a monolithic beast and the only thing that had stopped me breaking it up before was an easy way to add Single Sign On to the many apps it would become.
 
-Enter [Django Social Auth](http://django-social-auth.readthedocs.org/en/latest/index.html). A cover-all-the-bases authentication app that provides backends for pretty much every service you can think of.
+Enter [Django Social Auth](https://django-social-auth.readthedocs.org/en/latest/index.html). A cover-all-the-bases authentication app that provides backends for pretty much every service you can think of.
 
 This write-up is based on my experience setting up a few internal apps so it's fairly opinionated towards that goal, but hopefully it's still adaptable to other situations!
 
 ## Setup your App in Google's API Console
 In Google's [API Console](https://code.google.com/apis/console) create a new project.
 
-![Create Project](http://f.cl.ly/items/1i353P2Q162K3G440o0R/Screen%20Shot%202012-07-15%20at%2021.11.02.png)
+![Create Project](https://f.cl.ly/items/1i353P2Q162K3G440o0R/Screen%20Shot%202012-07-15%20at%2021.11.02.png)
 
 You don't need to turn on any extra services, so go directly to `API Access` and hit the giant blue button to get started.
 
-![Create OAuth 2.0 Client ID](http://f.cl.ly/items/323j183V3n0j0s1H1A2p/Screen%20Shot%202012-07-15%20at%2021.12.26.png)
+![Create OAuth 2.0 Client ID](https://f.cl.ly/items/323j183V3n0j0s1H1A2p/Screen%20Shot%202012-07-15%20at%2021.12.26.png)
 
 Enter your Product name and the URL to a logo if you have one. These are the details users will see when they authenticate via Google. Click `Next`.
 
 Now set up the credentials for your application (this is per environment due to the redirect URI). The example below is for development, but only the hostname needs to change between environments.
 
-![Enter Local Hostname](http://f.cl.ly/items/3f2M0e0r0z3D120X1f2z/Screen%20Shot%202012-07-15%20at%2021.16.47.png)
+![Enter Local Hostname](https://f.cl.ly/items/3f2M0e0r0z3D120X1f2z/Screen%20Shot%202012-07-15%20at%2021.16.47.png)
 
 Click `more options` to set the callback path. The default Social Auth URL for this is `/complete/google-oauth2/`.
 
-![Enter your redirect URI](http://f.cl.ly/items/3q2P0j173i2Q000r3i24/Screen%20Shot%202012-07-15%20at%2021.21.40.png)
+![Enter your redirect URI](https://f.cl.ly/items/3q2P0j173i2Q000r3i24/Screen%20Shot%202012-07-15%20at%2021.21.40.png)
 
 Click `Create client id` and grab your `Client ID`/`Client secret` combo for the next step.
 
@@ -55,5 +55,5 @@ Now all we need is to plumb this in with some URLs:
 
 
 ## Profit
-I usually put `login_required` on the whole site with a little piece of middleware (like [this](http://djangosnippets.org/snippets/1179/) or [this](http://djangosnippets.org/snippets/1220/)) but otherwise that's it!
+I usually put `login_required` on the whole site with a little piece of middleware (like [this](https://djangosnippets.org/snippets/1179/) or [this](https://djangosnippets.org/snippets/1220/)) but otherwise that's it!
 

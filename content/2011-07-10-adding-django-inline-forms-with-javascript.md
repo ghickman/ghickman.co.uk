@@ -30,6 +30,6 @@ The script grabs the last form in the formset _every_ time so say you want the f
 
 [1]: https://github.com/pydanny/django-uni-form
 [2]: #gotchas
-[3]: http://api.jquery.com/clone/
-[4]: http://api.jquery.com/slideDown/
+[3]: https://api.jquery.com/clone/
+[4]: https://api.jquery.com/slideDown/
 

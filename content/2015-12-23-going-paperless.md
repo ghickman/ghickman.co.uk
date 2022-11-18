@@ -56,9 +56,9 @@ This is all working smoothly now, but there are some downsides:
 
 However, none of these are a big enough issue for me to shell out more money on a new scanner.
 
-[1]: http://stevelosh.com/blog/2011/05/paper-free/
-[2]: http://www.getdoxie.com/product/one/
-[3]: http://www.amazon.co.uk/gp/product/B00FG8PPXI
+[1]: https://stevelosh.com/blog/2011/05/paper-free/
+[2]: https://www.getdoxie.com/product/one/
+[3]: https://www.amazon.co.uk/gp/product/B00FG8PPXI
 [4]: https://www.noodlesoft.com/hazel.php
-[5]: http://solutions.weblite.ca/pdfocrx/
+[5]: https://solutions.weblite.ca/pdfocrx/
 [6]: https://gist.github.com/ghickman/decca82fb0e67d7e6e65

@@ -3,7 +3,7 @@ Status: published
 
 I've had pet peeves with standard layout keyboards for as long as I can remember. The slanted and unbalanced layout has always seemed so illogical to me. I'm aware of the history behind their design, but whereas so many other things have been improved on computers, keyboards have remained essentially untouched (at least in layout).
 
-My first attempt at doing something about this was an [ErgoDox](http://deskthority.net/wiki/ErgoDox), which is a matrix layout, fully firmware programmable, split keyboard. Building it involved buying all the parts from Massdrop, learning to solder, "borrowing" the kitchen table for a weekend, and a couple of singed fingers.This was the first time I've really done a hardware project and it was fascinating to dive into that world.
+My first attempt at doing something about this was an [ErgoDox](httpp//deskthority.net/wiki/ErgoDox), which is a matrix layout, fully firmware programmable, split keyboard. Building it involved buying all the parts from Massdrop, learning to solder, "borrowing" the kitchen table for a weekend, and a couple of singed fingers.This was the first time I've really done a hardware project and it was fascinating to dive into that world.
 
 ![ErgoDox Buildstation](/images/ergodox-buildstation.jpg)
 

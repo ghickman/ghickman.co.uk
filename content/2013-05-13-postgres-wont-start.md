@@ -12,7 +12,7 @@ Starting or restarting Postgres (with either upstart or init.d) results in a det
 ## The Cause
 The amount of shared memory your OS provides is configured at the kernel level during *installation*. This part is important if you're hosting on VPSs and resizing them as the shared memory value won't change with the amount of RAM you provision.
 
-Postgres has a setting called [shared_buffers](http://www.postgresql.org/docs/9.1/static/runtime-config-resource.html) which configures the amount of shared memory Postgres will consume. The docs suggest using 25% of your total memory value for this setting which is where I got into trouble downsizing VPSs.
+Postgres has a setting called [shared_buffers](https://www.postgresql.org/docs/9.1/static/runtime-config-resource.html) which configures the amount of shared memory Postgres will consume. The docs suggest using 25% of your total memory value for this setting which is where I got into trouble downsizing VPSs.
 
 
 ## The Solution

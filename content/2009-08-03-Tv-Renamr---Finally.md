@@ -13,4 +13,4 @@ Next on the agenda is customising the output. The more important part of this is
 
 This project has taught me a few things about myself and coding along the way - coding stuff you're really interested in is hellishly fun (I've literally lost days to this project without even noticing) and doing it in a language you've barely tried before is a massive confidence boost to your skill level.
 
-The project is of course hosted on my [github page](http://github.com/ghickman/tvrenamr/tree/master) where you can download it or clone it to your neat little heart's content. If you find any bugs or problems, please add an issue on github, dm/@ me on [twitter](http://twitter.com/ghickman) or email me on george [at] ghickman -dot- co -dot- uk.
+The project is of course hosted on my [github page](https://github.com/ghickman/tvrenamr/tree/master) where you can download it or clone it to your neat little heart's content. If you find any bugs or problems, please add an issue on github, dm/@ me on [twitter](https://twitter.com/ghickman) or email me on george [at] ghickman -dot- co -dot- uk.
