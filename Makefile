@@ -68,9 +68,5 @@ devserver-global:
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
-deploy: publish
-	aws s3 sync --acl=public-read --delete $(OUTPUTDIR)/ s3://$(S3_BUCKET)/
-	@echo 'Published ghickman.co.uk'
 
-
-.PHONY: html help clean regenerate serve serve-global devserver publish deploy
+.PHONY: html help clean regenerate serve serve-global devserver publish
