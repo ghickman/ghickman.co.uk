@@ -12,7 +12,7 @@ params:
   author: "George Hickman"
   contact:
     email: george@ghickman.co.uk
-  description: "George Hickman is a consulting Python engineer"
+  description: "George Hickman is a consulting Python engineer specialising in pragmatic solutions to complex problems"
   info: Pragmatic solutions to complex problems
   keywords: "blog,developer,engineer,python,django,fullstack,full-stack,postgres,git"
   gravatar: george@ghickman.co.uk
