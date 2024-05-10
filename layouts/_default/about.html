@@ -1,0 +1,27 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            {{ .Title }}
+            </a>
+          </h1>
+        </div>
+      </header>
+
+      <div class="post-content">
+        {{ if .Params.featuredImage }}
+          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+        {{ end }}
+        {{ .Content }}
+      </div>
+
+
+    </article>
+
+  </section>
+{{ end }}
