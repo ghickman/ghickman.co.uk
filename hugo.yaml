@@ -2,7 +2,7 @@ baseURL: https://ghickman.co.uk/
 languageCode: 'en-gb'
 paginate: 20
 theme: hugo-coder
-title: GHickman
+title: George Hickman
 
 markup:
   highlight:
