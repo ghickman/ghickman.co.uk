@@ -3,16 +3,16 @@ title: About
 layout: about
 ---
 
-George is a software engineer with over 15 years experience.
-With a wealth of experience , he specializes in crafting elegant, efficient solutions to the toughest challenges.
+I help businesses and teams improve their software.
+I specialise in Python, Django, and improving your development infrastructure.
 
-With a meticulous approach to problem-solving, George thrives on simplifying intricate tasks.
-His philosophy is simple: why complicate when you can simplify?
+## Python
+I've been writing Python professionally since 2010, with a focus on web services and CLI tooling.
+I'm the author of [classify](/posts/2013-06-23-classify/), a tool for generating concrete class API documentation for Python classes.
 
-When you engage George's services, you're not just hiring a consultant; you're partnering with a seasoned professional dedicated to your project's success.
-From inception to execution, George guides you through every stage, ensuring optimal results.
+## Django
+I've been using Django professionally since 2011, on sites both large and small.
+I'm well versed in digging into its source code, fixing common problems, and determining which community packages are the best to use for a given situation.
+I am the author of [django-cache-url](https://pypi.org/project/django-cache-url/) and a maintainer of [ccbv.co.uk](https://ccbv.co.uk) the definitive site for class-based view reference documentation.
 
-For Python projects poised for excellence, trust George Hickman to deliver unparalleled expertise and results.
-Let George turn your tech aspirations into tangible achievements.
-
-Interested in engaging George's services?  [Get in contact now](mailto:george@ghickman.co.uk).
+Interested in engaging my services?  [Get in contact now](mailto:george@ghickman.co.uk).
