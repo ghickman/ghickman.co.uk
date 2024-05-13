@@ -1,3 +1,3 @@
 # GHickman.co.uk
 
-My personal site, built using [pelican](http://getpelican.com).
+My portfolio and blog, built using [hugo](https://gohugo.io/).
