@@ -1,0 +1,58 @@
+baseURL: https://ghickman.co.uk/
+languageCode: 'en-gb'
+paginate: 20
+theme: hugo-coder
+title: George Hickman
+
+markup:
+  highlight:
+    style: github-light
+
+params:
+  author: "George Hickman"
+  contact:
+    email: george@ghickman.co.uk
+  description: "George Hickman is a consulting Python engineer specialising in pragmatic solutions to complex problems"
+  info: Pragmatic solutions to complex problems
+  keywords: "blog,developer,engineer,python,django,fullstack,full-stack,postgres,git"
+  gravatar: george@ghickman.co.uk
+
+  faviconSVG: "/img/favicon.svg"
+  favicon_32: "/img/favicon-32x32.png"
+  favicon_16: "/img/favicon-16x16.png"
+
+  since: 2009
+
+  enableTwemoji: true
+
+  colorScheme: "auto"
+  hidecolorschemetoggle: false
+
+  social:
+  - name: Github
+    icon: fa-brands fa-github fa-2x
+    weight: 1
+    url: https://github.com/ghickman/
+  - name: Mastodon
+    icon: fa-brands fa-mastodon fa-2x
+    weight: 2
+    url: https://mastodon.social/@ghickman/
+
+menu:
+  main:
+  - name: Blog
+    weight: 1
+    url : posts/
+  - name: About
+    weight: 2
+    url: about/
+
+taxonomies:
+  author: authors
+  category: categories
+  series: series
+  tag: tags
+
+module:
+  hugoVersion:
+  min: "0.77.0"
