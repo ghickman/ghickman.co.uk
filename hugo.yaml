@@ -1,5 +1,5 @@
 baseURL: https://ghickman.co.uk/
-languageCode: 'en-gb'
+locale: 'en-gb'
 paginate: 20
 theme: hugo-coder
 title: George Hickman
