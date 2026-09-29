@@ -9,7 +9,9 @@ aliases:
 ---
 I recently gave [Github's](https://github.com/) paid service a go when my vimrc ended up needing some passwords in it. While I'm a big fan of Github and what it's done for the Git community as a whole I just can't justify paying the £5 a month so I can use my vimrc at home, work and a few servers. Of course the downside is the loss of being able to quickly view code on the web, but as fate would have it Twitter came to my rescue within a couple of days via the sagely [Joel Moss](https://developwithstyle.com/).
 
-<blockquote class="twitter-tweet"><p>Gitalist - a modern git web viewer https://j.mp/pJEQtN</p>&mdash; Joel Moss (@joelmoss) <a href="https://twitter.com/joelmoss/statuses/89637329731461121">July 9, 2011</a></blockquote>
+> Gitalist - a modern git web viewer https://j.mp/pJEQtN
+>
+> — Joel Moss ([@joelmoss](https://twitter.com/joelmoss)), [July 9, 2011](https://twitter.com/joelmoss/statuses/89637329731461121)
 
 Diving into [Gitalist](https://www.gitalist.com/) there were a couple of surprises, least of all it's written in Perl. _Perl?! That's a dead language right? (Unless you're slashdot)_. However playing around with the demo (guys, please up whatever server you're running that on, it's dire) was great, not to mention it looks really slick.
 
@@ -40,7 +42,9 @@ After some fruitless attempts to install from source and [bootstrap](https://sea
 
 First of all CPAN needs a little love. By default it asks you what to do when it finds a dependency it doesn't have.
 
-<blockquote class="twitter-tweet"><p>&quot;Module X is required, shall I install it?&quot; Well… yea…</p>&mdash; George Hickman (@ghickman) <a href="https://twitter.com/ghickman/statuses/89982230209904641">July 10, 2011</a></blockquote>
+> "Module X is required, shall I install it?" Well… yea…
+>
+> — George Hickman ([@ghickman](https://twitter.com/ghickman)), [July 10, 2011](https://twitter.com/ghickman/statuses/89982230209904641)
 
 Thankfully it's easy enough to configure CPAN to follow the default options with the `prerequisites_policy` option. Open the CPAN console by running `cpan`.
 
@@ -167,7 +171,7 @@ Link the virtual host into sites-enabled and test with `sudo nginx -t` to check 
 
 While getting FastCGI setup I toyed with Nginx as a reverse proxy to the one or more instances of the Catalyst development server, but had issues with hiding the port number and it felt a bit wrong to use a development server in production.
 
-<h4 id="gitalist-install-dir">Gitalist Install Directory</h4>
+#### Gitalist Install Directory {#gitalist-install-dir}
 
 Having installed Gitalist via CPAN it lives under `/usr/local/share/perl/5.10.1/Gitalist/` which seems a bad place to store a socket file, a pid file or any logs which is why I chose to put them all under `/var/`.
 
@@ -175,5 +179,3 @@ Having installed Gitalist via CPAN it lives under `/usr/local/share/perl/5.10.1/
 * [Catalyst and Nginx (Catalyst Docs)](https://wiki.catalystframework.org/wiki/adventcalendararticles/2008/02-catalyst_and_nginx)
 * [Gitalist, FastCGI and Nginx (Catalyst Docs on CPAN)](https://search.cpan.org/~bobtfish/Catalyst-Runtime-5.80032/lib/Catalyst/Engine/FastCGI.pm#nginx)
 * [Catalyst Standalone Server (Gitalist Docs on CPAN)](https://search.cpan.org/dist/Catalyst-Manual/lib/Catalyst/Manual/Cookbook.pod#Standalone_server_mode)
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

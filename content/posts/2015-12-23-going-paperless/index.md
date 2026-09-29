@@ -3,7 +3,7 @@ date: 2015-12-23T19:41:53+01:00
 draft: false
 title: Paperless Documents
 tags:
- - process
+ - Process
 aliases:
  - /2015/12/23/paperless-documents
 ---
