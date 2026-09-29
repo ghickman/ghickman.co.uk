@@ -57,4 +57,4 @@ taxonomies:
 
 module:
   hugoVersion:
-  min: "0.77.0"
+    min: "0.167.0"
