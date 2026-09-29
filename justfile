@@ -1,5 +1,4 @@
-default:
-    just --list
+set default-list
 
 run:
     hugo server --buildDrafts
