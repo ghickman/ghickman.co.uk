@@ -94,7 +94,14 @@ Next you'll need a config file for Gitalist:
 
 Paste in the following - setting the path to your gitalist_server.pl to the appropriate place if it's not in the default location.
 
-{{< gist ghickman 1084154 "supervisor" >}}
+```ini
+[program:gitalist]
+command=/usr/local/bin/gitalist_fastcgi.pl --listen /var/run/gitalist/gitalist.sock --nproc 2 --pidfile /var/run/gitalist/gitalist.pid
+user=git
+autostart=true
+autorestart=true
+redirect_stderr=true
+```
 
 I've put the socket and pid files in `/var/run/` since Gitalist is installed via CPAN into and [doesn't really](#gitalist-install-dir) have an install directory as such so that's the next logical place. However you'll need to create the gitalist directory there and `chown` it to your `git` user so it can be written to by the FastCGI script (which is now running under the `git` user). The `--nproc` switch tells the script how many processes to run, like Nginx's workers directive. To see all the options run `/usr/local/bin/gitalist_fastcgi.pl --help` in your terminal.
 
@@ -107,12 +114,49 @@ Since we're using FastCGI to pass requests from Nginx through to Gitalist we'll 
 
 and set the `repo_dir` option to `/home/git/repositories/`:
 
-{{< gist ghickman 1084154 "gitalist.conf" >}}
+```apache
+name Gitalist
+
+<Model::CollectionOfRepos>
+    #git /path/to/git
+    # Configure this to where your repositories are.
+    repo_dir /home/git/repositories/
+</Model::CollectionOfRepos>
+
+sitename "Gitalist"
+
+<paging>
+  log = 20
+  summary = 17
+</paging>
+
+# Support gitweb patches action.
+<patches>
+  max = 16
+</patches>
+```
 
 #### Nginx
 Create yourself a virtual host in nginx's sites-available directory and add the following, changing the server name to something suitable:
 
-{{< gist ghickman 1084154 "vhost" >}}
+```nginx
+server {
+    server_name www.example.com;
+    rewrite ^/(.*) http://git.example.com/$1 permanent;
+}   
+
+server {
+    server_name example.com;
+
+    access_log /var/log/gitalist/access.log combined;
+    error_log /var/log/gitalist/error.log;
+
+    location / {
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass unix:/var/run/gitalist/gitalist.sock;
+    }
+}
+```
 
 I've setup the logs under `/var/log/gitalist/` for the same reason as the socket and the pid files, again you'll have to create that directory but make it writable by `www-data` so Nginx has access to it.
 

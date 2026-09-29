@@ -11,4 +11,17 @@ After making the move to [Linode](https://linode.com) (finally!) I had some issu
 
 A bit of googling turned up this little snippet which, when placed in `app/config/`, will tell RVM to use the gemset associated with the folder.
 
-{{< gist ghickman 900934 >}}
+```ruby
+if ENV['MY_RUBY_HOME'] && ENV['MY_RUBY_HOME'].include?('rvm')
+  begin
+    rvm_path     = File.dirname(File.dirname(ENV['MY_RUBY_HOME']))
+    rvm_lib_path = File.join(rvm_path, 'lib')
+    $LOAD_PATH.unshift rvm_lib_path
+    require 'rvm'
+    RVM.use_from_path! File.dirname(File.dirname(__FILE__))
+  rescue LoadError
+    # RVM is unavailable at this point.
+    raise "RVM ruby lib is currently unavailable."
+  end
+end
+```

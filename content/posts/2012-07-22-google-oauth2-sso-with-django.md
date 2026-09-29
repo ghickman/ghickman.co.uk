@@ -39,7 +39,18 @@ Click `Create client id` and grab your `Client ID`/`Client secret` combo for the
 ## Setup Django Social Auth
 Add `social_auth` to your `INSTALLED_APPS` and the other settings below:
 
-{{< gist ghickman 3118490 "settings.py" >}}
+```python
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+LOGIN_REDIRECT_URL = '/'
+
+GOOGLE_OAUTH2_CLIENT_ID = os.environ['GOOGLE_OAUTH2_CLIENT_ID']
+GOOGLE_OAUTH2_CLIENT_SECRET = os.environ['GOOGLE_OAUTH2_CLIENT_SECRET']
+GOOGLE_WHITE_LISTED_DOMAINS = ['incuna.com']
+SOCIAL_AUTH_USER_MODEL = 'auth.User'
+```
 
 Here I whitelist our Google Apps domain to only allow authentication by users from work email addresses and tell Social Auth to use the `auth.User` model when creating new users which it will do by default (I believe you can turn this off with another setting). This lets met forget about registration completely which is perfect for internal applications.
 
@@ -49,7 +60,30 @@ Make sure you've set `GOOGLE_OAUTH2_CLIENT_ID` and `GOOGLE_OAUTH2_CLIENT_SECRET`
 
 ## Create Some Basic Views
 
-{{< gist ghickman 3118490 "views.py" >}}
+```python
+from django.core.urlresolvers import reverse
+from django.contrib import messages
+from django.http import HttpResponse, HttpResponseRedirect
+from django.views.generic.base import View
+from social_auth.backends.exceptions import AuthFailed
+from social_auth.views import complete
+
+
+
+class AuthComplete(View):
+    def get(self, request, *args, **kwargs):
+        backend = kwargs.pop('backend')
+        try:
+            return complete(request, backend, *args, **kwargs)
+        except AuthFailed:
+            messages.error(request, "Your Google Apps domain isn't authorized for this app")
+            return HttpResponseRedirect(reverse('login'))
+
+
+class LoginError(View):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse(status=401)
+```
 
 Social Auth requires you add a view for when login fails. So far this hasn't been an issue for me so I've done the pure basics here with `LoginError`.
 
@@ -57,7 +91,24 @@ The second view was to cope with the whitelisting of domains which, pleasingly, 
 
 Now all we need is to plumb this in with some URLs:
 
-{{< gist ghickman 3118490 "urls.py" >}}
+```python
+from django.conf.urls import *
+from django.contrib import admin
+
+from .views import AuthComplete, LoginError
+
+
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    # some other urls
+
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^complete/(?P<backend>[^/]+)/$', AuthComplete.as_view()),
+    url(r'^login-error/$', LoginError.as_view()),
+    url(r'', include('social_auth.urls')),
+)
+```
 
 
 ## Profit

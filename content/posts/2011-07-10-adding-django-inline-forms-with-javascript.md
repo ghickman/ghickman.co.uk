@@ -13,13 +13,55 @@ Using Django formsets on a new section for a project at work I came across somet
 
 The idea behind the script is pretty simple: duplicate an existing form then update the form counter.
 
-{{< gist ghickman 1020463 "add_inline.js" >}}
+```js {linenos=table}
+function add_inline_form(prefix) {
+    var count = parseInt($('#id_' + prefix + '-TOTAL_FORMS').val(), 10);
+    var last_form = $('.' + prefix + ':last');
+
+    var new_form = last_form.clone(false).html(last_form.html().replace(
+          new RegExp(prefix + '-\\\\d-', 'g'), prefix + '-' + count + '-'));
+    new_form.find('input[type="text"], textarea').each(function () {
+        $(this).val('');
+    });
+    new_form.hide().insertAfter(last_form).slideDown(300);
+
+    // Update the total form count
+    $('#id_' + prefix + '-TOTAL_FORMS').val(count + 1);
+
+    // re-initialise triggers
+
+    return false;
+}
+
+var regex = /(?:inline\-form) ([\\w\-]*) (?:add|existing)/;
+$('.add-inline').each(function () {
+    var match = regex.exec($(this).closest('.body').find('.inline-form').attr('class'));
+    if (match && match.length > 1) {
+        $(this).click(function () {
+            return add_inline_form(match[1]);
+        });
+    }
+});
+```
 
 Which is setup to work on html that looks like this:
 
 _Note: I'm using [Django UniForm][1] to output the form in `<div>'s`_
 
-{{< gist ghickman 1020463 "forms.html" >}}
+```html
+<div class="body">
+    {{ prefix_formset.management_form }}
+    {{ prefix_formset.non_form_errors }}
+    {% for form in prefix_formset.forms %}
+    <div class="inline-form prefix">
+        {{ form|as_uni_form }}
+    </div>
+    {% endfor %}
+    <div class="new-inline">
+        <input type="button" class="add-inline" value="Add another form" />
+    </div>
+</div>
+```
 
 ### So How Does it Work?
 _Skip to Gotchas if you already understand my javascript_

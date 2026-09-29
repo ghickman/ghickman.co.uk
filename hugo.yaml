@@ -8,7 +8,7 @@ pagination:
 
 markup:
   highlight:
-    style: github-light
+    noClasses: false
 
 params:
   author: "George Hickman"
